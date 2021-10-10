@@ -1,0 +1,886 @@
+FINAL REPORT ON GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+EBA/GL/2018/01
+12/01/2018
+Final report
+Guidelines on uniform disclosures under Article 473a of Regulation
+(EU) No 575/2013 as regards the transitional period for mitigating
+the impact of the introduction of IFRS 9 on own funds
+
+FINAL REPORT ON GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+Contents
+1. Executive summary                                                                            3
+2. Background and rationale                                                                     4
+3. Guidelines                                                                                   5
+1.      Compliance and reporting obligations                                                    7
+2.      Subject matter, scope and definitions                                                   8
+3.      Format                                                                                  9
+4.      General requirements for disclosure                                                   10
+Annex I ñTemplate on the comparison of institutionsí own funds and capital and leverage ratios with
+and without the application of transitional arrangements for IFRS 9 or analogous ECLs         11
+4. Accompanying documents                                                                     14
+4.1     Draft cost-benefit analysis/impact assessment                                         14
+4.2     Feedback on the public consultation                                                   18
+                                                                                                   2
+
+FINAL REPORT ON GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+1. Executive summary
+On 22 November 2016, the International Financial Reporting Standard 9, ëFinancial Instrumentsí
+(IFRS 9), was adopted in the EU to replace the previous accounting standard, i.e. International
+Accounting Standard 39, ëFinancial Instruments: Recognition and Measurementí (IAS 39). On
+12 December 2017, the EU adopted Regulation (EU) No 2017/2395 of the European Parliament and
+of the Council amending Regulation (EU) No 575/2013 as regards transitional arrangements for
+mitigating the impact of the introduction of IFRS 9 on own funds and for the large exposures
+treatment of certain public sector exposures denominated in the domestic currency of any Member
+State (the ënew Regulationí). The new Regulation inserts a new Article 473a in the CRR, which
+includes provisions on transitional arrangements for the introduction of IFRS 9 and IFRS 9-like
+expected credit loss models (analogous ECLs 1), in order to mitigate the impact of the impairment
+requirements resulting from IFRS 9 on capital and leverage ratios.
+Article 473a of the CRR requires institutions that apply transitional arrangements for IFRS 9 and
+analogous ECLs to disclose the effect of these transitional arrangements on own funds, risk-based-
+capital ratio and leverage ratio. In particular, these institutions are required to disclose the amount
+of own funds, the amount of Common Equity Tier 1 capital, the amount of Tier 1 capital, the
+Common Equity Tier 1 capital ratio, the Tier 1 capital ratio, the total capital ratio and the leverage
+ratio with and without the application of the transitional arrangements.
+Finally, paragraph 10 of Article 473a of the CRR also includes a mandate for the EBA to issue
+guidelines on disclosure requirements in relation to transitional arrangements for IFRS 9 or
+analogous ECLs. It is on the basis of this mandate that the EBA has drafted these guidelines, which
+specify a uniform disclosure format for the institutionsí disclosure requirements on transitional
+arrangements for IFRS 9 or analogous ECLs, with the aim of achieving consistent and comparable
+disclosure among institutions.
+Next steps
+The guidelines will be published on the EBA website and translated into the official EU languages. The
+deadline for competent authorities to report whether they comply with the guidelines will be 2
+months after the publication of the guidelines.
+1
+  ëAnalogous ECLsí refers to expected credit loss models that are the same as those used in accounting standards adopted in
+accordance with the procedure laid down in Article 6(2) of Regulation (EC) No 1606/2002.
+                                                                                                                          3
+
+FINAL REPORT ON GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+2. Background and rationale
+On the basis of the ënew Regulationí, which inserts a new article, Article 473a, into the CRR,
+institutions referred to in this Article will have the following options: they can phase in the impact of
+the implementation of IFRS 9 or analogous ECLs on capital and leverage ratios or they can recognise
+the full impact of IFRS 9 or analogous ECLs on capital and leverage ratios from 1 January 2018 or
+before the end of the transitional period. In order to achieve consistency in institutionsí Pillar 3
+disclosures regarding capital and leverage ratios, the EU institutions have decided that proper,
+uniform and consistent disclosure of the impact of transitional arrangements for IFRS 9 or analogous
+ECLs on these prudential metrics will be key during the transitional period.
+Therefore, new Article 473a of the CRR includes the requirement for institutions subject to IFRS 9 or
+an analogous ECLs framework and which apply the corresponding transitional arrangements to
+disclose, together with their actual own funds and their actual capital and leverage ratios, the value
+of these prudential metrics on an IFRS 9/analogous ECLs fully loaded basis, i.e. as if the transitional
+arrangements had not been applied. This disclosure is required in addition to the information that
+institutions are required to disclose under Part Eight of the CRR. The same Article also includes, in
+paragraph 10, a mandate for the EBA to issue guidelines on these disclosure requirements. These
+guidelines specify a uniform disclosure format to be applied by institutions in order to increase the
+consistency and comparability of the information disclosed during the transitional period.
+In specifying the uniform disclosure format to be applied by institutions for the abovementioned
+purpose, the EBA has taken into account developments at the international level, with a view to
+implementing the new CRR requirement in a manner that is consistent with international standards
+and allows international comparisons. Therefore, these guidelines take into account the standard
+issued by the Basel Committee on Banking Supervision (BCBS) on 29 March 2017 on ìPillar 3
+disclosure requirements ñ consolidated and enhanced frameworkî. 2 This standard includes a
+disclosure template, with an implementation date of 1 January 2018, that provides users with
+information on the impact of the transitional arrangements for the implementation of expected
+credit loss accounting on banksí regulatory capital and leverage ratios.
+2
+  Which can be found here: http://www.bis.org/bcbs/publ/d400.htm
+                                                                                                        4
+
+FINAL REPORT ON GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+3. Guidelines
+                                                    5
+
+FINAL REPORT ON GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+EBA/GL/2018/01
+12/01/2018
+Guidelines
+on uniform disclosures under
+Article 473a of Regulation (EU)
+No 575/2013 as regards transitional
+arrangements for mitigating the impact
+of the introduction of IFRS 9 on own
+funds
+                                                    6
+
+FINAL REPORT ON GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+1. Compliance and reporting
+obligations
+Status of these guidelines
+1. This document contains guidelines issued pursuant to Article 16 of Regulation (EU)
+      No 1093/2010. 3 In accordance with Article 16(3) of Regulation (EU) No 1093/2010, competent
+      authorities and financial institutions must make every effort to comply with the guidelines.
+2. Guidelines set out the EBAís view of appropriate supervisory practices within the European
+      System of Financial Supervision or of how Union law should be applied in a particular area.
+      Competent authorities as defined in Article 4(2) of Regulation (EU) No 1093/2010 to whom
+      guidelines apply should comply by incorporating them into their practices as appropriate (e.g.
+      by amending their legal framework or their supervisory processes), including where guidelines
+      are directed primarily at institutions.
+Reporting requirements
+3. In accordance with Article 16(3) of Regulation (EU) No 1093/2010, competent authorities
+      must notify the EBA that they comply or intend to comply with these guidelines, or otherwise
+      give reasons for non-compliance, by ([dd.mm.yyyy]). In the absence of any notification by this
+      deadline, competent authorities will be considered by the EBA to be non-compliant.
+      Notifications should be sent by submitting the form available on the EBA website to
+      compliance@eba.europa.eu with the reference ëEBA/GL/2018/01í. Notifications should be
+      submitted by persons with appropriate authority to report compliance on behalf of their
+      competent authorities. Any change in the status of compliance must also be reported to the
+      EBA.
+4. Notifications will be published on the EBA website, in line with Article 16(3).
+3
+  Regulation (EU) No 1093/2010 of the European Parliament and of the Council of 24 November 2010 establishing a
+European Supervisory Authority (European Banking Authority), amending Decision No 716/2009/EC and repealing
+Commission Decision 2009/78/EC, (OJ L 331, 15.12.2010, p.12).
+                                                                                                              7
+
+FINAL REPORT ON GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+2. Subject matter, scope and definitions
+Subject matter
+5. These guidelines specify the uniform disclosure format in accordance with which the
+      disclosures required under Article 473a of Regulation (EU) No 575/2013 (the ëCRRí) should be
+      made.
+Scope of application
+6. These guidelines apply to institutions referred to in paragraph 1 of Article 473a of the CRR
+      that are subject to all or part of the disclosure requirements specified in Part Eight of the CRR
+      in accordance with Articles 6, 10 and 13 of the CRR.
+7. These guidelines apply during the transitional period referred to in paragraph 6 of
+      Article 473a of the CRR.
+Addressees
+8. These guidelines are addressed to competent authorities as defined in points (i) to (ii) of
+      Article 4(2) of Regulation (EU) No 1093/2010 and to financial institutions as defined in
+      Article 4(1) of Regulation No 1093/2010.
+Definitions
+9. Unless otherwise specified, terms used and defined in Regulation (EU) No 575/2013 have the
+      same meaning in the guidelines.
+10. ëAnalogous ECLsí refers to the expected credit loss models that are the same as those used in
+      accounting standards adopted in accordance with the procedure laid down in Article 6(2) of
+      Regulation (EC) No 1606/2002.
+Date of application
+11. These guidelines apply from 20 March 2018 until the end of the transitional period referred to
+      in paragraph 6 of Article 473a of the CRR.
+                                                                                                      8
+
+FINAL REPORT ON GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+3. Format
+12. Institutions that choose to apply Article 473a of the CRR should complete the quantitative
+      template contained in Annex I, in accordance with the instructions included therein. Those
+      institutions among those mentioned in paragraph 1 of Article 473a that choose not to apply
+      Article 473a should disclose the narrative commentary indicated in Annex I, in accordance
+      with the instructions included therein.
+                                                                                               9
+
+FINAL REPORT ON GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+4. General requirements for disclosure
+13. The EBA Guidelines on disclosure requirements under Part Eight of Regulation (EU)
+      No 575/2013 (EBA/GL/2016/11) are applicable, where relevant, to the uniform disclosure
+      format specified in the current guidelines.
+                                                                                          10
+
+FINAL REPORT ON GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+Annex I ñTemplate on the comparison of
+institutionsí own funds and capital and
+leverage ratios with and without the
+application of transitional arrangements
+for IFRS 9 or analogous ECLs
+Template IFRS 9-FL: Comparison of institutionsí own funds and capital and leverage
+ratios with and without the application of transitional arrangements for IFRS 9 or
+analogous ECLs
+  Purpose: Provide a comparison of the institutionsí own funds, Common Equity Tier 1 capital, Tier 1 capital, risk-weighted
+  assets, Common Equity Tier 1 capital ratio, Tier 1 capital ratio, total capital ratio and leverage ratio with and without the
+  application of transitional arrangements for IFRS 9 or analogous ECLs. Only the transitional arrangements arising from the
+  implementation of the IFRS 9 and analogous ECLS are considered in this template.
+  Scope of application: The quantitative template is mandatory for all institutions referred to in paragraph 1 of Article 473a
+  that, pursuant to the first subparagraph of paragraph 9 of the same Article, choose to apply Article 473a of the CRR and are
+  subject to all or part of the disclosure requirements specified in Part Eight of the CRR, during the transitional period specified
+  in paragraph 6 of the same Article.
+  Those institutions referred to in paragraph 1 of Article 473a that are subject to all or part of the disclosure requirements
+  specified in Part Eight of the CRR but, pursuant to the first subparagraph of paragraph 9 of the same Article, choose not to
+  apply the transitional arrangements specified in Article 473a should instead disclose a narrative commentary explaining that
+  they are not applying the transitional arrangements for IFRS 9 or analogous ECLs, any changes on that decision over the time
+  and that their own funds, capital and leverage ratios already reflect the full impact of IFRS 9 or analogous ECLs.
+  Content: Regulatory own funds, risk-based capital ratios and leverage ratio compared with the same metrics as if they were
+  not subject to the transitional arrangements for IFRS 9 or analogous ECLs. Institutions should disclose each metricís value at
+  the end of the reporting period.
+  Frequency: Institutions should disclose this information with the frequency set in paragraphs 25, 26 and 27 of
+  EBA GL/2014/14 as amended by EBA GL/2016/11 for the disclosure of information on own funds (paragraph 25.a), risk-
+  weighted assets (paragraph 25.b.i.) and leverage ratio (paragraph 25.c).
+  Format: A fixed format for the quantitative template is mandatory for institutions that apply the IFRS 9 transitional
+  arrangements. For institutions that do not apply the transitional arrangements, the format of the narrative commentary is
+  flexible.
+  Accompanying narrative: Institutions applying the transitional arrangements should provide a narrative accompanying the
+  quantitative template that explains the key elements of the transitional arrangements they use. Pursuant to the
+  second subparagraph of paragraph 9 of Article 473a of the CRR, institutions should, in particular, provide explanations of all
+  their choices regarding the options included in the same paragraph, including whether they are applying paragraph 4 of
+  Article 473a or not, and on any changes on the application of these options. Institutions should also provide explanations of
+  the changes to the prudential metrics included in the template due to the application of the transitional arrangements for
+  IFRS 9 or analogous ECLs, where these changes are material.
+                                                                                                                                  11
+
+FINAL REPORT ON GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+                                                               Quantitative template
+                                                                                             a            b            c           d         e
+                                                                                             T          T-1          T-2          T-3       T-4
+            Available capital (amounts)
+     1      Common Equity Tier 1 (CET1) capital
+     2      Common Equity Tier 1 (CET1) capital as if IFRS 9 or analogous ECLs
+            transitional arrangements had not been applied
+     3      Tier 1 capital
+     4      Tier 1 capital as if IFRS 9 or analogous ECLs transitional
+            arrangements had not been applied
+     5      Total capital
+     6      Total capital as if IFRS 9 or analogous ECLs transitional
+            arrangements had not been applied
+            Risk-weighted assets (amounts)
+     7      Total risk-weighted assets
+     8      Total risk-weighted assets as if IFRS 9 or analogous ECLs
+            transitional arrangements had not been applied
+            Capital ratios
+     9      Common Equity Tier 1 (as a percentage of risk exposure amount)
+    10      Common Equity Tier 1 (as a percentage of risk exposure amount)
+            as if IFRS 9 or analogous ECLs transitional arrangements had not
+            been applied
+    11      Tier 1 (as a percentage of risk exposure amount)
+    12      Tier 1 (as a percentage of risk exposure amount) as if IFRS 9 or
+            analogous ECLs transitional arrangements had not been applied
+    13      Total capital (as a percentage of risk exposure amount)
+    14      Total capital (as a percentage of risk exposure amount) as if IFRS 9
+            or analogous ECLs transitional arrangements had not been applied
+            Leverage ratio
+    15      Leverage ratio total exposure measure
+    16      Leverage ratio
+    17      Leverage ratio as if IFRS 9 or analogous ECLs transitional
+            arrangements had not been applied
+                                                                 Instructions
+  Row
+              Explanation
+  Number
+              Amount of CET1 capital in accordance with the amount disclosed by institutions following the ITS on disclosure of own funds
+  1                         4
+              requirements (row 29 of the íOwn funds disclosure templateí)
+              Amount of CET1 capital as if the amount of IFRS 9 or analogous ECLs transitional arrangements calculated in accordance with
+  2
+              Article 473a of the CRR were not applied
+              Amount of Tier 1 capital in accordance with the amount disclosed by institutions following the ITS on disclosure of own funds
+  3                         4
+              requirements     (row 45 of the íOwn funds disclosure templateí)
+              Amount of Tier 1 capital as if the amount of IFRS 9 or analogous ECLs transitional arrangements calculated in accordance
+  4
+              with Article 473a of the CRR were not applied.
+              Amount of total capital in accordance with the amount disclosed by institutions following the ITS on disclosure of own funds
+  5                         4
+              requirements (row 59 of the íOwn funds disclosure templateí)
+  6           Amount of total capital as if the amount of IFRS 9 or analogous ECLs transitional arrangements calculated in accordance with
+4
+  COMMISSION IMPLEMENTING REGULATION (EU) No 1423/2013 of 20 December 2013 laying down implementing
+technical standards with regard to disclosure of own funds requirements for institutions according to Regulation (EU)
+No 575/2013 of the European Parliament and of the Council (OJ L 355, 31.12.2013, 60).
+                                                                                                                                  12
+
+FINAL REPORT ON GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+  Row
+              Explanation
+  Number
+              Article 473a of the CRR were not applied
+              Amount of total risk-weighted assets in accordance with the amount disclosed by institutions following the ITS on disclosure
+  7                                         4
+              of own funds requirements (row 60 of the íOwn funds disclosure templateí)
+              Amount of total risk-weighted assets as if the amount of IFRS 9 or analogous ECLs transitional arrangements calculated in
+  8
+              accordance with Article 473a of the CRR were not applied
+              CET1 capital ratio in accordance with the value disclosed by institutions following the ITS on disclosure of own funds
+  9                          4
+              requirements (row 61 of the íOwn funds disclosure templateí)
+              CET1 capital ratio as if IFRS 9 or analogous ECLs transitional arrangements calculated in accordance with Article 473a of the
+  10                                  5
+              CRR were not applied
+              Tier 1 capital ratio in accordance with the value disclosed by institutions following the ITS on disclosure of own funds
+  11                         4
+              requirements (row 62 of the ëOwn funds disclosure templateí)
+              Tier 1 capital ratio as if IFRS 9 or analogous ECLs transitional arrangements calculated in accordance with Article 473a of the
+  12                                  5
+              CRR were not applied
+              Total capital ratio in accordance with the value disclosed by institutions following the ITS on disclosure of own funds
+  13                         4
+              requirements (row 63 of the ëOwn funds disclosure templateí)
+              Total capital ratio as if IFRS 9 or analogous ECLs transitional arrangements calculated in accordance with Article 473a of the
+  14                                  5
+              CRR were not applied
+              Leverage ratio total exposure measure in accordance with the amount disclosed by institutions following the ITS on
+  15                                        6
+              disclosure of leverage ratio (row 21 of the table ëLRCom: Leverage ratio common disclosureí)
+                                                                                                                                                6
+              Leverage ratio in accordance with the value disclosed by institutions following the ITS on disclosure of leverage ratio
+  16
+              (row 22 of the table ëLRCom: Leverage ratio common disclosureí)
+              Leverage ratio calculated as if as if the amount of IFRS 9 or analogous ECLs transitional arrangements calculated in
+  17                                                                       5
+              accordance with Article 473a of the CRR were not applied
+              Reporting periods
+              Reporting periods T, T-1, T-2, T-3 and T-4 are defined as quarterly periods. Institutions should disclose the dates
+              corresponding to the reporting periods.
+              Institutions disclosing this template on a quarterly basis should provide data for periods T, T-1, T-2, T-3 and T-4; institutions
+              disclosing this template on a semi-annual basis should provide data for periods T, T-2 and T-4; and institutions disclosing this
+              template on an annual basis should provide data for periods T and T-4.
+              The disclosure of data for previous periods is not required when data are disclosed for the first time. Information on previous
+              periods is required only when the previous periods are later than the starting date of their first financial year starting on or
+              after 1 January 2018.
+5
+  When disclosing this ratio, institutions should consider those transitional arrangements for IFRS 9 or analogous ECLs
+that have an impact both on the numerator and on the denominator.
+6
+  Commission Implementing Regulation (EU) 2016/200 of 15 February 2016 laying down implementing technical
+standards with regard to disclosure of the leverage ratio for institutions, according to Regulation (EU) No 575/2013 of
+the European Parliament and of the Council (OJ L 39, 16.2.2016, p. 5).
+                                                                                                                                       13
+
+FINAL REPORT ON GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+4. Accompanying documents
+4.1 Draft cost-benefit analysis/impact assessment
+Regulation (EU) No 2017/2395 of the European Parliament and of the Council amending
+Regulation (EU) No 575/2013 as regards transitional arrangements for mitigating the impact of
+the introduction of IFRS 9 on own funds and for the large exposures treatment of certain public
+sector exposures denominated in the domestic currencies of any Member State introduces a new
+article, Article 473a into the CRR, which mandates the EBA to issue guidelines on the disclosure
+requirements in relation to IFRS 9 transitional arrangements.
+As per Article 16(2) of the EBA Regulation (Regulation (EU) No 1093/2010 of the European
+Parliament and of the Council), any guidelines developed by the EBA shall be accompanied by an
+assessment annex that analyses ëthe potential related costs and benefitsí. This annex should
+provide the reader with an overview of the findings as regards the problem identification, the
+options identified to remove the problem and their potential impacts.
+This section presents an impact assessment and cost-benefit analysis of the policy options taken
+into account in drafting these guidelines. Given the nature of the study, the assessment is
+high level and qualitative in nature.
+A. Problem identification
+The primary problems that the current guidelines aim to address are the potential asymmetry of
+information on IFRS 9 transitional arrangements between information available to market
+participants and information available internally to institutions, and the possible inconsistencies
+and variations in the institutionsí disclosures related to the impact of IFRS 9 transitional
+arrangements on their risk-based capital ratios and the leverage ratio during the phase-in period.
+Asymmetric information and a lack of comparability of information by market participants impair
+the functioning of market discipline.
+Furthermore, the BCBS issued, in March 2017, the standard íPillar 3 disclosure requirements ñ
+consolidated and enhanced frameworkí. This includes a disclosure template, with an
+implementation date of 1 January 2018, that provides users with information on the impact of the
+transitional arrangements for the implementation of expected credit loss accounting on banksí
+regulatory capital and leverage ratios. Hence the current regulatory framework is not in line with
+the recent amendments at the BCBS level and in practice may lead to inconsistent
+implementation of the standards within the EU.
+                                                                                                14
+
+FINAL REPORT ON GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+B. Policy objectives
+The main objective of the guidelines is to increase the consistency and comparability of
+information disclosed by EU institutions regarding the impact of the IFRS 9 transitional
+arrangements on their own funds and capital and leverage ratios during the transition to the full
+implementation of the IFRS 9 framework.
+The guidelines also aim to help EU institutions in implementing the new BCBS Pillar 3
+requirements regarding the impact of the transitional arrangements for the implementation of
+expected credit loss accounting on banksí regulatory capital and leverage ratios.
+These guidelines address the problem of asymmetric information, increase the comparability of
+EU institutionsí disclosures and promote the alignment of the EU disclosure requirements with
+the BCBS Pillar 3 framework. The ultimate general objective of the guidelines is to strengthen
+market discipline.
+C. Baseline scenario
+Institutions within the scope of these guidelines are already subject to disclosure requirements on
+available own funds, risk weighted assets (RWA), leverage ratio risk exposure amount, regulatory
+capital ratios and the leverage ratio. These institutions already disclose the aforementioned
+information on a regular basis.
+In addition, those institutions that choose to apply the IFRS 9 transitional arrangements in
+accordance with Article 473a of the CRR need to estimate the adjustments to own funds,
+regulatory capital ratios and the leverage ratio arising from the application of the IFRS 9
+transitional arrangements. Finally, institutions applying the IFRS 9 transitional arrangements are
+required to report, as part of the reporting requirements included in the EU supervisory reporting
+framework, 7 the amount of the adjustments to own funds and RWA arising from the application
+of IFRS 9 transitional arrangements.
+Institutions are therefore already required to disclose information on the actual value of the
+prudential metrics to which these guidelines refer and are required to estimate and report to the
+competent authorities the value of the adjustments to be applied to the same prudential metrics
+if the IFRS 9 transitional arrangements are implemented.
+D. Options considered: assessment of the options and the preferred option(s)
+During the development of the current guidelines, the following policy options were considered:
+7
+  COMMISSION IMPLEMENTING REGULATION (EU) No 680/2014 of 16 April 2014 laying down implementing technical
+standards with regard to supervisory reporting of institutions according to Regulation (EU) No 575/2013 of the
+European Parliament and of the Council.
+                                                                                                           15
+
+FINAL REPORT ON GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+a.        Scope of the template: restricted to the mandate of the Commission vs. expanded
+          in line with the BCBS framework
+The BCBS framework includes information on the impact on regulatory capital and the leverage
+ratio of the transitional arrangements for the implementation of expected credit loss accounting
+in a key metrics template, which also includes other metrics that are considered key for users of
+information but that are not affected by the transitional arrangements (e.g. the liquidity coverage
+ratio and the net stable funding ratio).
+During the preparation of the current guidelines, the possibility of adding these additional metrics
+to template IFRS 9-FL was discussed. EU institutions are required to disclose these additional
+metrics under Part Eight of the CRR, using separate disclosure templates, and the addition of
+these metrics would allow even closer alignment with the BCBS standard. Nevertheless, the
+mandate to the EBA to issue guidelines included in Article 473a of the CRR refers strictly to the
+disclosure requirements under the same Article; the additional metrics included in the BCBS
+standard are already implemented at EU level, albeit in separate templates. Therefore, it was
+decided to stick strictly to the mandate included in Article 473a of the CRR when developing
+template IFRS 9-FL.
+b.        Time dimension: reporting data as of time T and T-1 vs. reporting longer time-
+          series data
+During the development of template IFRS 9-FL, there was discussion of whether institutions
+should be required to disclose the relevant information for period T and T-1 or whether the time
+series should be extended, including T-2, T-3 and T-4, in line with the BCBS standard. Given that
+institutions will be required to disclose the information on a quarterly, semi-annual or annual
+basis, depending on the significance of the institution, in accordance with the criteria set in EBA
+GL/2014/14, it was decided that for institutions disclosing the information on a quarterly basis the
+time series required should be T, T-1, T-2, T-3 and T-4; for institutions disclosing the information
+on a semi-annual basis the time series required should be T, T-2 and T-4; and for institutions
+disclosing the information on an annual basis the time series requested should be T and T-4. This
+way, all institutions will disclose the data at the reference data and the evolution of the data
+during the previous year.
+E. Cost-benefit analysis
+The information that institutions are asked to disclose under template IFRS 9-FL of the current
+guidelines is fully available to them. Institutions are already required to disclose the information
+on the transitional value of the prudential metrics included in this template and are also required
+to estimate and report to the competent authorities the value of the adjustments to be applied to
+the same prudential metrics if the IFRS 9 transitional arrangements are implemented.
+In addition, the policy choices agreed during the development of the guidelines simplify the
+information that institutions are asked to disclose.
+                                                                                                  16
+
+FINAL REPORT ON GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+For these reasons, the marginal cost and impact of the implementation of the current draft
+guidelines by institutions is expected to be negligible. The net benefit is expected to be positive
+when the marginal costs of implementation of the draft guidelines are compared with the
+benefits that the current guidelines are expected to achieve, in terms of improved symmetry of
+information between market participants and institutions, consistency and comparability of the
+information available to market participants and further fostering of market discipline. The
+benefits arising from the guidelines are hence expected to notably exceed the marginal costs for
+institutions.
+                                                                                                 17
+
+FINAL REPORT ON GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+4.2 Feedback on the public consultation
+The EBA publicly consulted on the guidelines contained in this paper.
+The consultation period lasted for 2 months and ended on 13 September 2017. Five responses
+were received, all of which five were published on the EBA website.
+This paper presents a summary of the key points and other comments arising from the
+consultation, the analysis and discussion triggered by these comments and the actions taken to
+address them if deemed necessary.
+In many cases, several industry bodies made similar comments or the same body repeated its
+comments in response to different questions. In such cases, the comments and the EBAís analysis
+are included in the section of this paper where the EBA considers them most appropriate.
+Changes to the draft guidelines have been incorporated as a result of the responses received
+during the public consultation.
+Summary of key issues and the EBAís response
+The EBA included in the consultation paper a question on the possibility of adding a row to the
+disclosure template with quantitative information on an institutionís RWA as if the IFRS 9
+transitional arrangements had not been applied. Following the answers received and the EBAís
+analysis, according to which this information would indeed contribute to a better and more
+complete picture of the impact of IFRS 9 transitional arrangements on institutions capital ratios
+without creating an additional burden for banks, this row has been added to the template.
+Other changes applied to the guidelines compared with the version published for consultation,
+following the comments received, include:
+<U+F0A7>         The requirement to disclose the reasons behind an institutionsí decision not to apply the
+          IFRS 9 transitional arrangements, where relevant, has been dropped.
+<U+F0A7>         The accompanying narrative to the quantitative template has been further elaborated in
+          line with paragraph 9 of Article 473a.
+<U+F0A7>         The instructions regarding the reference date for the reporting of data corresponding to
+          previous periods have been adjusted in order to achieve consistency among institutions,
+          regardless of the frequency with which they are required to report the template.
+                                                                                                  18
+
+FINAL REPORT ON THE GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+Summary of responses to the consultation and the EBAís analysis
+                                                                                                                                               Amendments to
+Comments                             Summary of responses received                        EBA analysis
+                                                                                                                                               the proposals
+Responses to questions in Consultation Paper EBA-CP-2017-11
+Question 1: Could you provide your views on whether adding RWA on an IFRS 9 fully loaded basis to the quantitative disclosure template in Annex I would provide
+more clarity to the users and would ensure a more consistent and comparable disclosure by institutions compared with the current proposal to disclose only the
+actual figure of RWA?
+Disclosure of RWA on an IFRS 9       Most members believe it would be beneficial to
+fully loaded basis                   disclose RWA on an IFRS 9 fully loaded basis to
+                                     provide more clarity to users, particularly as RWA
+                                     will differ on a fully loaded basis. Furthermore,
+                                     most members do not perceive this disclosure as
+                                     requiring substantial additional resource or effort,
+                                     and therefore the benefit of the disclosure would
+                                     outweigh the associated cost of implementation.                                                           A row has been
+                                                                                                                                               added      to     the
+Disclosure of RWA on an IFRS 9       It may be that adding RWA on an IFRS 9 fully         The EBA agrees that disclosing the information on    disclosure template
+fully loaded basis                   loaded basis to the template would provide more      RWA on an IFRS 9 fully loaded basis would provide    with the information
+                                     clarity to its users. However, considering the fact  clarity and a more complete picture of the impact of on     íTotal   risk-
+                                     that institutions applying the IFRS 9 transition     the IFRS 9 transitional arrangements on capital      weighted assets as if
+                                     arrangement are already expected to supplement       ratios.                                              IFRS 9 transitional
+                                     the template with a narrative commentary to                                                               arrangements had
+                                     explain any significant changes to RWA that are                                                           not been appliedí
+                                     due to the application of the transitional
+                                     arrangement, there is no need to disclose RWA on
+                                     an IFRS 9 fully loaded basis.
+                                     Furthermore, the draft EBA guidelines take into
+                                     account the disclosure Template KM1 issued by
+                                     the BCBS on 29 March 2017 (Pillar 3 disclosure
+                                     requirementsì consolidated and enhanced
+                                                                                                                                                                  19
+
+FINAL REPORT ON THE GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+                                                                                                         Amendments to
+Comments                             Summary of responses received                          EBA analysis
+                                                                                                         the proposals
+                                     framework) which aims to provide users with
+                                     information on the impact of transitional
+                                     arrangements on institutionsí regulatory capital
+                                     and leverage ratios. Since even BCBS Template
+                                     KM1 requires only the disclosure of RWA on a
+                                     transitional basis, it is suggested that the regulator
+                                     should carefully assess if this additional disclosure
+                                     requirement is really necessary.
+Disclosure of RWA on an IFRS 9       Given the uncertainty about the long-term
+fully loaded basis                   regulatory treatment of provisions and the revision
+                                     of the standardised approach for credit risk in the
+                                     context of the Basel III finalisation, we believe that
+                                     the proposed disclosure could create confusion
+                                     and mislead stakeholders. Currently, both the RWA
+                                     and the interaction between the accounting and
+                                     the regulatory frameworks are being reviewed by
+                                     the BCBS. The information to be disclosed will
+                                     therefore change when the revision is finalized.
+                                     This regulatory uncertainty about the information
+                                     to be disclosed could therefore lead markets to
+                                     draw inaccurate conclusions and bring about
+                                     confusion instead of clarity.
+                                     The disclosure of changes caused by applying the
+                                     IFRS 9 transitional arrangements should generally
+                                     be limited to material items and to ratios of
+                                     relevance to capital markets and the public. It
+                                     should be kept in mind that the transitional
+                                     arrangements in the CRR and under Basel III
+                                     concerning the eligibility of AT1 and Tier 2 capital
+                                     instruments will remain relevant beyond
+                                                                                                                       20
+
+FINAL REPORT ON THE GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+                                                                                                         Amendments to
+Comments                             Summary of responses received                          EBA analysis
+                                                                                                         the proposals
+                                     1 January 2018 and that they have already resulted
+                                     in differences in Tier 1, TC, leverage ratio and other
+                                     relevant metrics.
+Disclosure of RWA on an IFRS 9       While we understand the need to disclose
+fully loaded basis                   information regarding the impact of transitional
+                                     arrangements for the implementation of expected
+                                     loss accounting on banks' regulatory capital and
+                                     leverage ratios, we question the relevance of
+                                     adding granular information related to the impact
+                                     of IFRS 9 on RWA.
+                                     Currently, RWA are going to evolve following
+                                     coming changes initiated by the BCBS and
+                                     following revision of the CRR/CRD. Moreover, the
+                                     long-term regulatory treatment of provisions is
+                                     also under review. So these forthcoming legislative
+                                     or regulatory changes will modify the RWA of a
+                                     same risk exposure during the transitional period.
+                                     Thus, it will become more difficult to provide
+                                     consistent and comparable RWAs information.
+                                     The development of business activities brings
+                                     natural changes in RWA that would be
+                                     burdensome to isolate and distinguish, without
+                                     undue costs and efforts, from the impact of IFRS 9
+                                     transitional arrangements on RWA.
+                                     Furthermore, requiring additional explanations of
+                                     the changes to RWA would add complexity to the
+                                     calculation of the metrics, whereas the proposed
+                                     draft Article 473a, paragraph 7, of the CRR
+                                     suggests a simplified way of calculating the credit
+                                                                                                                       21
+
+FINAL REPORT ON THE GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+                                                                                                       Amendments to
+Comments                             Summary of responses received                        EBA analysis
+                                                                                                       the proposals
+                                     risk adjustments applied to exposures.
+                                     In addition, the EBA draft guidelines refer to the
+                                     Pillar 3 disclosure standards ìconsolidated and
+                                     enhanced frameworkîù issued by the BCBS on
+                                     March 2017. However, the BCBS standard requires
+                                     only quantitative information on the impact of the
+                                     IFRS 9 transitional arrangements, excluding
+                                     narrative explanations of changes and significant
+                                     events. Providing the amounts of the transitional
+                                     adjustments to own funds to users of information
+                                     (i.e. investors and shareholders) is far more
+                                     relevant than providing greater granularity in the
+                                     information on transitional adjustments on RWA.
+                                     Accordingly, we consider that narrative and
+                                     quantitative information related to explanations of
+                                     the changes to RWA that are due to the IFRS 9
+                                     transitional arrangements should be deleted (see
+                                     EBA/CP/2017/11, page 12, accompanying the
+                                     narrative: ëInstitutions should also provide
+                                     explanations of the changes to RWA and leverage
+                                     exposure measure that are due to the application
+                                     of the IFRS 9/analogous ECLs transitional
+                                     arrangements, where these changes are material)
+Disclosure of RWA on an IFRS 9       Adding RWA on an IFRS 9 fully loaded basis would
+fully loaded basis                   provide more clarity. However, it could easily be
+                                     reversely computed from capital ratios and capital
+                                     position stated on an IFRS 9 fully loaded basis (see
+                                     comment on question 2).
+                                                                                                                     22
+
+FINAL REPORT ON THE GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+                                                                                                                                              Amendments to
+Comments                             Summary of responses received                         EBA analysis
+                                                                                                                                              the proposals
+Disclosure of RWA on an IFRS 9       We agree that the addition of RWA on an IFRS 9
+fully loaded basis                   fully loaded basis to the quantitative disclosure
+                                     template in Annex I would provide more clarity
+                                     and contribute to ensuring more consistent and
+                                     comparable disclosures by institutions and would
+                                     therefore be beneficial to users of the Pillar 3
+                                     disclosure documents.
+Question 2: Do you agree with the overall content of these guidelines and with the template proposed? In case of disagreement, please outline alternatives that
+would help to achieve the purpose of the guidelines.
+Alignment       of     the    row    The format of the template would be better if it
+numbering in the template            followed the row numbering of the Basel KM1           The alignment of the numbering of the rows with
+with the numbering of BCBS           template. This would make disclosures easier for      BCBS template KM1 would be confusing. BCBS
+                                                                                                                                              No     amendments
+template KM1                         those banks that may wish to adopt KM1                template KM1 includes information that is not
+                                                                                                                                              were made as a
+                                     disclosures early, assist international comparability included in Template IFRS 9-FL. This means that
+                                                                                                                                              result   of   this
+                                     and avoid having to re-engineer the template          following BCBS numbering would lead to gaps in the
+                                                                                                                                              comment.
+                                     when the transitional period ends or additional key   numbering of the rows, and this might lead to
+                                     metric disclosures are made by banks, i.e. avoid      misunderstandings.
+                                     erratic row numbering.
+Accompanying narrative ñ             Institutions are expected to supplement the
+information on significant           template with an accompanying narrative to
+changes in the metric values         explain any significant changes in the metric values
+compared with the previous           mentioned compared with previous quarters. In                                                            No     amendments
+quarters                             this respect, clarity is needed on whether it is                                                         were made as a
+                                     expected that the accompanying narrative will                                                            result   of   this
+                                     need to be included in upcoming disclosures to                                                           comment.
+                                     explain material changes from one quarter to the
+                                     next until they are phased out after T-4. We
+                                     suggest disclosing commentary only on material
+                                                                                                                                                             23
+
+FINAL REPORT ON THE GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+                                                                                                                                                 Amendments to
+Comments                             Summary of responses received                       EBA analysis
+                                                                                                                                                 the proposals
+                                     changes compared with the previous quarter (T-1).
+                                     We are of the view that the proposed template
+                                     would generate significant redundancy. Of the 16
+                                     proposed rows, the information required for 9 is
+                                                                                         While the EBA acknowledges that part of the
+                                     already provided in existing disclosures. The
+                                                                                         information included in the disclosure template
+                                     template should therefore be limited to ratios that
+                                                                                         IFRS 9-FL is also included in other disclosure
+                                     are relevant, namely the CET1 ratio and the
+                                                                                         templates at EU level, this information is still needed
+                                     leverage ratio (rows 1, 2, 8, 9, 15 and 16). We
+                                                                                         in Template IFRS 9-FL in order to disclose a complete
+                                     suggest deleting rows 3, 4, 5, 6, 7, 10, 11, 12, 13
+                                                                                         picture of the impact of IFRS 9 transitional
+                                     and 14.
+                                                                                         arrangements on own funds and capital and
+                                     Finally, we do not consider it appropriate to       leverage ratios.
+                                     increase the frequency of comparative disclosure
+Some of the information                                                                  Template IFRS 9-FL requires the disclosure of           No     amendments
+                                     to up to four times a year, nor do we believe this
+required is already included in                                                          information for one, two or three reference dates       were made as a
+                                     would be consistent with the presentation of
+other disclosure requirements.                                                           depending on the frequency with which institutions      result   of   this
+                                     comparative reference dates for other disclosures.
+                                                                                         are required to disclose information on own funds,      comment.
+Frequency of the disclosures.        We therefore suggest requiring all banks to
+                                                                                         leverage ratio and RWA. Therefore, the template
+                                     disclose comparative information for one
+                                                                                         does not increase the frequency with which
+                                     reference date per year. In our view, this would
+                                                                                         information has to be disclosed and it does not
+                                     also be consistent with the requirements of the
+                                                                                         require substantial additional resources or effort for
+                                     EBA guidelines on disclosure requirements for
+                                                                                         institutions. Furthermore, this information is
+                                     RWA under Part Eight of Regulation (EU) No
+                                                                                         beneficial for the users of information, ensures
+                                     575/2013 (see. page 57 of EBA/GL/2016/11: ëRWA
+                                                                                         compliance with international standards and
+                                     (T-1): RWA as disclosed in the previous interim
+                                                                                         facilitates      comparability        with         non-
+                                     period. As template EU OV1 is required to be
+                                                                                         EU international active banks.
+                                     disclosed with quarterly frequency, the RWA (T-1)
+                                     figure should be the figure disclosed at the end of
+                                     the previous quarterí).
+Reference       dates for the        Concerning the time dimension, we do not            Template IFRS 9-FL requires the disclosure of           No     amendments
+disclosure      of comparative       consider it appropriate to extend the time series   information for one, two or three reference dates,      were made as a
+                                                                                                                                                                24
+
+FINAL REPORT ON THE GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+                                                                                                                                                      Amendments to
+Comments                             Summary of responses received                          EBA analysis
+                                                                                                                                                      the proposals
+information.                         up to four times a year. Thus, we suggest that         depending on the frequency with which institutions        result     of      this
+                                     banks disclose comparative information for one         are required to disclose information on own funds,        comment.
+                                     reference date per year. We believe it would be        leverage ratio and RWA. Therefore, the template
+                                     consistent with the EBA Guidelines on disclosure       does not increase the frequency with which
+                                     requirements under Part Eight of Regulation (EU)       information has to be disclosed and it does not
+                                     No 575/2013 (see page 57 of EBA/GL/2016/11:            require substantial additional resources or effort for
+                                     ëRWA (T-1): RWA as disclosed in the previous           institutions. In addition, this information is beneficial
+                                     interim period. As template EU OV1 is required to      for the users of information, ensures compliance
+                                     be disclosed with quarterly frequency, the RWA (T-     with international standards and facilitates
+                                     1) figure should be the figure disclosed at the end    comparability with non-EU international active
+                                     of the previous quarterí)                              banks.
+                                     In principle, the disclosure of divergence resulting   The disclosure template fully follows the disclosure
+                                     from the application of IFRS 9 transitional            requirements in paragraph 8 of the regulation and
+                                     provisions should be limited to material facts and     the mandate for the EBA set in the same paragraph.
+                                     to parameters that are relevant for the capital                                                                  For             those
+                                     markets and the general public. In this connection,                                                              institutions    under
+                                     it should be noted that transitional provisions for                                                              the scope of the
+                                     the inclusion of AT1 and Tier 2 capital instruments,                                                             guidelines        that
+Information on transitional          pursuant to the CRR and Basel III, will remain                                                                   decide not to apply
+provisions with an impact on         relevant beyond 1 January 2018, thus leading to                                                                  the       transitional
+Additional Tier 1 and Tier 2         different indications of Tier 1 and total capital, the                                                           arrangements
+capital.                             relevant capital ratios, and the leverage ratio. We                                                              specified in Article
+Information redundancies.            believe that disclosing different phased-in ratios                                                               473a,              the
+                                     (with     and      without     IFRS 9     transitional                                                           requirement          to
+                                     arrangements), with the level of granularity                                                                     provide the reasons
+                                     proposed, would create not transparency but                                                                      behind this decision
+                                     general uncertainty.                                                                                             has been dropped.
+                                     Moreover, the proposed table would lead to             While the EBA acknowledges that some of the
+                                     significant redundancies: 9 of the proposed 16         information included in the disclosure template
+                                     lines are already included in existing disclosure      IFRS 9-FL is also included in other disclosure
+                                                                                                                                                                          25
+
+FINAL REPORT ON THE GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+                                                                                                                                                     Amendments to
+Comments                             Summary of responses received                         EBA analysis
+                                                                                                                                                     the proposals
+                                     templates. Therefore, disclosure should be limited    templates at EU level, this information is still needed
+                                     to truly relevant parameters, i.e. CET1, CET1 ratio   in Template IFRS 9-FL in order to disclose a complete
+                                     and leverage ratio (lines 1, 2, 8, 9, 15 and 16). We  picture of the impact of IFRS 9 transitional
+                                     thus propose deleting lines 3-7 and 10-14.            arrangements on own funds and capital and
+                                                                                           leverage ratio.
+                                     We consider extending disclosure to up to four
+                                     reference dates to be inappropriate; moreover, we     Template IFRS 9-FL requires the disclosure of
+                                     believe it would also be inconsistent with the        information for one, two or three reference dates
+                                     presentation of reference dates for other             depending on the frequency with which institutions
+                                     information that forms part of the disclosure.        are required to disclose information on own funds,
+                                     Hence we propose limiting disclosure to one           leverage ratio and RWAs. Therefore the template
+                                     reference date throughout. We believe that this       does not increase the frequency with which
+                                     would also be consistent with the requirements set    information has to be disclosed and does not require
+                                     out by EBA/GL/2016/11 pursuant to Part Eight of       substantial additional resources or effort for
+                                     Regulation (EU) No 575/2013 concerning RWA (see       institutions. In addition, this information is beneficial
+                                     page 57: ëRWA (T-1): RWA as disclosed in the          for the users of information, ensures compliance
+                                     previous interim period. As template EU OV1 is        with international standards and facilitates
+                                     required to be dis-closed with quarterly frequency,   comparability with non-EU international active
+                                     the RWA (T-1) figure should be the figure disclosed   banks.
+                                     at the end of the previous quarter.í)
+                                     Template        IFRS 9-FL     (Annex I)      contains
+                                     requirements concerning phased-in and fully
+                                     loaded disclosures. According to the described
+                                     scope of application, institutions that choose not
+                                                                                           The EBA agrees that there is no need to justify the
+                                     to apply the transitional arrangements should
+                                                                                           frontloading of the full implementation of IFRS 9.
+                                     disclose a narrative commentary explaining that
+                                     they are not applying the IFRS 9 or analogous ECLs
+                                     transitional arrangements, the reasons behind that
+                                     decision and that their own funds, capital ratios
+                                     and leverage ratio already reflect the full impact of
+                                     IFRS 9 or analogous ECLs. We agree with the
+                                                                                                                                                                   26
+
+FINAL REPORT ON THE GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+                                                                                                                                            Amendments to
+Comments                             Summary of responses received                        EBA analysis
+                                                                                                                                            the proposals
+                                     requirement for a ënot-applying-statementí as well
+                                     as a statement reflecting the full impact of IFRS 9.
+                                     In our opinion it is not reasonable to require
+                                     institutions to justify the full implementation of
+                                     IFRS 9. We believe stakeholders are more
+                                     interested in the reasons of making use of the
+                                     transitional arrangements than of applying the
+                                     fully-loaded approach. Therefore we propose
+                                     removing the disclosure requirements with regard
+                                     to the reasons for full IFRS 9 implementation. It
+                                     could be more useful to disclose the reasons for
+                                     the decision to apply the transitional arrangements
+                                     specified in Article 473a instead.
+                                     We agree with the content of the guidelines, but
+                                     we recommend, for more clarity and
+                                     comparability, requiring to disclose RWA on an                                                         No     amendments
+                                                                                          This proposal goes beyond the disclosure
+                                     IFRS 9 fully loaded basis, including a split by                                                        were made as a
+                                                                                          requirements set in the regulation and cannot
+                                     individual exposure classes (Article 112 CRR for SA                                                    result   of   this
+                                                                                          therefore be included in the guidelines.
+                                     and Article 147 for IRB); especially in SA, due to                                                     comment.
+                                     logic of allocation of risk weights in accordance
+                                     with Article 127, would be very useful.
+                                     We support the overall content of the draft
+                                     guidelines and the templates proposed in the
+                                     Consultation Paper and agree that the draft                                                            No     amendments
+                                     guidelines will contribute to increasing the                                                           were made as a
+                                     consistency and comparability of information                                                           result   of   this
+                                     disclosed in the context of IFRS 9 transitional                                                        comment.
+                                     arrangements.                                        The impact of transitional arrangements on Tier 2
+                                     The proposed quantitative template includes lines    capital is embedded in the data required in the
+                                                                                                                                                           27
+
+FINAL REPORT ON THE GUIDELINES ON UNIFORM DISCLOSURE OF
+IFRS 9 TRANSITIONAL ARRANGEMENTS
+                                                                                                                                                    Amendments to
+Comments                             Summary of responses received                           EBA analysis
+                                                                                                                                                    the proposals
+                                     to show CET1, Tier 1 and Total Capital figures. For     template, when asking institutions to disclose Tier 1
+                                     completeness, the EBA may want to consider              and total capital ratios with and without the impact
+                                     including lines on Tier 2 capital as well, particularly of transitional arrangements. The term ëfully loadedí
+                                     as IFRS 9 phase-in may have an impact on Tier 2         has not been used in order to avoid confusion as
+                                     capital. This is particularly the case for banks that   ëfully loadedí terminology is usually applied to refer
+                                     have an excess of accounting provisions over            to all transitional arrangements with an impact on
+                                     regulatory expected loss pre-IFRS 9 phase-in and        capital ratios.
+                                     for which that excess is eligible to be included in
+                                     Tier 2 Capital under CRR Article 62(d).
+                                     We would like to point out the differences in
+                                     terminology used in the March 2017 BCBS Pillar 3
+                                     disclosure requirements standard and the
+                                     proposed Guidelines. Specifically, we recommend
+                                     using the well-established term fully loadedù (as in
+                                     the BCBS standard) rather than the longer and
+                                     more ambiguous ëas if IFRS 9 transitional
+                                     arrangements were not appliedíù (as in the draft
+                                     guidelines).
+                                                                                                                                                                  28
+

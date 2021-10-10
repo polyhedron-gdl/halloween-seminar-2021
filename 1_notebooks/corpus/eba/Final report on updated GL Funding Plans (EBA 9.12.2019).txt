@@ -1,0 +1,876 @@
+ EBA/GL/2019/05
+ 9 December 2019
+Final Report
+Guidelines
+on harmonised definitions and templates for funding plans of
+credit institutions under Recommendation A4 of ESRB/2012/2
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS
+OF CREDIT INSTITUTIONS UNDER RECOMMENDATION A4 OF ESRB/2012/2
+Contents
+1. Executive summary                                                                          3
+2. Background and rationale                                                                   4
+3. Guidelines on harmonised definitions and templates for funding plans of credit institutions
+under Recommendation A4 of ESRB/2012/2                                                        7
+4. Accompanying documents                                                                    17
+4.1    Draft cost-benefit analysis/impact assessment                                         17
+4.2    Feedback on the public consultation                                                   21
+                                                                                               2
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS
+OF CREDIT INSTITUTIONS UNDER RECOMMENDATION A4 OF ESRB/2012/2
+1. Executive Summary
+1.        These draft guidelines are an update of the EBA guidelines on harmonised definitions and
+templates for funding plans of credit institutions under Recommendation A4 of ESRB/2012/2
+(EBA/GL/2014/04) issued on 19 June 2014. EBA/GL/2014/04 will be repealed from the date these
+draft guidelines come into force.
+2.        The update is based on experience gained through analysing the data received as well as
+due to the questions raised via the EBA Single Rulebook Q&A tool 1 . A detailed set of instructions
+has been included to facilitate harmonised implementation and reduce implementation burden.
+The templates have been revised and updated reflecting lessons learnt in analysing and validating
+banks’ funding plans (see reports published in 2017 and 2018 2 ) and aim to better align with the
+definitions used in Commission Implementing Regulation (EU) No 680/2014 (the Reporting
+Regulation) 3 .
+3.        A new template for forecasting the statement of profit or loss has been introduced, with
+the intention of monitoring trends over time in firms’ profitability and their impact in funding.
+1 The EBA Single Rulebook Q&A tool can be accessed at https://eba.europa.eu/single-rule-book-qa
+2 The reports can be accessed at https://eba.europa.eu/risk-analysis-and-data/risk-assessment-reports/thematic-reports
+3 Commission Implementing Regulation (EU) No 680/2014 of 16 April 2014 laying down implementing technical standards
+with regard to supervisory reporting of institutions according to Regulation (EU) No 575/2013 of the European Parliament
+and of the Council (OJ L 191, 28.6.2014, p. 1).
+                                                                                                                      3
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS UNDER
+RECOMMENDATION A4 OF ESRB/2012/2
+2. Background and rationale
+1. On 19 June 2014, the EBA issued guidelines on harmonised definitions and templates for funding
+    plans of credit institutions under Recommendation A4 of ESRB/2012/2 (EBA/GL/2014/04) 4 . These
+    guidelines provided harmonised definitions and templates for the funding plans of credit
+    institutions mainly as a response to the European Systemic Risk Board (ESRB) Recommendation
+    2012/02 5 on the funding of credit institutions.
+2. Based on the experience gained through assessing banks’ funding plans in 2017 and 2018 6 , and
+    from the questions raised via the EBA Single Rulebook Q&A tool 7 , it is clear that there is a need to
+    update the current templates and to provide detailed instructions.
+3. The majority of the changes aim to align the definitions and breakdowns used in the guidelines with
+    those used in the Financial Reporting Framework (FINREP). This will reduce uncertainty about its
+    implementation, increase comparability and facilitate better and more automatic validations of
+    data provided. This will result in an easier data production process for credit institutions and will
+    ultimately deliver better data quality.
+4. Other changes aim to improve the assessment of banks’ funding plans and the relevance of the
+    data provided for such assessments. These changes are described in more detail in the following
+    paragraphs.
+5. Funding plans should be reported on a consolidated basis following the prudential scope at the
+    highest level of consolidation in a Member State. The guidelines also clarify that the data should be
+    reported on an individual basis when the entities are not part of a prudential group. In addition,
+    competent authorities may also require data on an individual basis when deemed necessary for
+    assessing individual institutions’ funding. The updated guidelines also clarify that liquidity ratios
+    should be provided only when requested by Regulation 575/2013 and Commission Delegated
+    Regulation (EU) 2015/61 and following the scope of application of those regulations.
+6. The ESRB recommendation requires the EBA to assess the viability of funding plans for the Union
+    banking system, on an aggregated basis. In order to be able to do a proper analysis at that level,
+    the breakdown of the information between domestic and international activities is not enough and
+    therefore it is proposed to split the breakdown of banks’ international activities into ‘other EEA
+    countries activities’ and ‘non-EEA countries activities’. This also serves the objective of maintaining
+    a Union-wide view.
+4 The guidelines can be accessed at https://eba.europa.eu/regulation-and-policy/liquidity-risk/guidelines-on-harmonised-
+definitions-and-templates-for-funding-plans-of-credit-institutions/
+5       The       English       text      of       the         recommendation         can      be       accessed       at
+http://www.esrb.europa.eu/pub/pdf/recommendations/2012/ESRB_2012_2.en.pdf?04a855f6d5c296dd9ae9f6576d45bb33
+or     OJ    2013/C     119/01.     Versions    in    the      other   official   languages    may     be    found     at
+https://www.esrb.europa.eu/mppa/recommendations/html/index.en.htmlin the entry for 18 February 2013.
+6 The reports can be accessed at https://eba.europa.eu/risk-analysis-and-data/risk-assessment-reports/thematic-reports
+7 The EBA Single Rulebook Q&A tool can be accessed at https://eba.europa.eu/single-rule-book-qa
+                                                                                                                       4
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS UNDER
+RECOMMENDATION A4 OF ESRB/2012/2
+7. The current breakdowns of assets and liabilities in templates P01.01 and
+    P01.02 have proven to be too restricted to understand the forecast of the balance sheet, with
+    considerable amounts being provided as other assets and other liabilities. In order to tackle this
+    and to have better information on the funding plans of the entities, further breakdowns have been
+    included.
+8. On the asset side, the revised breakdown includes all counterparty sectors for loans and advances
+    (full alignment with FINREP table F 05.01) as well as debt securities and equity instruments (which
+    were included in ‘other assets’ under the original guidelines). In addition, information on non-
+    performing loans is also now required in order to understand the expected changes in the level of
+    non-performing exposures following the introduction of the EBA guidelines on management of non-
+    performing and forborne exposures. The forecast data input from credit institutions is expected to
+    indicate the institutions’ management strategies to achieve sustainable reduction of NPEs on their
+    balance sheets.
+9. On the liability side, a further breakdown of total long-term unsecured debt securities issued has
+    been incorporated. The breakdown includes different classes of issued debt instruments, i.e.
+    Additional Tier 1 instruments, Tier 2 instruments, subordinated instruments and senior
+    instruments, adding other long-term unsecured instruments as the remainder. These instruments
+    have different risk structures and therefore also different pricing. The issuance and outstanding
+    volumes of some of those instruments are directly related to the requirements issued by the
+    respective regulations (Regulation (EU) No 575/2013 – “CRR”/ Directive 2013/36/EU – “CRD” and
+    Directive 2014/59/UE – “BRRD”). For these reasons, the issuances and volumes of those different
+    types of debt instruments should presumably be planned separately by banks and not as a single
+    position. Such differentiation is also important for the validation of banks’ funding plans.
+10. Due to the significant effect that the liquidity coverage ratio (LCR) and the net stable funding ratio
+    (NSFR) could have on bank funding patterns, and in order to understand better their composition
+    and projection, forecasts of their main contributors are now requested.
+11. The issuance and redemptions of debt instruments, which were previously part of the balance-
+    sheet liabilities template, are now covered in a separate template that includes further breakdowns
+    of the instruments issued. The template reflects the composition of the liabilities, and thus
+    differentiates between the main classes of total long-term unsecured and secured debt securities
+    issued. In addition to the rows for the reporting of the maturing debt, the planned issuances for the
+    secured instruments are split between those instruments issued and not retained by the institution
+    and those that are retained. Retained instruments as part of an issuance are commonly used as
+    collateral, for instance for central banks. These instruments are therefore not placed on financial
+    markets, and should not need to be considered in any analysis related to primary market activity.
+    Clarifications in the instructions have also been added to indicate that maturing instruments include
+    those instruments that are contractually due to mature but also those bought back and redeemed
+    or cancelled by an institution, for instance as part of a liability management exercise.
+12. The template that covers public sector and central bank sources of funding has been further
+    extended and now also includes national and supra-national term repo funding programmes with
+    a maturity of less than 1 year, such as the ECB’s main refinancing operations. This expansion of the
+    template will make sure that the dependency on central bank funding is reflected in full.
+                                                                                                                  5
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS UNDER
+RECOMMENDATION A4 OF ESRB/2012/2
+    Information on the direct financing provided by the public sector to the real
+    economy by granting loans has been added, completing the view of public funding support. The
+    latter requirement addressed several comments and questions received.
+13. A complete new template on forecasting the statement of profit and loss has been introduced with
+    the intention of monitoring trends over time in firms’ profitability and their impact on funding. This
+    information enables the analysis of projected financial performance of the supervised entities and
+    the viability of the institution’s business model in accordance with paragraphs 72(b), 74 and 76 of
+    EBA/GL/2014/13 on common procedures and methodologies for the supervisory review and
+    evaluation process (the SREP Guidelines) 8 . Being part of the funding plan templates, planned
+    profitability can easily be set in relation to planned changes of assets and liabilities.
+14. During the next 2 years, the need to issue MREL-eligible instruments and replacements of maturing
+    central bank funding support for financial institutions are expected to be the key drivers for financial
+    institutions’ funding market trends. However, the current version of the funding plan templates
+    does not provide for any differentiation into different classes of unsecured and subordinated debt
+    securities issued. Such differentiation is of particular relevance to and importance for the analysis
+    of the funding plans and understanding the risks for banks’ funding, as they have different means
+    and purposes as well as risk and pricing levels in banks’ funding mix.
+15. Finally, the guidelines include some proportionality in order to reduce the reporting cost of small
+    and non-complex credit institutions, as defined in point 145 of paragraph 1 of Article 4 of the CRR.
+    Small and non-complex credit institutions, when they are requested to provide funding plan data
+    following these guidelines, will have to provide information neither on asset and liability
+    restructuring plans nor on assets and liabilities in foreign currency. Moreover, they will have to
+    report the forecast of a simplified statement of profit and loss account.
+8 The SREP Guidelines can be accessed at https://eba.europa.eu/-/eba-publishes-final-guidelines-on-srep-methodologies-
+and-processes
+                                                                                                                    6
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS
+UNDER RECOMMENDATION A4 OF ESRB/2012/2
+3. Guidelines on harmonised
+definitions and templates for funding
+plans of credit institutions under
+Recommendation A4 of ESRB/2012/2
+                                                                                                            7
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS
+UNDER RECOMMENDATION A4 OF ESRB/2012/2
+  EBA/GL/2019/05
+  09 December 2019
+Draft Guidelines
+on harmonised definitions and
+templates for funding plans of credit
+institutions under Recommendation of
+the European Systemic Risk Board of
+20 December 2012 (ESRB/2012/2)
+                                                                                                            8
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS
+UNDER RECOMMENDATION A4 OF ESRB/2012/2
+1. Compliance and reporting
+obligations
+Status of these guidelines
+1. This document contains guidelines issued pursuant to Article 16 of Regulation (EU)
+     No 1093/2010 9 . In accordance with Article 16(3) of Regulation (EU) No 1093/2010, competent
+     authorities and financial institutions must make every effort to comply with the guidelines.
+2. Guidelines set the EBA’s view of appropriate supervisory practices within the European System
+     of Financial Supervision or of how Union law should be applied in a particular area. Competent
+     authorities as defined in Article 4(2) of Regulation (EU) No 1093/2010 to whom guidelines apply
+     should comply by incorporating them into their practices as appropriate (e.g. by amending their
+     legal framework or their supervisory processes), including where guidelines are directed
+     primarily at institutions.
+Reporting requirements
+3. According to Article 16(3) of Regulation (EU) No 1093/2010, competent authorities must notify
+     the EBA whether they comply or intend to comply with these guidelines, or otherwise with
+     reasons for non-compliance, by 09.02.2020. In the absence of any notification by this deadline,
+     competent authorities will be considered by the EBA to be non-compliant. Notifications should
+     be sent by submitting the form available on the EBA website to compliance@eba.europa.eu
+     with the reference ‘EBA/GL/2019/05’. Notifications should be submitted by persons with
+     appropriate authority to report compliance on behalf of their competent authorities. Any
+     change in the status of compliance must also be reported to the EBA.
+4. Notifications will be published on the EBA website, in line with Article 16(3) of Regulation (EU)
+     No 1093/2010.
+9 Regulation (EU) No 1093/2010 of the European Parliament and of the Council of 24 November 2010 establishing a
+European Supervisory Authority (European Banking Authority), amending Decision No 716/2009/EC and repealing
+Commission Decision 2009/78/EC (OJ L 331, 15.12.2010, p. 12).
+                                                                                                             9
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS
+UNDER RECOMMENDATION A4 OF ESRB/2012/2
+2. Subject matter, scope and definitions
+Subject matter
+5. These guidelines specify the content, instructions and uniform formats for the reporting of
+     funding plans on the basis of paragraph 4 of Recommendation A of the Recommendation of
+     the European Systemic Risk Board of 20 December 2012 on funding of credit institutions (‘ESRB
+     Recommendations’ and ‘ESRB Recommendation A’) 10 .
+Scope of application
+6. Competent authorities should apply these guidelines on a consolidated basis in accordance
+     with Chapter 2 of Title II of Part One of Regulation (EU) No 575/2013 11 .
+7. Competent authorities should apply these guidelines on an individual basis in accordance with
+      Chapter 1 of Title II of Part One of Regulation (EU) No 575/2013 when the credit institutions
+      referred to in paragraph 9 are not part of a group subject to consolidated supervision pursuant
+      to Articles 111 and 112 of Directive 2013/36/EU 12 .
+8. Notwithstanding paragraphs 6 and 7, competent authorities may also apply these guidelines
+      on an individual basis in accordance with Chapter 1 of Title II of Part One of Regulation (EU)
+      No 575/2013 for all institutions.
+9. When applying these guidelines, competent authorities should ensure that the largest credit
+      institutions in terms of volume of assets in each Member State are covered, and that the
+      coverage amounts to at least 75% of the banking system’s total consolidated assets in that
+      Member State.
+10 Recommendation of the European Systemic Risk Board of 20 December 2012 on funding of credit institutions (OJ L
+119, 25.4.2013, p. 1).
+11 Regulation (EU) No 575/2013 of the European Parliament and of the Council of 26 June 2013 on prudential
+requirements for credit institutions and investment firms and amending Regulation (EU) No 648/2012 Text with EEA
+relevance (OJ L 176, 27.6.2013, p. 1).
+12 Directive 2013/36/EU of the European Parliament and of the Council of 26 June 2013 on access to the activity of credit
+institutions and the prudential supervision of credit institutions and investment firms, amending Directive 2002/87/EC
+and repealing Directives 2006/48/EC and 2006/49/EC (OJ L 176, 27.6.2013, p. 338).
+                                                                                                                     10
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS
+UNDER RECOMMENDATION A4 OF ESRB/2012/2
+Addressees
+10. These guidelines are addressed to competent authorities as defined in point (i) of point (2) of
+       Article 4 of Regulation (EU) No 1093/2010 and to credit institutions that report funding plans
+       to their competent authorities, in accordance with the national implementation framework of
+       the ESRB Recommendations and the scope of application of these guidelines.
+Definitions
+11. Unless otherwise specified, terms used and defined in Regulation (EU) No 575/2013, Regulation
+       (EU) No 680/2014 13 and Regulation (EU) 2018/1624 14 have the same meaning in the guidelines.
+13  Commission Implementing Regulation (EU) No 680/2014 of 16 April 2014 laying down implementing technical
+standards with regard to supervisory reporting of institutions according to Regulation (EU) No 575/2013 of the European
+Parliament and of the Council (OJ L 191, 28.6.2014, p. 1).
+14 Commission Implementing Regulation (EU) 2018/1624 of 23 October 2018 laying down implementing technical
+standards with regard to procedures and standard forms and templates for the provision of information for the purposes
+of resolution plans for credit institutions and investment firms pursuant to Directive 2014/59/EU of the European
+Parliament and of the Council, and repealing Commission Implementing Regulation (EU) 2016/1066 (OJ L 277, 7.11.2018,
+p. 1).
+                                                                                                                    11
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS
+UNDER RECOMMENDATION A4 OF ESRB/2012/2
+3. Implementation
+Date of application
+12. These guidelines apply from 31 December 2020.
+Repeal
+13. The EBA guidelines on harmonised definitions and templates for funding plans of credit
+     institutions under Recommendation A4 of ESRB/2012/2 (EBA/GL/2014/04) of 19 June 201415
+     are repealed with effect from 31 December 2020.
+15  The guidelines can be accessed at https://eba.europa.eu/regulation-and-policy/liquidity-risk/guidelines-on-
+harmonised-definitions-and-templates-for-funding-plans-of-credit-institutions/
+                                                                                                            12
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS
+UNDER RECOMMENDATION A4 OF ESRB/2012/2
+4. Requirements for reporting of
+funding plans
+14. Credit institutions should report their funding plans in accordance with the harmonised
+     instructions and templates referred to in Annex I and Annex II to these guidelines.
+15. Competent authorities should also provide the EBA with full transparency on the scope of
+     application of these guidelines and an explanation of how the guidance referred to in
+     paragraph 9 has been observed.
+4.1 Reporting format
+16. Credit institutions should submit the information referred to in these guidelines in the data
+     exchange formats and representations specified by competent authorities, respecting the data
+     point definition included in the data point model referred to in Annex XIV and the validation
+     formulae specified in Annex XV of Commission Implementing Regulation (EU) No 680/2014, as
+     well as the following specifications:
+     (a) information that is not required or not applicable should not be included in a data
+            submission;
+     (b) numeric values should be submitted as facts according to the following:
+         i.    data points with the data type ‘Monetary’ should be reported using a minimum
+               precision equivalent to millions of units;
+        ii.    data points with the data type ‘Percentage’ should be expressed as per unit with a
+               minimum precision equivalent to four decimals;
+       iii.    data points with the data type ‘Integer’ should be reported using no decimals and a
+               precision equivalent to units.
+17. The data submitted by the credit institutions should be associated with the following
+     information:
+     (a) reporting reference date and reference period;
+     (b) reporting currency;
+     (c) accounting standard;
+     (d) identifier of the reporting institution;
+     (e) level of application as individual or consolidated.
+                                                                                                            13
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS
+UNDER RECOMMENDATION A4 OF ESRB/2012/2
+4.2 Frequency, reporting reference date and remittance date
+18. Credit institutions should submit the information with an annual frequency.
+19. Credit institutions should report their funding plans in accordance with these guidelines by
+     15 March with a reference date of 31 December of the previous year.
+20. Where credit institutions are permitted by national laws to report their financial information
+     based on their accounting year-end, which deviates from the calendar year-end, the latest
+     available accounting year-end should be considered as the reference date.
+                                                                                                            14
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS
+UNDER RECOMMENDATION A4 OF ESRB/2012/2
+Annex I – Instructions
+                                                                                                            15
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS
+UNDER RECOMMENDATION A4 OF ESRB/2012/2
+Annex II – Templates
+                                                                                                            16
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS
+UNDER RECOMMENDATION A4 OF ESRB/2012/2
+4. Accompanying documents
+4.1 Draft cost-benefit analysis/impact assessment
+21. As per Article 16(2) of Regulation (EU) No 1093/2010 (EBA Regulation), any guidelines and
+     recommendations developed by the EBA shall be accompanied by an Impact Assessment (IA)
+     which analyses ‘the potential related costs and benefits’.
+22. This analysis presents the impact assessment of the main policy options included in the
+     Consultation Paper on the draft guidelines on harmonised definitions and templates for funding
+     plans of credit institutions under Recommendation A4 of ESRB/2012/2. The impact assessment
+     is high level and qualitative in nature.
+A. Problem identification
+23. Some issues were identified as part of the implementation of the EBA Guidelines on
+     harmonised definitions and templates for funding plans of credit institutions under
+     Recommendation A4 of ESRB/2012/2 (EBA/GL/2014/04), which were issued in 2014.
+     Specifically, the Q&A process and analysis of the data submitted made clear that some
+     clarifications and changes to the templates would be beneficial or in some cases indeed
+     necessary.
+24. Clarifications and changes relate to a lack of alignment with FINREP reporting templates,
+     insufficient granularity of data, missing information on Profit or Loss (P&L), and a lack of explicit
+     instructions for filling in the templates. Changes also relate to the structure of market funding
+     liabilities, mainly in the area of secured and unsecured debt securities, aiming to align them to
+     common debt market practice (issuers’ and investors’ views). Modifications of the latter
+     include for example splitting unsecured and subordinated funding into Additional Tier 1 (AT1),
+     Tier 2 (T2), non-preferred senior unsecured instruments and other unsecured instruments.
+B. Policy objectives
+25. These draft guidelines aim to address the identified issues through revised and new templates
+     and explicit instructions for filling out the templates. The aim is to improve clarity, enhance
+     data quality and reduce banks’ reporting burden in those areas where items overlap with
+     FINREP.
+C. Options considered, assessment of the options and preferred options
+26. Section C presents the main policy options discussed and the decisions made during the
+     development of the draft guidelines. Advantages and disadvantages, potential costs and
+                                                                                                            17
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS
+UNDER RECOMMENDATION A4 OF ESRB/2012/2
+      benefits of the policy options, and the preferred options resulting from this analysis are
+      reported.
+Remove reporting uncertainty: consistency of funding plan templates with FINREP
+27. Option 1a: For items included in both funding plan and FINREP reporting, make explicit
+      references to FINREP in the funding plans to ensure consistency. Apart from that, keep the
+      templates and guidelines unchanged.
+28. Option 1b: For items included in both funding plan and FINREP reporting, make explicit
+      references to FINREP in new instructions to the funding plans to ensure consistency, and fully
+      align the wording and definitions (by changing the wording in the funding plans where
+      necessary). In addition, introduce some changes in the funding plan templates to further
+      increase the alignment with FINREP.
+29. The current balance-sheet templates in the funding plan templates show several mis-
+      alignments with FINREP. Discrepancies in items’ definitions, titles and scope prevent more
+      streamlined and efficient production of the data required by banks. Improved consistency has
+      been one of the key motivations behind the adjustment of the funding plan templates.
+30. There are various ways to achieve this. Keeping the existing templates and merely establishing
+      references to the FINREP templates would imply minimum change in implementation practices;
+      however, it would require banks to go back and forth between FINREP and funding plan
+      templates. Importantly, it would only achieve a very limited degree of consistency. Option 1a
+      has therefore been eliminated.
+31. In addition to making references to FINREP, making targeted changes to the existing funding
+      plan templates allows a far greater degree of consistency. This is proposed by actually aligning
+      definitions and naming conventions of items included in both reporting frameworks with those
+      used in FINREP and adding some FINREP items to the funding plan scope. Newly added detailed
+      instructions also make references to FINREP. This ensures improved clarity for banks while
+      keeping the broader structure of the existing funding plan templates.
+32. Making changes to align the definitions and wordings directly in the funding templates, in
+      addition to providing references to FINREP, is viewed as more efficient, effective and user
+      friendly. Option 1b has been assessed as the preferred option.
+Filling data gaps and improving the relevance of the data
+33. Option 2a: Include new and more granular data items to reflect recent regulatory and market
+      developments.
+34. Option 2b: Stick to a more aggregated data presentation and keep the status quo.
+35. Data collection, analysis and developments in markets and the regulatory framework over
+      recent years have exposed several data gaps and room for improvement in the current funding
+                                                                                                            18
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS
+UNDER RECOMMENDATION A4 OF ESRB/2012/2
+     plan templates. In particular, regulatory developments have revealed the need to adapt the
+     collected data in order to be able to continue making meaningful and relevant analyses of the
+     market and banking sector going forward. These include for instance the reflection of different
+     instruments of debt securities issued, such as their split into AT1, T2, non-preferred senior
+     unsecured instruments and other unsecured instruments in actual data and the forecast years.
+36. It was assessed that meaningful and relevant analyses would not be possible if the templates
+     were kept in their current form under Option 2b. This was hence excluded.
+37. As part of the preferred Option 2a, several changes have therefore been proposed in the draft
+     new funding plan templates. These changes include a more granular split-up of various debt
+     securities under the liabilities table, adding details on the nominator and denominator of the
+     LCR and NSFR, more details on public funding sources, an additional breakdown of international
+     exposures into European Economic Area (EEA) and non-EEA, foreign exchange (FX) funding data
+     now taking into account any hedging done by the institution by means of FX forwards, FX swaps
+     or cross-currency swaps, and the inclusion of a template of a P&L forecast.
+D. Conclusion
+38. It is not possible to quantify the overall costs or benefits of the change in funding plan reporting
+     proposed through the draft guidelines and revised templates.
+39. However, the benefits of the amendments proposed in these draft guidelines on harmonised
+     definitions and templates for funding plans of credit institutions are expected to outweigh the
+     costs, not least given that they reflect comments and lessons learnt from the practical
+     application of the previous guidelines, and aim to address any deficiencies/issues that have
+     transpired from the previous templates. Most importantly, they aim to ensure that data
+     collection and analysis remain up to date with regulatory and market developments. The
+     revised templates should better reflect, for instance, banks’ approach to planning different
+     kinds of classes of debt securities issued (e.g. AT1, T2, non-preferred senior unsecured
+     instruments and other unsecured instruments), which in turn have different means and
+     purposes as well as risk levels in banks’ funding mix.
+40. Three key improvements of the draft guidelines can be highlighted in particular.
+      a) Reduce uncertainty and increase comparability of data: the instructions provided and the
+           alignment of definitions and wordings with FINREP templates (where applicable) will
+           ensure clarity for banks and improved comparability of data.
+      b) Ease the burden on banks by facilitating automatic validation of the data and enhancing
+           their quality: aligning the funding plan templates’ wordings and definitions with FINREP
+           templates (where applicable) should ease the reporting burden on banks and at the same
+           time improve data quality, as it should streamline the data-reporting process.
+                                                                                                            19
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS
+UNDER RECOMMENDATION A4 OF ESRB/2012/2
+      c) Improve the relevance of the assessment of funding plans: increased granularity and
+          additional data items – including a P&L forecast – in the draft guidelines and revised
+          templates enable a funding plan assessment that reflects the most relevant issues, market
+          and regulatory developments, and questions raised via the EBA Single Rulebook Q&A tool.
+                                                                                                            20
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS
+UNDER RECOMMENDATION A4 OF ESRB/2012/2
+4.2 Feedback on the public consultation
+41. The EBA publicly consulted on the draft proposal contained in this paper.
+42. The consultation period lasted for 2 months and ended on 5 May 2019. Seven responses were
+     received, of which six were published on the EBA website.
+43. This paper presents a summary of the key points and other comments arising from the
+     consultation, the analysis and discussion triggered by these comments, and the actions taken
+     to address them if deemed necessary.
+44. In many cases several industry bodies made similar comments or the same body repeated its
+     comments in response to different questions. In such cases, the comments and the EBA’s
+     analysis are included in the section of this paper where the EBA considers them most
+     appropriate.
+45. Changes to the guidelines have been incorporated as a result of the responses received during
+     the public consultation.
+Summary of key issues and the EBA’s response
+46. In general, the respondents welcomes the EBA’s review of the funding plans of credit
+     institutions.
+47. However, the following major concerns were raised by some respondents:
+     •    the reasoning for the alignment with FINREP;
+     •    the level of consolidation required for the provision of funding plans data;
+     •    the remittance date.
+The reasoning for the alignment with FINREP
+48. One respondent does not understand the alignment with FINREP, as it is not aligned with how
+     institutions manage their liquidity. The respondent considers the funding plan reports to be
+     parts of the liquidity reports and therefore suggests that the terms and concepts should be
+     aligned with liquidity.
+49. Another respondent considers that in most credit institutions the planning process is not
+     geared by FINREP items.
+50. However, the EBA considers that the funding plan guidelines are focused on coherent reporting
+     of planned assets and liabilities, as they are, for example, reflected in institutions’ balance
+     sheets. Making clear references to FINREP aims to increase comparability across time, across
+     Member States and across the EEA.
+                                                                                                            21
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS
+UNDER RECOMMENDATION A4 OF ESRB/2012/2
+The level of consolidation required for the provision of funding plans data
+51. Two respondents consider that the highest level of consolidation in a Member State following
+     the prudential scope of consolidation may not be the most appropriate for funding plan
+     reporting, either because this is not the way planning is done at the institutions or because the
+     different funding structures of different type of banks may give a non-meaningful picture of
+     funding when data are asked for at consolidated level.
+52. The EBA believes that applying the same level of consolidation aims to increase comparability
+     across time, across Member States and across the EEA. It also fosters the assessment of funding
+     plans at Union level on an aggregated basis (ESRB Recommendation A5).
+The remittance date
+53. Some respondents indicated that a later remittance date would allow firms with a December
+     year-end date sufficient time to provide more precise 3-year forecasts. To take this comment
+     into account, the EBA has postponed the remittance date to 15 March.
+54. A summary of these concerns together with a more detailed EBA analysis and the rest of the
+     feedback received is available in the table below.
+55. The EBA has carefully considered all responses and revised the guidelines where appropriate.
+                                                                                                            22
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS UNDER RECOMMENDATION A4 OF ESRB/2012/2
+Summary of responses to the consultation and the EBA’s analysis
+                                                                                                                                                       Amendments to
+  Comments                          Summary of responses received                            EBA analysis
+                                                                                                                                                       the proposals
+  General comments
+  Funding Plans (FP) reporting      While most of the stakeholders (four stakeholders        The funding plan guidelines are focused on a coherent No amendment.
+  alignment with FINREP, and the    explicitly agree and one states no objection)            reporting of planned assets and liabilities, as they are,
+  objective and rationale of the    support the harmonisation and alignment of the FP        for example, reflected in institutions’ balance sheets.
+  FP reports                        with FINREP to develop further consistency in
+                                                                                             Planned equity and the planned profit and loss
+                                    reporting, two stakeholders questioned the
+                                                                                             account presumably form an integral part of banks’
+                                    purpose of the FP proposal in relation to monitoring
+                                                                                             planning process and as such are an integral part of
+                                    the liquidity risk profiles of the institutions.
+                                                                                             the funding plan guidelines. This is reflected in the
+                                    The main arguments against the alignment are the fact that the planned profit and loss account was
+                                    following:                                               added to the funding plan guidelines and not to
+                                                                                             FINREP.
+                                    i) The requested data are more suited to a 3-years-
+                                    forward balance sheet given budget assumptions or The comparability with FINREP aims to ensure
+                                    to a resolution plan than to the way institutions common definitions and a common understanding.
+                                    manage their liquidity. It is complicated to reconcile The comparability with FINREP also aims to ensure
+                                    FP reports with liquidity-reporting definitions and that forecast data can be compared with historical
+                                    breakdowns, of which the data are yet to be used to data (historical volumes and asset composition,
+                                    complete the templates and the scope and historical liability composition, historical profitability
+                                    methodologies are different.                             and its composition).
+                                    ii) Institutions’ management and planning are            This approach of having clear references to FINREP, as
+                                    carried out on the basis of the items relevant to        well as applying the same level of consolidation, aims
+                                    commercial law and for internal management               to increase comparability across time, across
+                                    purposes. There are no FINREP-based management           Member States and across the EEA.
+                                    requirements.
+                                    iii) The use of FINREP data as a reference to
+                                    complete funding plan templates obliges
+                                    institutions to dedicate people to the completion of
+                                                                                                                                                                     23
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS UNDER RECOMMENDATION A4 OF ESRB/2012/2
+                                                                                                                                                   Amendments to
+  Comments                          Summary of responses received                            EBA analysis
+                                                                                                                                                   the proposals
+                                    the funding plan template, whereas funding plan
+                                    templates are considered disconnected from risk
+                                    management figures and not re-used for the
+                                    management of institutions. To better assess the
+                                    institutions’ funding plans, they suggest reviewing
+                                    the funding plan reporting to better align its
+                                    components with definitions actually used by
+                                    operational teams within the institutions to steer
+                                    the funding plans and, more broadly, the liquidity
+                                    position on a prospective basis. The alignment has
+                                    unintended consequences and creates additional
+                                    burden by widening the scope.
+                                    iv) Given the liquidity nature of the FP reporting, the
+                                    breakdown of assets and liabilities should be
+                                    aligned with liquidity definitions of the LCR, NSFR or
+                                    ALMM (contractual maturity ladder template for
+                                    instance). It is the best solution to make sure that
+                                    the institutions take ownership of these funding
+                                    plan regulatory templates within their internal
+                                    management policies.
+  Remittance date                   Some stakeholders suggested moving the proposed          The EBA acknowledges time constraints banks may       The EBA amended
+                                    submission date (28 February) to a later date, e.g.      have in reporting accurate forecasts. Therefore, the  the relevant text in
+                                    31 March or 30 April. According to the comments          EBA has revised the remittance date for banks’ FP     the       guidelines
+                                    this would allow firms with a December year-end          reporting from 28 February to 15 March.               accordingly.
+                                    date to have sufficient time to provide more precise
+                                    3-year forecasts. One stakeholder considers that a
+                                    4-month period between the reference date and
+                                    submission date would strike an appropriate
+                                    balance between the immediacy of data and its
+                                    accuracy and precision.
+                                                                                                                                                                   24
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS UNDER RECOMMENDATION A4 OF ESRB/2012/2
+                                                                                                                                                     Amendments to
+  Comments                          Summary of responses received                             EBA analysis
+                                                                                                                                                     the proposals
+                                    It was also stated that within the first 2 months of a
+                                    year banks prepare their financial statements and
+                                    for their auditing.
+  Level of consolidation            Two stakeholders commented on the level of                The approach of having clear references to FINREP, as  No amendment.
+                                    consolidation for reporting.                              mentioned above, as well as applying the same level
+                                                                                              of consolidation, as the CRR requires FINREP financial
+                                    One stakeholder indicated that, in practice,
+                                                                                              reporting only on a consolidated basis, aims to
+                                    planning processes take place in some cases at
+                                                                                              increase comparability across time, across Member
+                                    institution level or at consolidated group level
+                                                                                              States and across the EEA. It also fosters the
+                                    under commercial law, but not at consolidated
+                                                                                              assessment of funding plans at Union level on an
+                                    group level under supervisory law, since at this
+                                                                                              aggregated basis (ESRB Recommendation A5).
+                                    level, taking into account the entities specifically
+                                    included, no management requirement may
+                                    effectively exist. He indicated that this is also in line
+                                    with the view of the Banking Stakeholder Group
+                                    when the EBA guidelines where introduced in 2014,
+                                    i.e. the scope of consolidation should be based on
+                                    the bank’s internal processes. The stakeholder
+                                    therefore requested that the reporting requirement
+                                    be maintained at the ‘appropriate level of
+                                    consolidation’, as in the current guidelines.
+                                    Similarly, another stakeholder indicated that there
+                                    may be differences in the funding structures of
+                                    different types of credit institutions and a
+                                    consolidated report may not be representative.
+                                    Therefore, he asked for supervisory discretion
+                                    regarding the level of consolidation, whether
+                                    individual or consolidated.
+  Proportionality                   According to one comment, the requirement from The EBA agrees that some proportionality could be                  The   EBA    has
+                                    the ESRB that 75% of bank assets in a market should achieved. Therefore, when a small and non-complex            amended        the
+                                                                                                                                                                   25
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS UNDER RECOMMENDATION A4 OF ESRB/2012/2
+                                                                                                                                                      Amendments to
+  Comments                          Summary of responses received                            EBA analysis
+                                                                                                                                                      the proposals
+                                    be included in funding plans reports implies that in     institution, as defined in Article 4(145) of the CRR, is instructions    and
+                                    some countries not only big banks are covered by         required to report FP data, that institution will be templates
+                                    this reporting obligation. Therefore, the                exempted from the reporting of templates P02.06 accordingly.
+                                    stakeholder suggested graduating the size of the         (Assets and liabilities in foreign currency), and P02.07
+                                    reporting templates for proportionality reasons.         and P02.08 (Assets and liabilities restructuring plan).
+                                    Such graduation would be conceivable at the              In addition, a specific simplified P&L template has
+                                    following points: LCR forecast, pricing and P&L. The     been created for small and non-complex institutions.
+                                    stakeholder referred to the proportionality
+                                    principle as one of the criteria for implementing
+                                    ESRB          recommendations          (ESRB/2012/2,
+                                    implementation criterion 1.c).
+  P&L template (P04.00)             One stakeholder argued that template P04.00              The template included in the funding plan reports is     The      EBA    has
+                                    (Statement of profit and loss) requires a detailed       already a simplified version of the one in FINREP. In    amended         the
+                                    split in the 3-year forecast of income and expenses.     addition, a specific simplified P&L template has been    instructions    and
+                                    Such a detailed split is not necessarily standard        created for small and non-complex institutions.          templates
+                                    practice and the stakeholder would prefer a less                                                                  accordingly       to
+                                    detailed statement of the forecast. It stated that a                                                              include a simplified
+                                    solution could be reporting on total income,                                                                      template for small
+                                    expenses, provisions and total profit and loss before                                                             and non-complex
+                                    and after tax in the 3-year forecast. Alternatively,                                                              institutions.
+                                    the reporting on detailed forecasts could be on a
+                                    best effort basis.
+  Responses to questions in Consultation Paper EBA/CP/2019/02
+  Question 1 (on template P01.02 - Liabilities)
+  1.1 Do respondents agree with the proposed breakdown of ‘Total long-term unsecured (original maturity >=1 year)”?
+  1.2 Otherwise, which breakdown would you suggest?
+                                                                                                                                                                     26
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS UNDER RECOMMENDATION A4 OF ESRB/2012/2
+                                                                                                                                                       Amendments to
+  Comments                          Summary of responses received                            EBA analysis
+                                                                                                                                                       the proposals
+  Proposed breakdown of ‘Total All stakeholders agreed with the proposed The EBA acknowledges the agreement.                                           No amendments.
+  long-term unsecured (original breakdown of the total long-term unsecured debt in
+                                                                                             In terms of the use of the original maturity, the EBA
+  maturity = 1 year)’               template on template P01.02.
+                                                                                             believes that this concept reflects the funding
+                                    However, two stakeholders proposed the structure of the institutions and presents an overview
+                                    replacement of ‘original maturity’ with ‘residual of the composition of their funding more accurately.
+                                    maturity’. They argued that this would be in line This would also allow the users of the data to see the
+                                    with other regulatory metrics on liquidity.              changes in the funding structure, e.g. a shift from
+                                                                                             long-term to short-term funding.
+  Further                           One stakeholder argued the breakdown between             Please note that the ESRB recommendation requires         The      EBA  has
+  clarification/consistency         ‘domestic activities’, ‘other EEA countries activities’  the EBA to assess the viability of funding plans for the  amended        the
+                                    and ‘non-EEA countries activities’ is burdensome         Union banking system, on an aggregated basis. In          instructions
+                                    and does not reflect the way institutions manage         order to be able to do a thorough analysis, the           accordingly.
+                                    their liquidity on a prospective basis.                  breakdown of the information between domestic and
+                                                                                             international activities is not enough and therefore it
+                                    It should be specified whether the requirement to
+                                                                                             is proposed to split the breakdown of banks’
+                                    distinguish between domestic, other EEA and non-
+                                                                                             international activities into ‘other EEA countries
+                                    EEA activities applies to the country of residence of
+                                                                                             activities’ and ‘non-EEA countries activities’. This also
+                                    the counterparty or to the booking country of the
+                                                                                             serves the objective to maintain a Union-wide view.
+                                    transaction.
+                                                                                             This argument is presented in the ‘Background and
+                                                                                             rationale section’ of the CP.
+                                                                                             The EBA agrees that further clarification is needed for
+                                                                                             transactions in relation to other EEA and non-EEA
+                                                                                             activities.
+  Further      clarification    on  On template P01.02, the breakdown related to the The EBA acknowledges the comment and will not                     The      EBA  has
+  impairment of NPLs                accumulated impairment of non-performing loans require information on the accumulated impairment                   amended        the
+                                    should be removed because it does not reflect the of non-performing loans.                                         instructions
+                                    way institutions manage their liquidity on a                                                                       accordingly.
+                                    prospective basis.
+                                                                                                                                                                     27
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS UNDER RECOMMENDATION A4 OF ESRB/2012/2
+                                                                                                                                                     Amendments to
+  Comments                            Summary of responses received                          EBA analysis
+                                                                                                                                                     the proposals
+  Further                             One stakeholder raised specific points on P01.02:      The EBA is of the view that some comments are           No amendments.
+  clarification/consistency                                                                  country specific and is not in favour of including
+                                      • Row 010 of P01.02: in order to be consistent with
+                                                                                             country-specific aspects in the templates. For
+                                      row 020 in P01.01, change ‘Repurchase
+                                                                                             example, requesting additional data on insured loans
+                                      agreements’ into ‘Repurchase borrowings’.
+                                                                                             may raise further questions around the type of
+                                      • Row 070 of P01.02: insured loans (i.e. loans whose insurance and the product that is insured.
+                                      performance is guaranteed by a dedicated
+                                                                                             Secondly, for convenience and transparency
+                                      counterparty) should be added.
+                                                                                             purposes, the EBA is aligning, as much as possible, the
+                                                                                             concepts used in the FP templates with the existing
+                                                                                             reporting standards, i.e. FINREP. To this end, the EBA
+                                                                                             aims to keep the concepts constant. In this case, the
+                                                                                             EBA will keep the wording ‘repurchase agreements’
+                                                                                             as it is.
+  Question 2 (on template P02.02 - Public sector and Central Bank sources of funding)
+  Template P02.02 has been expanded to include additional public sector and Central Bank sources of funding. Do respondent believe that now this template covers
+  all forms of public sector and central bank sources of funding or should additional forms of sources be included?
+  Expansion of the scope for          Stakeholders do not have objections to the
+                                                                                             The EBA acknowledges the agreement.                     No amendments.
+  public sector coverage              proposed coverage and they agreed with it.
+  Question 3 (on template P02.06 - Two Largest Significant Currencies and Reporting Currency)
+  3.1 Do respondents agree that information on currency breakdown after hedging (template P02.06) will provide effective insight into possible currency
+  mismatches?
+  3.2 Does the information reflect banks’ FX management approach or do you see the need to request more information to better reflect banks’ FX management?
+  3.3 Are the instructions clear enough?
+  3.4 If the instructions are not clear please indicate how they could be improved.
+                                                                                                                                                                   28
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS UNDER RECOMMENDATION A4 OF ESRB/2012/2
+                                                                                                                                                        Amendments to
+  Comments                          Summary of responses received                            EBA analysis
+                                                                                                                                                        the proposals
+  Currency breakdown and FX All stakeholders identified various shortcomings of The EBA acknowledges the comments. Following the                        The EBA amended
+  management approach               the proposed template. They also requested further feedback received in the CP, the EBA has amended                 the template and the
+                                    clarifications in the instructions document.             the template. Financial assets and liabilities should be   instructions
+                                                                                             reported before hedging through, for example, FX           accordingly.
+                                    Some stakeholders argued that banks often
+                                                                                             swaps, FX forwards and cross-currency swaps, i.e. as
+                                    undertake portfolio hedging and so the
+                                                                                             it is in the current funding plans report. The section
+                                    classification of asset and liability components only
+                                                                                             will be called ‘Assets and liabilities in foreign currency
+                                    may give regulators an erroneous picture, as that
+                                                                                             and reporting currency’.
+                                    would not appropriately represent the bank’s
+                                    currency management. If the template is to be
+                                    retained, some stakeholders recommended the
+                                    addition of a separate, dedicated FX hedging
+                                    category, with one line for assets and one line for
+                                    liabilities.
+                                    One stakeholder commented that the effect of FX
+                                    hedging should not be taken into account in each
+                                    line item of template P02.06. It would be more
+                                    relevant to present all rows without the effect of FX
+                                    hedging and a row ‘FX hedging’. In fact, FX hedging
+                                    is not generally performed transaction by
+                                    transaction but based on the overall FX exposure
+                                    (macro-hedge).
+  Clarification on largest material One stakeholder requested clarification on ‘largest      The EBA agrees with the suggestion and further             The EBA made
+  currency                          material currency’. They asked if this has the same      alignment of the terminology and definitions. The          necessary
+                                    meaning as ‘significant currency’ defined in the         template and instructions are now using ‘significant       amendments         to
+                                    liquidity regulations (i.e. Article 415(1) of            currency’ as defined in Article 415(1) of the CRR.         template P02.06 and
+                                    Regulation (UE) 575/2013 and Article 3 of                Please also note that, for the purposes of this            related instructions.
+                                    Delegated Regulation (UE) 2015/61). If yes, then         template, institutions will report the two largest
+                                    they asked for an alignment of the wording.              ‘significant currencies’ as well as the reporting
+                                                                                             currency.
+                                                                                                                                                                         29
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS UNDER RECOMMENDATION A4 OF ESRB/2012/2
+                                                                                                                                                    Amendments to
+  Comments                          Summary of responses received                            EBA analysis
+                                                                                                                                                    the proposals
+  Clarification    on      currency One stakeholder asked for clarification of the The FP report used the term ‘currency mismatch’ as it            No amendments.
+  mismatch                          definition of ‘currency mismatch’, i.e. it asked stands in the CRR. However, as explained in the EBA
+                                    exactly how a currency mismatch is measured.             analysis of the comments on ‘Currency breakdown
+                                                                                             and FX management approach’ above, the template
+                                                                                             now will collect information not on currency
+                                                                                             mismatches but on assets and liabilities in foreign
+                                                                                             currencies and the reporting currency before
+                                                                                             hedging.
+  Further      clarification    on One stakeholder recognised that banks should              The reporting of currency mismatch also in the         No amendments.
+  reporting currency in currency provide the information on structural currency              (home) reporting currency aims to reflect the idea
+  mismatch                          mismatch not only for significant foreign currencies     that an institution might refinance business in the
+                                    but also for the reporting currency. The stakeholder     country of residence through bonds denominated in
+                                    questioned how currency mismatches in the (home)         currencies other than the one of that country.
+                                    reporting currency can occur and therefore               However, as explained in the EBA analysis of the
+                                    requested an explanation or clarification from the       comments on ‘Currency breakdown and FX
+                                    EBA in this regard.                                      management approach’ above, the template now will
+                                                                                             collect information not on currency mismatches but
+                                                                                             on assets and liabilities in foreign currencies before
+                                                                                             hedging.
+  Question 4 (on template P05.00 - Debt securities: issuances and redemptions)
+  Do respondents agree with the possibility to have “retained issuance” for each of the instruments included in template P05.00? If not, could you please indicate
+  which ones should be maintained and which ones should not and the reasons for it?
+  Retained issuance                 While some stakeholders indicated that this is           The EBA agrees with the comment. The EBA will          The EBA amended
+                                    applicable to secured instruments, others argued         include ‘retained issuances’ data for secured debt     template P05.00.
+                                    that only covered bonds can be retained.                 instruments only.
+                                    One stakeholder questioned the existence of
+                                    forecast figures for retained and non-retained debt
+                                                                                                                                                                   30
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS UNDER RECOMMENDATION A4 OF ESRB/2012/2
+                                                                                                                                                   Amendments to
+  Comments                           Summary of responses received                           EBA analysis
+                                                                                                                                                   the proposals
+                                     securities amounts and hence the possibility of the
+                                     institutions reporting them.
+  Question 5 (on template P05.00 - Debt securities: issuances and redemptions)
+  5.1 Which methodology do you apply to calculate carrying amounts for future issuances (please describe as detailed as possible and highlight any problem with
+  that calculation)?
+  5.2 Are you of the opinion that reporting maturing and new issuance volumes (as defined in P05.00) as nominal amounts would better reflect your planning
+  procedure and approach and do you believe that this alternative is preferable?
+  Carrying amounts          versus While most stakeholders consider the use of The EBA will continue to ask for the carrying amount                No amendment.
+  nominal amounts                    nominal amounts for the purposes of planning for consistency with FINREP and the template on
+                                     issuances more relevant, some argued in favour of liabilities in the funding plans report.
+                                     gross carrying amount for the funding plans
+                                     reporting for further alignment with FINREP.
+  Question 6 (on template P05.00 - Debt securities: issuances and redemptions)
+  6.1 Do respondents believe that these movements [from one category to another] could occur too often or be big enough so that including them as inflows or
+  outflows as explained above and in the instructions may distort the analysis of the information?
+  6.2 If the answer to the 6.1 is positive, which would be the best way for the respondents to report this information?
+  Movements of instruments Stakeholders do not believe that these movements The EBA acknowledges the comments received.                            No amendments.
+  between categories                 could occur too often or be big enough that they
+                                     would lead to any distortion in the analysis of the
+                                     information.
+  Question 7 (on alignment with FINREP as regards assets and liabilities)
+  7.1 Do respondents agree with amending the templates to align definitions with FINREP? Are there other definitions that could be further aligned with other parts
+  of the EBA supervisory reporting framework?
+                                                                                                                                                                 31
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS UNDER RECOMMENDATION A4 OF ESRB/2012/2
+                                                                                                                                                     Amendments to
+  Comments                          Summary of responses received                            EBA analysis
+                                                                                                                                                     the proposals
+  7.2 Do respondents agree that alignment of definitions will facilitate the reporting production process?
+  7.3 Are there other aspects in the template design or further integration with FINREP reporting technical package that could help in the data production process?
+  Alignment with FINREP             Most stakeholders support the alignment with             The EBA acknowledges the comments received.             No amendments.
+                                    FINREP.
+                                                                                             See also the comment and the EBA analysis of the
+                                                                                             general comment ‘FP reporting alignment with
+                                                                                             FINREP, and the objective and rationale of the FP
+                                                                                             reports’ above.
+  Further clarification/alignment   One stakeholder requested the inclusion of exact         With the introduction of the instructions document,     No amendments.
+  on referencing to FINREP          FINREP references to FINREP data points in the           the exact references to FINREP templates have been
+                                    format ‘Form.Column.Row’ especially for the              deleted while the reference to the FINREP
+                                    reporting lines ‘050 Other Financial assets’ and ‘110    instructions are kept. Due to the different timing of
+                                    other Financial Liabilities’. In addition to that,       the updates of the two reporting frameworks, it is not
+                                    further information is needed on natural hedges.         desirable to make direct mapping to data points in the
+                                                                                             guidelines. However, the EBA will design the
+                                                                                             validation rules so that there is a cross-check between
+                                                                                             the two reporting frameworks. The validation rules,
+                                                                                             as always, will be available on the EBA website.
+  Accounting standards              On the instructions document, one stakeholder            Validation rules for the purposes of FP reporting, as   No amendments.
+                                    highlighted that, unlike for banks applying IFRS for     mentioned above, will account for institutions
+                                    accounting purposes, for banks applying nGAAP            reporting FINREP under nGAAP in accordance with
+                                    there is a lack of reference to FINREP templates.        Annex 4 of Commission Implementing Regulation
+                                                                                             (EU) No 680/2014.
+  Further clarification/alignment One stakeholder commented that instructions lack The instructions have been further clarified. Note that           The      EBA  has
+                                    accuracy. For example, Assets (P01.01), Row 010: they should read ‘cash balances and cash balances at            amended
+                                    the heading says ‘Cash and cash balances at central central banks’.                                              instructions
+                                    banks’, whereas the instruction refers solely to the                                                             accordingly.
+                                    definition of cash balances at central banks. It is not
+                                                                                                                                                                   32
+
+FINAL REPORT ON GUIDELINES ON HARMONISED DEFINITIONS AND TEMPLATES FOR FUNDING PLANS OF CREDIT INSTITUTIONS UNDER RECOMMENDATION A4 OF ESRB/2012/2
+                                                                                                                                                   Amendments to
+  Comments                          Summary of responses received                            EBA analysis
+                                                                                                                                                   the proposals
+                                    clear what the report is requesting in the designated
+                                    cell. Is it only cash balances at central banks or
+                                    Including cash balances?
+                                    They also questioned other demand deposits that
+                                    are included in FINREP reporting. Should the
+                                    reporter need to consider them as well?
+                                                                                                                                                                 33
+

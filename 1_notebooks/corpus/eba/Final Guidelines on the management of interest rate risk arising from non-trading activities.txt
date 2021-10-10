@@ -1,0 +1,1549 @@
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+ EBA/GL/2018/02
+ 19 July 2018
+Guidelines
+on the management of interest rate risk
+arising from non-trading book activities
+                                                   1
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+Abbreviations
+ ALCO          asset and liability management committee
+ ALM           asset and liability management
+ BCBS          Basel Committee on Banking Supervision
+ BSG           Banking Stakeholder Group
+ CET1          Common Equity Tier 1
+ CSRBB         credit spread risk from non-trading book activities
+ CRD           Capital Requirements Directive (Directive 2013/36/EU)
+ CRR           Capital Requirements Regulation (Regulation (EU) No 575/2013)
+ EBA           European Banking Authority
+ EaR           earnings at risk
+ EV            economic value
+ EVaR          economic value at risk
+ EVE           economic value of equity
+ FVOCI         fair value through other comprehensive income
+ ICAAP         Internal Capital Adequacy Assessment Process
+ IFRS 9        International Financial Reporting Standard 9 – Financial instruments
+ IMS           internal measurement system
+ IR            interest rate
+ IRRBB         interest rate risk arising from the banking book (referred to in CRD as interest rate risk arising
+               from non-trading book activities)
+ IT            information technology
+ MIS           management information system
+ NII           net interest income
+ NMD           non-maturity deposit
+ NPE           non-performing exposure
+ P&L           profit and loss
+ QIS           quantitative impact study
+ SREP          supervisory review and evaluation process
+                                                                                                                 2
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+1. Compliance and reporting
+obligations
+Status of these guidelines
+1. This document contains guidelines issued pursuant to Article 16 of Regulation (EU)
+     No 1093/20101. In accordance with Article 16(3) of Regulation (EU) No 1093/2010, competent
+     authorities and financial institutions must make every effort to comply with the guidelines.
+2. Guidelines set the EBA view of appropriate supervisory practices within the European System
+     of Financial Supervision or of how Union law should be applied in a particular area. Competent
+     authorities as defined in Article 4(2) of Regulation (EU) No 1093/2010 to whom guidelines apply
+     should comply by incorporating them into their practices as appropriate (e.g. by amending their
+     legal framework or their supervisory processes), including where guidelines are directed
+     primarily at institutions.
+Reporting requirements
+3. According to Article 16(3) of Regulation (EU) No 1093/2010, competent authorities must notify
+     the EBA whether they comply or intend to comply with these guidelines, or otherwise with
+     reasons for non-compliance, by (dd.mm.yyyy). In the absence of any notification by this
+     deadline, competent authorities will be considered by the EBA to be non-compliant.
+     Notifications should be sent by submitting the form available on the EBA website to
+     compliance@eba.europa.eu with the reference ‘EBA/GL/2018/xx’. Notifications should be
+     submitted by persons with appropriate authority to report compliance on behalf of their
+     competent authorities. Any change in the status of compliance must also be reported to the
+     EBA.
+4. Notifications will be published on the EBA website, in line with Article 16(3).
+1 Regulation (EU) No 1093/2010 of the European Parliament and of the Council of 24 November 2010 establishing a
+European Supervisory Authority (European Banking Authority), amending Decision No 716/2009/EC and repealing
+Commission Decision 2009/78/EC, (OJ L 331, 15.12.2010, p.12).
+                                                                                                              3
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+2. Subject matter, scope and definitions
+Subject matter and scope of application
+5. These guidelines specify:
+               (a) the systems to be implemented by institutions for the identification, evaluation
+                    and management of the interest rate risk arising from the non-trading book
+                    activities, also referred to as interest rate risk arising from the banking book,
+                    (IRRBB) referred to in Article 84 of Directive 2013/36/EU;
+               (b) institutions’ internal governance arrangements in relation to the management of
+                    IRRBB;
+               (c) sudden and unexpected changes in the interest rate in accordance with
+                    Article 98(5) of Directive 2013/36/EU for the purposes of the review and evaluation
+                    performed by competent authorities;
+               (d) general expectations for the identification and management of credit spread risk
+                    in the non-trading book (CSRBB).
+Addressees
+6. These guidelines are addressed to competent authorities referred to in point (i) of Article 4(2)
+      of Regulation (EU) No 1093/2010, and to financial institutions referred to in Article 4(1) of that
+      regulation which are also institutions in accordance with point 3 of Article 4(1) of Regulation
+      (EU) No 575/2013.
+Definitions
+7. Unless otherwise specified, terms used and defined in Directive 2013/36/EU2 and in Regulation
+      (EU) No 575/20133 have the same meaning in the guidelines. In addition, for the purposes of
+      these guidelines, the following definitions apply:
+  Interest rate risk arising from non-trading                   The current or prospective risk to both the
+  book activities                                               earnings and the economic value of an
+                                                                institution arising from adverse movements in
+                                                                interest rates that affect interest rate sensitive
+2 Directive 2013/36/EU of the European Parliament and of the Council of 26 June 2013 on access to the activity of credit
+institutions and the prudential supervision of credit institutions and investment firms, amending Directive 2002/87/EC
+and repealing Directives 2006/48/EC and 2006/49/EC (1) - OJ L 176, 27.6.2013.
+3  Regulation (EU) No 575/2013 of the European Parliament and of the Council of 26 June 2013 on prudential
+requirements for credit institutions and investment firms and amending Regulation (EU) No 648/2012 – OJ L 176,
+27.6.2013.
+                                                                                                                      4
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+                                                   instruments, including gap risk, basis risk and
+                                                   option risk.
+ Interest rate sensitive instruments               Assets, liabilities and off-balance-sheet items in
+                                                   the non-trading book, excluding assets
+                                                   deducted from CET1 capital, e.g. real estate or
+                                                   intangible assets or equity exposures in the
+                                                   non-trading book.
+ Gap risk                                          Risk resulting from the term structure of
+                                                   interest rate sensitive instruments that arises
+                                                   from differences in the timing of their rate
+                                                   changes, covering changes to the term
+                                                   structure of interest rates occurring
+                                                   consistently across the yield curve (parallel
+                                                   risk) or differentially by period (non-parallel
+                                                   risk).
+ Basis risk                                        Risk arising from the impact of relative changes
+                                                   in interest rates on interest rate sensitive
+                                                   instruments that have similar tenors but are
+                                                   priced using different interest rate indices.
+                                                   Basis risk arises from the imperfect correlation
+                                                   in the adjustment of the rates earned and paid
+                                                   on different interest rate sensitive instruments
+                                                   with otherwise similar rate change
+                                                   characteristics.
+ Option risk                                       Risk arising from options (embedded and
+                                                   explicit), where the institution or its customer
+                                                   can alter the level and timing of their cash
+                                                   flows, namely the risk arising from interest rate
+                                                   sensitive instruments where the holder will
+                                                   almost certainly exercise the option if it is in
+                                                   their financial interest to do so (embedded or
+                                                   explicit automatic options) and the risk arising
+                                                   from flexibility embedded implicitly or within
+                                                   the terms of interest rate sensitive
+                                                   instruments, such that changes in interest rates
+                                                   may affect a change in the behaviour of the
+                                                   client (embedded behavioural option risk).
+ Credit spread risk from non-trading book          The risk driven by changes in the market
+ activities (CSRBB)                                perception about the price of credit risk,
+                                                   liquidity premium and potentially other
+                                                   components of credit-risky instruments
+                                                   inducing fluctuations in the price of credit risk,
+                                                   liquidity premium and other potential
+                                                   components, which is not explained by IRRBB
+                                                   or by expected credit/(jump-to-)default risk.
+ Earnings measures                                 Measures of changes in expected future
+                                                   profitability within a given time horizon
+                                                   resulting from interest rate movements.
+                                                                                                     5
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+ Economic value (EV) measures                      Measures of changes in the net present value
+                                                   of the interest rate sensitive instruments over
+                                                   their remaining life resulting from interest rate
+                                                   movements. EV measures reflect changes in
+                                                   value over the remaining life of the interest
+                                                   rate sensitive instruments, i.e. until all
+                                                   positions have run off.
+ Economic value of equity (EVE) measures           A specific form of EV measure where equity is
+                                                   excluded from the cash flows.
+ Conditional cash flow modelling                   Cash flow modelling under the assumption that
+                                                   the timing and amount of cash flows is
+                                                   dependent on the specific interest rate
+                                                   scenario.
+ Unconditional cash flow modelling                 Cash flow modelling under the assumption that
+                                                   the timing and amount of cash flows is
+                                                   independent of the specific interest rate
+                                                   scenario.
+ Run-off balance sheet                             A balance sheet where existing non-trading
+                                                   book positions amortise and are not replaced
+                                                   by any new business.
+ Dynamic balance sheet                             A balance sheet incorporating future business
+                                                   expectations, adjusted for the relevant
+                                                   scenario in a consistent manner.
+ Constant balance sheet                            A balance sheet including off-balance-sheet
+                                                   items in which the total size and composition
+                                                   are maintained by replacing maturing or
+                                                   repricing cash flows with new cash flows that
+                                                   have identical features with regard to the
+                                                   amount, repricing period and spread
+                                                   components.
+                                                                                                    6
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+3. Implementation
+Date of application
+8. Competent authorities should ensure that institutions apply these guidelines from
+     30 June 2019 and reflect the guidelines in the 2019 ICAAP cycle, i.e. ICAAP reports presented in
+     2020, based on end-year 2019 data, should take these guidelines into account.
+Transitional provisions
+9. These specific provisions of the guidelines are subject to the following transitional
+     arrangements:
+     (a) For institutions that fall under SREP categories 3 and 4 as set out in the EBA Guidelines on
+           the revised common procedures and methodologies for the supervisory review and
+           evaluation process and supervisory stress testing (SREP Guidelines) 4 , paragraph 18 will
+           apply as from 31 December 2019 [6 months after the application date of the guidelines].
+     (b) For SREP category 3 and 4 institutions, paragraph 114 will apply as from 31 December 2019
+           [6 months after the application date of the guidelines].
+Repeal
+10. The following guidelines are repealed with effect from 30 June 2019: Guidelines on the
+     management of interest rate risk arising from non-trading activities (EBA/GL/2015/08)5.
+4   EBA/GL/2014/13. Available online: http://www.eba.europa.eu/regulation-and-policy/supervisory-review-and-
+evaluation-srep-and-pillar-2/guidelines-for-common-procedures-and-methodologies-for-the-supervisory-review-and-
+evaluation-process-srep-
+5 Available online: http://www.eba.europa.eu/regulation-and-policy/supervisory-review-and-evaluation-srep-and-pillar-
+2/guidelines-on-technical-aspects-of-the-management-of-interest-rate-risk-arising-from-non-trading-activities.
+                                                                                                                   7
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+4. Guidelines on the management of
+interest rate risk arising from non-
+trading book activities
+4.1 General provisions
+11.Institutions should treat IRRBB as an important risk and always assess it explicitly and
+    comprehensively in their risk management processes and internal capital assessment processes.
+    A different approach should be fully documented and justified in the course of the supervisory
+    dialogue.
+12.Institutions should identify their IRRBB exposures and ensure that IRRBB is adequately
+    measured, monitored and controlled.
+13.Institutions should manage and mitigate risks arising from their IRRBB exposures that affect both
+    their earnings and economic value.
+14.When calculating the impact of interest rate movements in the earnings perspective, institutions
+    should consider not only the effects on interest income and expenses, but also the effects of the
+    market value changes of instruments — depending on accounting treatment — either shown in
+    the profit and loss account or directly in equity (e.g. via other comprehensive income).
+    Institutions should take into account the increase or reduction in earnings and capital over short-
+    and medium-term horizons resulting from interest rate movements.
+15.The change in earnings should be the difference between expected earnings under a base
+    scenario and expected earnings under an alternative, more adverse shock or stress scenario
+    from a going-concern perspective.
+16.Institutions should consider non-performing exposures 6 (net of provisions) as interest rate
+    sensitive instruments reflecting expected cash flows and their timing.
+17.Institutions should consider interest rate derivatives, as well as off-balance-sheet items such as
+    interest rate sensitive loan commitments, as interest rate sensitive instruments.
+18.Institutions should monitor and assess their CSRBB-affected exposures, by reference to the asset
+    side of the non-trading book, where CSRBB is relevant for the risk profile of the institution.
+19.When implementing the guidelines, institutions should identify their existing and prospective
+    exposure to IRRBB in a proportionate manner, depending on the level, complexity and riskiness
+    of the non-trading book positions they face, or an increasing risk profile taking into account their
+6 Non-performing exposures as defined in Annex V of Regulation (EU) 680/2014.
+                                                                                                      8
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+    business model, their strategies and the business environment they operate in or intend to
+    operate in.
+20.Based upon the assessment of their existing and prospective exposure to IRRBB, institutions
+    should consider elements and expectations stipulated in this section and in the sections on
+    capital identification, calculation and allocation (section 4.2.), governance (section 4.3.) and
+    measurement (section 4.4.) and implement them in a way that is commensurate with existing
+    and prospective exposure to IRRBB.
+21.In addition to the existing and prospective exposure to IRRBB, when implementing the
+    guidelines, institutions should also consider their general level of sophistication and internal
+    approaches to risk management to make sure that their approaches, processes and systems for
+    the management of IRRBB are coherent with their general approach to risk management and
+    their specific approaches, processes and systems implemented for the purpose of the
+    management of other risks.
+4.2 Capital identification, calculation and allocation
+22.When evaluating the amounts, types and distributions of internal capital pursuant to Article 73
+    of Directive 2013/36/EU, institutions should base the contribution of IRRBB to the overall
+    internal capital assessment on the institution’s internal measurement systems outputs, taking
+    account of key assumptions and risk limits. The overall level of capital should be commensurate
+    with both the institution’s actual measured level of risk (including for IRRBB) and its risk
+    appetite, and be duly documented in its report on the Internal Capital Adequacy Assessment
+    Process (ICAAP report).
+23.Institutions should demonstrate that their internal capital is commensurate with the level of
+    IRRBB, taking into account the impact on internal capital of potential changes in the institution’s
+    economic value and future earnings resulting from changes in interest rates. Institutions are not
+    expected to double-count their internal capital for EV and earning measures.
+24.In their ICAAP analysis of the amount of internal capital required for IRRBB, institutions should
+    consider:
+     (a) internal capital held for risks to economic value that could arise from adverse movements
+          in interest rates; and
+     (b) internal capital needs arising from the impact of rate changes on future earnings capacity,
+          and the resultant implications for internal capital buffer levels.
+25.Institutions should not only rely on the supervisory assessments of capital adequacy for IRRBB
+    or on the outcome of the supervisory outlier test (see section 4.5.), but should develop and use
+    their own methodologies for capital allocation, based on their risk appetite, level of risk and risk
+    management policies. In determining the appropriate level of capital, institutions should
+    consider both the amount and the quality of capital needed.
+                                                                                                       9
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+26.Capital adequacy assessments for IRRBB should take into account the following:
+     (a) the size and tenor of internal limits on IRRBB exposures, and whether or not these limits
+          are reached at the point of capital calculation;
+     (b) the expected cost of hedging open positions that are intended to take advantage of internal
+          expectations of the future level of interest rates;
+     (c) the sensitivity of the internal measures of IRRBB to key or imperfect modelling
+          assumptions;
+     (d) the impact of shock and stress scenarios on positions priced with different interest rate
+          indices (basis risk);
+     (e) the impact on economic value and earnings (including effects on the fair value through
+          other comprehensive income (FVOCI) portfolio) of mismatched positions in different
+          currencies;
+     (f) the impact of embedded losses and embedded gains;
+     (g) the distribution of capital relative to risks across legal entities included in the group’s
+          prudential perimeter of consolidation, in addition to the adequacy of overall capital on a
+          consolidated basis;
+     (h) the drivers of the underlying risk; and
+     (i) the circumstances under which the risk may materialise.
+27.The outcomes of the capital adequacy for IRRBB should be considered in an institution’s ICAAP
+    and flow through to the assessments of capital associated with business lines.
+28.To calibrate the amount of internal capital to be held for IRRBB, institutions should use
+    measurement systems and a range of interest rate shock and stress scenarios, which are
+    adapted to the risk profile of the institution in order to quantify the potential scale of any IRRBB
+    effects under adverse conditions.
+29.Institutions that operate economic capital models should ensure that the internal capital
+    allocation for IRRBB is properly factored into the overall economic capital allocation and that
+    any assumptions on diversification are documented and their reliability as well as stability is
+    verified using historical data appropriate for the individual institution and the markets in which
+    it operates. Economic capital costs may be allocated back to the business units and products to
+    ensure that the full costs of the underlying business units or products are properly understood
+    by those responsible for managing them.
+30.In considering whether or not an allocation of internal capital should be made in respect of
+    IRRBB to earnings, institutions should take into account the following:
+                                                                                                      10
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+      (a) The relative importance of net interest income to total net income, and therefore the
+           impact of significant variations in net interest income from year to year;
+      (b) The actual levels of net interest income achievable under different scenarios (i.e. the extent
+           to which margins are wide enough to absorb volatility arising from interest rate positions
+           and changes in the cost of liabilities);
+      (c) The potential for actual losses to be incurred under stressed conditions, or as a result of
+           secular changes in the market environment, e.g. where it might become necessary to
+           liquidate positions that are intended as a long-term investment to stabilise earnings;
+      (d) The relative importance of interest rate sensitive instruments (including interest rate
+           derivatives) in the non-trading book, with potential effects shown either in the profit and
+           loss account or directly in equity (e.g. via other comprehensive income); and
+      (e) The fluctuation of net interest income, the strength and stability of the earnings stream
+           and the level of income needed to generate and maintain normal business operations.
+           Institutions with a high level of IRRBB that could, under a plausible range of market
+           scenarios, result in losses, in curtailing normal dividend distribution, or in a decrease in
+           business operations should ensure that they have sufficient capital to withstand the
+           adverse impact of these scenarios.
+  31.Institutions should consider internal capital buffer adjustments where the results of their
+       stress testing highlight the potential for reduced earnings (and therefore reduced capital
+       generation capacity) under stress scenarios.
+4.3 Governance
+    4.3.1           Overall IRRBB strategy
+32.The IRRBB strategy of the institution, including the risk appetite for IRRBB and IRRBB mitigation,
+    should be part of the overall strategy, in particular the strategic objectives and risk objectives,
+    which the management body must approve as laid down in subparagraph (2), letter (a) of
+    Article 88(1) of Directive 2013/36/EU.
+33.The institution’s risk appetite for IRRBB should be expressed in terms of the acceptable impact
+    of fluctuating interest rates on both earnings and economic value and should be reflected in
+    limits. Institutions with significant exposures to gap risk, basis risk or option risk should
+    determine their risk appetite in relation to each of these material sub-types of IRRBB.
+34.The overall IRRBB strategy should also include the decision about the extent to which the
+    business model relies on generating earnings by ‘riding the yield curve’, i.e. funding assets with
+    a comparatively long repricing period with liabilities with a comparatively short repricing period.
+    Where the business model relies heavily on this source of earnings, the management body
+                                                                                                      11
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+    should explain its IRRBB strategy and how it plans to survive periods of flat or inverse yield
+    curves.
+35.Institutions should duly assess proposals to use new products, or engage in new activities, risk-
+    taking or hedging strategies, prior to acquisition or implementation to ensure that the resources
+    required to establish sound and effective IRRBB management of the product or activity have
+    been identified, that the proposed activities are in line with the institution’s overall risk appetite,
+    and that procedures to identify, measure, monitor and control the risks of the proposed product
+    or activity have been established. It should be ensured that the IRRBB characteristics of these
+    new products and activities are well understood.
+36.Institutions using derivative instruments to mitigate IRRBB exposures should possess the
+    necessary knowledge and expertise. Each institution should demonstrate that it understands
+    the consequences of hedging with interest rate derivatives.
+37.Institutions using models of customer behaviour as input for the measurement of their IRRBB
+    should possess the necessary knowledge and expertise. Each institution should be able to
+    demonstrate that it understands the consequences of modelling the behaviour of its customer
+    base.
+38.When making decisions on hedging activities, institutions should be aware of the effects of
+    accounting policies, but the accounting treatment should not drive their risk management
+    approach. The management of economic risks should therefore be a priority, and the accounting
+    impacts managed as a secondary concern.
+39.Consolidating institutions should ensure that internal governance arrangements and processes
+    for the management of IRRBB are consistent and well integrated on a consolidated and a sub-
+    consolidated basis.
+    4.3.2          Risk management framework and responsibilities
+40.In view of having internal governance arrangements pursuant to Article 74 and 88 of
+    Directive 2013/36/EU, institutions should, in relation to IRRBB, ensure the following:
+     (a) That their management body bears the ultimate responsibility for the oversight of the
+          IRRBB management framework, the institution’s risk appetite framework and the amounts,
+          types and distribution of internal capital to adequately cover the risks. The management
+          body should determine the institution’s overall IRRBB strategy and approve the
+          corresponding policies and processes. The management body may, however, delegate the
+          monitoring and management of IRRBB to senior management, expert individuals or an
+          asset and liability management committee under the conditions further specified in
+          paragraph 41.
+     (b) That they have in place an IRRBB management framework that establishes clear lines of
+          responsibilities and that consists of a limit system, policies, processes and internal controls
+                                                                                                        12
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+          including regular independent reviews and evaluations of the effectiveness of the
+          framework.
+41.The management body should, in particular, be responsible for the following:
+     (a) Understanding the nature and the level of the IRRBB exposure. The management body
+          should ensure that there is clear guidance regarding the risk appetite for IRRBB in respect
+          of the institution’s business strategies.
+     (b) Establishing that the appropriate actions are taken to identify, measure, monitor and
+          control IRRBB, consistent with the approved strategies and policies. In this regard, the
+          management body or its delegates are responsible for setting:
+              i.   appropriate limits on IRRBB, including the definition of specific procedures and
+                   approvals necessary for exceptions, and ensuring compliance with those limits;
+             ii.   systems and standards for measuring IRRBB, valuing positions and assessing
+                   performance, including procedures for updating interest rate shock and stress
+                   scenarios and key underlying assumptions driving the institution’s IRRBB analysis;
+            iii.   a comprehensive IRRBB reporting and review process; and
+            iv.    effective internal controls and management information systems (MISs).
+     (c) Approving major hedging or risk-taking initiatives in advance of implementation. Positions
+          related to internal risk transfers between the non-trading book and the trading book should
+          be properly documented.
+     (d) Carrying out the oversight of the approval, implementation and review of IRRBB
+          management policies, procedures and limits. The level of and changes in the institution’s
+          IRRBB exposure should be provided regularly to the management body (at least quarterly).
+     (e) Ensuring that the validation of IRRBB measurement methods and assessment of
+          corresponding model risk are included in a formal policy process that should be reviewed
+          and approved by the management body or its delegates.
+     (f) Understanding and assessing the functioning of its delegates in monitoring and controlling
+          IRRBB, consistent with policies approved by the management body, on the basis of regular
+          reviews of timely and sufficiently detailed information.
+     (g) Understanding the implications of the institution’s IRRBB strategies and their potential
+          linkages with market, liquidity, credit and operational risk but without requiring all the
+          management body members to be experts in the area. Some of the members should have
+          sufficient technical knowledge to question and challenge the reports made to the
+          management body. The institution should establish that management body members are
+                                                                                                   13
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+          responsible for ensuring that senior management has the competence to understand IRRBB
+          and that IRRBB management is provided with adequate resources.
+42.Institutions should have delegation arrangements and procedures in place for any delegation by
+    the management body of the monitoring or management of IRRBB, including, but not limited
+    to, the following:
+     (a) Persons or committees to which tasks of the management body are delegated for
+          developing IRRBB policies and practices, such as senior management, expert individuals or
+          an asset and liability management committee (ALCO), should be identified and have
+          objectives clearly set out by the management body.
+     (b) The management body should ensure that there is an adequate separation of
+          responsibilities in the risk management process for IRRBB. The IRRBB identification,
+          measurement, monitoring and control functions should have clearly defined
+          responsibilities, should be independent from risk-taking functions on IRRBB and should
+          report IRRBB exposures directly to the management body or its delegates.
+     (c) The institution should ensure that the management body’s delegates have clear lines of
+          authority over the units responsible for risk taking on IRRBB. The communication channel
+          to convey the delegates’ directives to these line units should be clear.
+     (d) The management body should establish that the institution’s structure enables its
+          delegates to carry out their responsibilities, and facilitates effective decision-making and
+          governance. In this regard, an ALCO should meet regularly and its composition should
+          reflect each major department linked to IRRBB. The management body should foster
+          discussion regarding the IRRBB management process, both between its members and its
+          delegates and between its delegates and others in the institution. The management body
+          should also ensure that regular communication between the risk management and
+          strategic planning areas facilitate the monitoring of the risk arising from future business.
+    4.3.3           Risk appetite and policy limits
+43.Institutions should articulate their risk appetite for IRRBB in terms of the risk to both economic
+    value and earnings in particular:
+     (a) Institutions should have clearly defined risk appetite statements that are approved by their
+          management body and implemented through comprehensive risk appetite frameworks,
+          i.e. policies and procedures for limiting and controlling IRRBB.
+     (b) Their risk appetite frameworks should delineate delegated powers, lines of responsibility
+          and accountability over IRRBB management decisions and should list the instruments,
+          hedging strategies and risk-taking opportunities authorised for IRRBB.
+                                                                                                     14
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+     (c) In defining their risk appetites, institutions should take account of earnings risks that may
+          arise as a consequence of the accounting treatment of transactions in the non-trading
+          book. The risk to earnings may not be limited to interest income and expenses: the effects
+          of changes in interest rates on the market value of instruments that, depending on
+          accounting treatment, are reflected either through the profit and loss account or directly
+          in equity (via other comprehensive income), should be taken into account separately.
+          Institutions should particularly take into account the earnings impact related to embedded
+          optionalities in fair value instruments under ongoing interest rate shocks and stress
+          scenarios. Institutions should also take into account the potential impact on the P&L
+          accounts of hedging interest rate derivatives if their effectiveness was hampered by
+          interest rate changes.
+44.Institutions should implement limits that target maintaining IRRBB exposures consistent with
+    their risk appetite and with their overall approach for measuring IRRBB, in particular the
+    following:
+     (a) Aggregate risk limits that clearly articulate the amount of IRRBB acceptable to the
+          management body should be applied on a consolidated basis and, as appropriate, at the
+          level of individual affiliates.
+     (b) Limits may be associated with specific scenarios of changes in interest rates and term
+          structures, such as their increase or decrease or a change in shape of the yield curve. The
+          interest rate movements used in developing these limits should represent sufficiently
+          adverse shock and stress situations, taking into account historical interest rate volatility and
+          the time required by management to mitigate those risk exposures.
+     (c) Policy limits should be appropriate to the nature, size, complexity and capital adequacy of
+          the institution, as well as its ability to measure and manage its risks.
+     (d) Depending on the nature of an institution's activities and business model, sub-limits may
+          also be identified for individual business units, portfolios, instrument types, specific
+          instruments or material sub-types of IRRBB risk such as gap risk, basis risk and option risk.
+     (e) Systems should be in place to ensure that positions that exceed, or are likely to exceed,
+          limits defined by the management body or its delegates receive prompt management
+          attention and are escalated without delay. There should be a clear policy on who will be
+          informed, how the communication will take place and the actions which will be taken in
+          response.
+     (f) The reporting of risk measures to the management body or its delegates should have at
+          least a quarterly frequency and should compare current exposure with policy limits.
+45.A framework should be in place to monitor the evolution of hedging strategies that rely on
+    instruments such as derivatives, and to control mark-to-market risks in instruments that are
+    accounted for at market value.
+                                                                                                        15
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+    4.3.4          Risk policies, processes and controls
+a.        Risk policies and processes
+46.The management body should, based on its overall IRRBB strategy, adopt robust risk policies,
+    processes and systems which should ensure that:
+     (a) procedures for updating scenarios for the measurement and assessment of IRRBB are set
+          up;
+     (b) the measurement approach and the corresponding assumptions for measuring and
+          assessing IRRBB, including the allocation of internal capital to IRRBB risks, are appropriate
+          and proportional;
+     (c) the assumptions of the models used are regularly reviewed and, if necessary, amended;
+     (d) standards for the evaluation of positions and the measuring of performance are defined;
+     (e) appropriate documentation and control over permissible hedging strategies and hedging
+          instruments exist; and
+     (f) the lines of authority and responsibility for managing IRRBB exposures are defined.
+47.The policies should be well reasoned, robust and documented and should address all IRRBB
+    components that are important to the institution’s individual circumstances. Without prejudice
+    to the proportionality principle, the IRRBB policies should include the following:
+     (a) The application of the boundary between ‘non-trading book’ and ‘trading book’. Internal
+          risk transfers between the banking book and the trading book should be properly
+          documented and monitored within the broader monitoring of the IRRBB originated by
+          interest rate derivatives instruments.
+     (b) The more detailed definition of economic value and its consistency with the method used
+          to value assets and liabilities (e.g. based on the discounted value of future cash flows, and
+          on the discounted value of future earnings) adopted for internal use.
+     (c) The more detailed definition of earnings risk and its consistency with the institution’s
+          approach to developing financial plans and financial forecasts adopted for internal use.
+     (d) The size and the form of the different interest rate shocks to be used for internal IRRBB
+          calculations.
+     (e) The use of conditional or unconditional cash flow modelling approaches.
+                                                                                                     16
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+     (f) The treatment of ‘pipeline transactions’7 (including any related hedging).
+     (g) The aggregation of multicurrency interest rate exposures.
+     (h) The measurement and management of basis risk resulting from different interest rate
+          indexes.
+     (i) Whether or not non-interest-bearing assets and liabilities of the non-trading book
+          (including capital and reserves) are included in calculations measuring IRRBB for the ICAAP.
+     (j) The behavioural treatment of current and savings accounts (i.e. the maturity assumed for
+          liabilities with short contractual maturity but long behavioural maturity).
+     (k) The measurement of IRRBB arising from behavioural and automatic options in assets or
+          liabilities, including convexity effects and non-linear payoff profiles.
+     (l) The degree of granularity employed in measurement calculations (e.g. use of time buckets).
+     (m) The internal definition of commercial margins and adequate methodology for internal
+          treatment of commercial margins.
+48.All IRRBB policies should be reviewed regularly, at least annually, and revised as needed.
+49.To ensure that the institution’s IRRBB management policies and procedures remain appropriate
+    and sound, the management body or its delegates should review the IRRBB management
+    policies and procedures in the light of the outcomes of regular reports.
+50.The management body or its delegates should ensure that analysis and risk management
+    activities related to IRRBB are conducted by sufficient and competent staff with technical
+    knowledge and experience, consistent with the nature and scope of the institution’s activities.
+b.        Internal controls
+51.With regard to IRRBB control policies and procedures, institutions should have appropriate
+    approval processes, exposure limits, reviews and other mechanisms designed to provide a
+    reasonable assurance that risk management objectives are being achieved.
+52.Institutions should undertake regular reviews and evaluations of their internal control systems
+    and risk management processes, seeking assurance that personnel comply with established
+    policies and procedures. Such reviews should also address any significant changes that may
+    affect the effectiveness of controls, including changes in market conditions, personnel,
+    technology and structures of compliance with exposure limits, and ensure that there are
+7 Pipeline exposures (e.g. where a loan has been agreed and the customer can choose whether to draw down
+or not) effectively provide the customer with an option that will most likely be exercised when market
+conditions least suit the institution (negative convexity). Management of pipeline exposures relies on
+accurate data on applications received, and modelling of expected drawdowns.
+                                                                                                      17
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+    appropriate escalation procedures for any exceeded limits. The reviews and evaluations should
+    be conducted regularly by individuals or units that are independent of the function under
+    review. When revisions or enhancements to internal controls are warranted, there should be an
+    internal review mechanism in place to ensure that these are implemented in a timely manner.
+53.Institutions should have their IRRBB identification, measurement, monitoring and control
+    processes reviewed by an independent auditing function, which may be an internal or external
+    auditor, on a regular basis. In such cases, reports written by internal or external auditors or other
+    equivalent external parties should be made available to relevant competent authorities.
+c.        IRRBB IT system and data quality
+54.The IT systems and applications used by the institution to carry out, process and record
+    operations, to identify, measure and aggregate IRRBB exposures, and to generate reports should
+    be capable of supporting the management of IRRBB in a timely and accurate manner. In
+    particular, the systems should:
+       (a) Capture interest rate risk data on all the institution’s material IRRBB exposures including
+            exposures to gap, basis, and option risk. This should support the institution’s
+            measurement system to identify, measure and aggregate the major sources of IRRBB
+            exposures.
+       (b) Be capable of fully and clearly recording all transactions made by the institution, taking
+            into account their IRRBB characteristics.
+       (c) Be tailored to the complexity and number of transactions creating IRRBB.
+       (d) Offer sufficient flexibility to accommodate a reasonable range of shock and stress
+            scenarios and any additional scenarios.
+       (e) Enable the institutions to fully measure, assess and monitor the contribution of individual
+            transactions to their overall exposure.
+       (f) Be able to compute economic value and earnings-based measures of IRRBB, as well as
+            other measures of IRRBB prescribed by their competent authorities, based on the interest
+            rate shock and stress scenarios set out in sections 4.4.3 and 4.4.4.
+       (g) Be sufficiently flexible to incorporate supervisory-imposed constraints on institutions’
+            internal risk parameter assumptions.
+55.The IT system and transaction system should be capable of recording the repricing profile,
+    interest rate characteristics (including spread) and option characteristics of the products to
+    enable measurement of gap risk, basis risk and option risk. In particular, the transaction system
+    should be able to gather detailed information on the repricing date(s) of a given transaction,
+    interest rate type or index, any options (including early repayment or redemption) and the fees
+    relating to the exercise of these options.
+                                                                                                       18
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+56.The systems used to measure IRRBB should be capable of capturing the IRRBB characteristics of
+    all products. The systems should also allow the disaggregation of the impact of individual IRRBB
+    instruments and portfolios at the risk level of the non-trading book.
+57.For complex, structured products in particular, the transaction system should be able to gather
+    information about the separate parts of the product and to capture their IRRBB characteristics
+    (e.g. the characteristics of assets and liabilities grouped by certain characteristics such as
+    repricing dates or optionality elements). The institution should ensure that the IT system is able
+    to keep pace with the introduction of new products.
+58.Adequate organisational controls of IT systems should be in place to prevent the corruption of
+    data used by IRRBB computer systems and applications, and to control changes to the coding
+    used in those applications, so as to ensure, in particular:
+     (a) the reliability of data used as input, and the integrity of processing systems for IRRBB
+          models;
+     (b) that the likelihood of errors occurring in the IT system, including those occurring during
+          data processing and aggregation, is minimised; and
+     (c) that adequate measures are taken if market disruptions or slumps occur.
+59.Risk measures should be based on reliable market and internal data. Institutions should
+    scrutinise the quality of external sources of information used to establish the historical
+    databases of interest rates, as well as the frequency at which databases are updated.
+60.To ensure the high quality of data, institutions should implement appropriate processes that
+    ensure that the data entered into the IT system is correct. Data inputs should be automated as
+    much as possible to reduce administrative errors, and data mapping should be periodically
+    reviewed and tested against an approved model version. In addition, there should be sufficient
+    documentation of the major data sources used in the institution’s risk measurement process.
+    Institutions should also establish appropriate mechanisms to verify the correctness of the
+    aggregation process and the reliability of model results. These mechanisms should confirm the
+    accuracy and reliability of data.
+61.Where institutions slot cash flows into different time buckets (e.g. for gap analyses) or assign
+    the cash flows to different vertex points to reflect the different tenors of the interest rate curve,
+    the slotting criteria should be stable over time to allow a meaningful comparison of risk figures
+    over different periods.
+62.Institutions should identify potential reasons for discrepancies and irregularities that may arise
+    at the time of data processing. Institutions should have procedures in place to handle those
+    discrepancies and irregularities, including procedures for the mutual reconciliation of positions
+    to enable these discrepancies and irregularities to be eliminated.
+                                                                                                      19
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+63.Institutions should set up appropriate processes to ensure that the data used to feed models
+    measuring the IRRBB across the group — e.g. for simulating earnings — is consistent with the
+    data used for financial planning.
+d.        Internal reporting
+64.Institutions’ internal risk-reporting systems should provide timely, accurate and comprehensive
+    information about their exposures to IRRBB. The frequency of internal reports should be at least
+    quarterly.
+65.The internal reports should be provided to the management body or its delegates with
+    information at relevant levels of aggregation (by consolidation level and currency), and reviewed
+    regularly. The reports should contain a level of information adapted to the particular
+    management level (e.g. management body, senior management) and to the specific situation of
+    the institution and the economic environment.
+66.The IRRBB reports should provide aggregate information as well as sufficient supporting detail
+    to enable the management body or its delegates to assess the sensitivity of the institution to
+    changes in market conditions and other important risk factors. The content of the reports should
+    reflect changes in the risk profile of the institution and in the economic environment, and
+    compare current exposure with policy limits.
+67.The IRRBB reports should, on a regular basis, include the results of the model reviews and audits
+    as well as comparisons of past forecasts or risk estimates with actual results to inform potential
+    modelling shortcomings. In particular, institutions should assess the modelled prepayment
+    losses against historical realised losses. Portfolios that may be subject to significant mark-to-
+    market movements should be clearly identified and the impact should be monitored within the
+    institution’s MIS and subject to oversight in line with any other portfolios exposed to market
+    risk.
+68.While the types of reports prepared for the management body or its delegates will vary based
+    on the institution’s portfolio composition, they should include, taking into account
+    paragraph 65, the following:
+    (a) Summaries of the institution’s aggregate IRRBB exposures, including information on
+         exposures to gap, basis and option risk. Assets, liabilities, cash flows, and strategies that are
+         driving the level and direction of IRRBB should be identified and explained.
+    (b) Reports demonstrating the institution’s compliance with policies and limits.
+    (c) Key modelling assumptions, such as characteristics of non-maturity deposits (NMDs),
+         prepayments on fixed rate loans, early withdrawals of fixed term deposits, drawing of
+         commitments, currency aggregation and treatment of commercial margins.
+                                                                                                        20
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+    (d) Details of the impact of key modelling assumptions on the measurement of IRRBB in terms
+         of both economic value measures and earnings measures, including changes in assumptions
+         under various interest rate scenarios.
+    (e) Details of the impact of interest rate derivatives on the measurement of IRRBB, in terms of
+         both economic value measures and earnings measures.
+    (f) Details of the impact of fair value instruments, including Level 3 assets and liabilities, on the
+         measurement of IRRBB in terms of both economic value measures and earnings measures.
+    (g) Results of stress tests as referred to in section 4.4.4, the shocks as referred to in
+         section 4.4.3, the supervisory outlier test as referred to in section 4.5, and assessments of
+         sensitivity to key assumptions and parameters; and
+    (h) Summaries of the reviews of IRRBB policies, procedures and adequacy of the measurement
+         systems, including any findings of internal and external auditors or other equivalent external
+         parties (such as consultants).
+69.Based on these reports, the management body or its delegates should be able to assess the
+    sensitivity of the institution to changes in market conditions and other important risk factors,
+    with particular reference to portfolios that may potentially be subject to significant mark-to-
+    market movements.
+70.The internal measurement system should generate reports in a format that allows the different
+    levels of the institution’s management to understand the reports easily and to make appropriate
+    decisions in a timely manner. The reports should constitute the basis for regular monitoring of
+    whether or not the institution operates in line with its strategy and the interest rate risk limits
+    it has adopted.
+e.        Model governance
+71.Institutions should ensure that the validation of IRRBB measurement methods — which should
+    be reviewed and validated independently of their development — and the assessment of
+    corresponding model risk are included in a formal policy process that should be reviewed and
+    approved by the management body or its delegates. The policy should be integrated within the
+    governance processes for model risk management and should specify:
+            (a) the management roles and designate who is responsible for the development,
+                validation, documentation, implementation and use of models; and
+            (b) the model oversight responsibilities as well as policies including the development of
+                initial and ongoing validation procedures, evaluation of results, approval, version
+                control, exception, escalation, modification and decommission processes.
+72.The validation framework should include the following four core elements:
+                                                                                                       21
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+           (a) evaluation of conceptual and methodological soundness, including developmental
+                evidence;
+           (b) ongoing model monitoring, including process verification and benchmarking;
+           (c) outcomes analysis, including back-testing of key internal parameters (e.g. stability of
+                deposits, loan prepayment rates, early redemptions of deposits, pricing of
+                instruments); and
+           (d) thorough assessment of any expert opinions and judgements used in internal models.
+73.In addressing the expected initial and ongoing validation activities, the policy should establish a
+    hierarchical process for determining model risk soundness based on both quantitative and
+    qualitative dimensions such as size, impact, past performance and staff expertise with the
+    modelling technique employed.
+74.Model risk management for IRRBB measures should follow a holistic approach that begins with
+    motivation, development and implementation by model owners and users. Prior to receiving
+    internal approval for usage, the process for determining model inputs, assumptions, modelling
+    methodologies and outputs should be reviewed and validated independently of the
+    development of IRRBB models.
+75.The review and validation results and any recommendations on model usage should be
+    presented to and approved by the management body or its delegates. Upon approval, the model
+    should be subject to ongoing review, process verification and validation at a frequency that is
+    consistent with the level of model risk determined and approved by the institution.
+76.The ongoing review process should establish a set of exception trigger events that obligate the
+    model reviewers to notify the management body or its delegates in a timely fashion, in order to
+    determine corrective actions and restrictions on model usage. Clear version control
+    authorisations should be designated, where appropriate, to model owners.
+77.On the basis of observations and new information gained over time, an approved model may be
+    modified or withdrawn. Institutions should articulate policies for model transition, including
+    change and version control authorisations and documentation.
+78.Institutions may rely on third-party IRRBB models to manage and control IRRBB, provided that
+    these models are adequately customised to properly reflect the specific characteristics of the
+    institution in question. Institutions are expected to fully understand the underlying analytics,
+    assumptions and methodologies of the third-party models and to ensure that they are
+    adequately integrated into the institutions’ overall risk management systems and processes.
+    Where third parties provide input for market data, behavioural assumptions or model settings,
+    the institution should have a process in place to determine if those inputs are reasonable for its
+    business and the risk characteristics of its activities. Institutions should ensure there is adequate
+    documentation of their use of third-party models, including any specific customisation.
+                                                                                                       22
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+79.Model inputs or assumptions, whether stemming from internal model processes or from third
+    parties, should be included in the validation process. The institution should document and
+    explain model specification choices as part of the validation process.
+4.4 Measurement
+    4.4.1          General approach to measurement of IRRBB
+80.Institutions should implement robust internal measurement systems (IMSs) that capture all
+    components and sources of IRRBB which are relevant for the institution’s business model.
+81.Institutions should measure their exposure to IRRBB in terms of potential changes to both the
+    economic value (EV) and earnings. Institutions should use complementary features of both
+    approaches to capture the complex nature of IRRBB over the short-term and long-term time
+    horizons. In particular, institutions should measure and monitor (i) the overall impact of key
+    modelling assumptions on the measurement of IRRBB in terms of both economic value
+    measures and earnings measures, and (ii) the IRRBB of their banking book interest rate
+    derivatives where relevant for the business model.
+82.If commercial margins and other spread components are excluded from economic value
+    measures, institutions should (i) use a transparent methodology for identifying the risk-free rate
+    at inception of each instrument; and (ii) use a methodology that is applied consistently across
+    all interest rate sensitive instruments and all business units.
+83.When calculating earnings measures, institutions should include commercial margins.
+84.Institutions should consider non-performing exposures (net of provisions) as interest rate
+    sensitive instruments reflecting expected cash flows and their timing.
+85.When measuring their exposure to IRRBB, institutions should not purely rely on the calculation
+    and outcomes of the supervisory outlier tests as described in section 4.5, or any additional
+    outlier test developed by the competent authority, but should develop and use their own
+    assumptions and calculation methods. However, the supervisory outlier tests should be fully
+    integrated into the internal framework for the management of IRRBB and should be used as
+    complementary tools for measuring exposure to IRRBB.
+    4.4.2          Methods for measuring IRRBB
+86.Institutions should not rely on a single measure of risk but should instead use the range of
+    quantitative tools and models that corresponds to their specific risk exposure. To that end,
+    institutions should consider the application of the methods listed in Annex I but not limited to
+    those, to ensure that various aspects of interest rate risk are captured adequately.
+87.The limitations of each quantitative tool and model used should be fully understood by the
+    institution, and these limitations should be taken into account in the IRRBB risk management
+                                                                                                    23
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+    process. In assessing IRRBB, institutions should be aware of the risks that may arise as a
+    consequence of accounting treatment of transactions in the non-trading book.
+88.Institutions should identify and measure all components of IRRBB. In order to identify different
+    components of IRRBB, institutions should at least consider those approaches as shown in
+    Table 1.
+Table 1: Identification of sub-components of interest rate risk in the non-trading book
+ Component              Method                         Focus
+                        Gap analysis                   The volume of mismatches in different time
+                                                       bands
+ Gap risk
+                        Partial duration for yield     The dispersion and concentration of
+                        curve risk                     mismatches in different time bands
+                                                       Use of derivatives and other hedging
+                        Inventory of instrument
+                                                       instruments in terms of different bases,
+ Basis risk             groups based on different
+                                                       convexity and timing difference neglected
+                        interest rates
+                                                       by gap analysis
+                                                       Behavioural options
+                                                       The volume of mortgages, current
+                                                       accounts, savings and deposits where the
+                                                       customer has the option to deviate from
+                                                       the contractual maturity; the volume of
+ Option risk            Inventory of all               commitments with interest rate sensitive
+ (automatic and         instruments with               customer drawings
+ behavioural            embedded or explicit
+                        options                        Automatic interest rate options
+ options)
+                                                       Caps, and floors embedded in assets and
+                                                       liabilities; swaptions or prepayment options
+                                                       embedded in wholesale assets and
+                                                       liabilities; and explicit caps, floors and
+                                                       swaptions
+89.For measuring and monitoring of IRRBB, institutions should use at least one earnings-based
+    measure and at least one economic value measurement method that, in combination, capture
+    all components of IRRBB. Large institutions with cross-border activities, in particular institutions
+    under categories 1 and 2 of the SREP Guidelines, and institutions with complex or sophisticated
+    business models, should use multiple measurement methods, as further specified in Annex II.
+    4.4.3          Interest rate shock scenarios for ongoing management
+90.Institutions should regularly, at least quarterly and more frequently in times of increased
+    interest rate volatility or increased IRRBB levels, measure their exposure to IRRBB in terms of
+                                                                                                      24
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+    changes in economic value and earnings under various interest rate shock scenarios for potential
+    changes in the level and shape of the interest rate yield curves, and to changes in the
+    relationship between different interest rates (i.e. basis risk).
+91.Institutions should also consider whether to apply a conditional or unconditional cash flow
+    modelling approach. Larger and more complex institutions, in particular institutions under
+    categories 1 and 2 of the SREP Guidelines, should also take into account scenarios where
+    different interest rate paths are computed and where some of the assumptions (e.g. relating to
+    behaviour, contribution to risk, and balance sheet size and composition) are themselves
+    functions of changing interest rate levels.
+92.Institutions should assess exposures in each currency in which they have positions. For the
+    material currency exposures, the interest rate shock scenarios should be currency-specific and
+    consistent with the underlying economic characteristics. Institutions should include in their
+    internal measurement systems methods to aggregate their IRRBB across different currencies.
+    Where institutions make use of assumptions about dependencies between interest rates in
+    different currencies, they should have the necessary level of skills and sophistication to do so.
+    Institutions should take into account the impact of assumptions regarding dependencies
+    between interest rates across different currencies.
+93.When selecting interest rate shock scenarios, institutions should consider the following:
+          (a) That their own internally developed interest rate shock scenarios be commensurate
+              with the nature, scale and complexity of their activities as well as their risk profile,
+              taking into account sudden and gradual parallel and non-parallel shifts and changes in
+              the yield curves. Scenarios should be based on the historical movements and behaviour
+              of interest rates, as well as simulations of future interest rates.
+          (b) Interest rate scenarios that reflect changes in the relationships between key market
+              rates in order to address basis risk.
+          (c) The six prescribed interest rate shock scenarios set out in Annex III.
+          (d) Any additional interest rate shock scenarios required by supervisors.
+94.In low interest rate environments, institutions should also consider negative interest rate
+    scenarios and the possibility of asymmetrical effects of negative interest rates on their interest
+    rate sensitive instruments.
+95.The results of shock scenarios should feed into the decision-making at appropriate management
+    level. This includes strategic or business decisions, the allocation of internal capital, and risk
+    management decisions by the management body or its delegates. The results should also be
+    considered when establishing and reviewing the policies and limits for IRRBB.
+                                                                                                   25
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+    4.4.4           Interest rate stress scenarios
+96.IRRBB stress testing should be considered in the ICAAP, where institutions should undertake
+    rigorous, forward-looking stress testing that identifies the potential adverse consequences of
+    severe changes in market conditions on their capital or earnings, including through changes in
+    the behaviour of their customer base. Stress testing for IRRBB should be integrated into
+    institutions’ overall stress-testing framework, including reverse stress testing, and should be
+    commensurate with their nature, size and complexity, as well as their business activities and
+    overall risk profile.
+97.IRRBB stress testing should be performed regularly, at least annually and more frequently in
+    times of increased interest rate volatility and increased IRRBB levels.
+98.The IRRBB stress-testing framework should include clearly defined objectives, scenarios tailored
+    to the institution’s businesses and risks, well-documented assumptions and sound
+    methodologies.
+99.In enterprise-wide stress tests, the interaction of IRRBB with other risk categories (e.g. credit
+    risk, liquidity risk, market risks), and any material second-round effects, should be computed.
+100. Institutions should perform reverse stress tests in order to (i) identify interest rate
+    scenarios that could severely threaten an institution’s capital and earnings; and (ii) reveal
+    vulnerabilities arising from its hedging strategies and the potential behavioural reactions of its
+    customers.
+101. In testing vulnerabilities under stressed conditions, institutions should use larger and more
+    extreme shifts and changes in interest rates than those used for the purpose of ongoing
+    management, including at least the following:
+          a) substantial changes in the relationships between key market rates (basis risk);
+          b) sudden and substantial shifts in the yield curve (both parallel and non-parallel);
+          c) breakdowns of key assumptions about the behaviour of asset and liability classes;
+          d) changes in key interest rate correlation assumptions;
+          e) significant changes to current market and macro conditions and to the competitive and
+               economic environment, and their possible development; and
+          f)   specific scenarios that relate to the individual business model and profile of the
+               institution.
+102. The results of stress scenarios should feed into the decision-making at the appropriate
+    management level. This includes strategic or business decisions, the allocation of internal
+                                                                                                   26
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+    capital, and risk management decisions by the management body or its delegates. The results
+    should also be considered when establishing and reviewing the policies and limits for IRRBB.
+    4.4.5          Measurement assumptions
+103. When measuring IRRBB, institutions should fully understand and document key
+    behavioural and modelling assumptions. These assumptions should be aligned with business
+    strategies and be regularly tested.
+104. Institutions should, in relation to both economic value and earnings-based measures of
+    IRRBB, take into account assumptions made for the purpose of risk quantification in relation to
+    at least the following areas:
+     a) the exercise of interest rate options (automatic or behavioural) by both the institution and
+          its customer under specific interest shock and stress scenarios;
+     b) the treatment of balances and interest flows arising from NMDs;
+     c) the treatment of fixed term deposits with risk of early redemption;
+     d) the treatment of fixed rate loans and fixed rate loan commitments;
+     e) the treatment of own equity in internal economic value measures;
+     f)   the implications of accounting practices for the measurement of IRRBB, and in particular
+          hedge-accounting effectiveness.
+105. As market conditions, competitive environments and strategies change over time,
+    institutions should review significant measurement assumptions at least annually, and more
+    frequently during rapidly changing market conditions.
+a) Behavioural assumptions for customer accounts with embedded customer optionality
+106.      In assessing the implications of optionality, institutions should take into account:
+     (a) The potential impact on current and future loan prepayment speeds arising from the
+          interest rate scenario, underlying economic environment and contractual features.
+          Institutions should take into account the various dimensions influencing the embedded
+          behavioural options.
+     (b) The elasticity of adjustment of product rates to changes in market interest rates.
+     (c) The migration of balances between product types as a result of changes in their features,
+          terms and conditions.
+107. Institutions should have policies in place governing the setting of, and the regular
+    assessment of, the key assumptions for the treatment of on- and off-balance-sheet items that
+                                                                                                  27
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+    have embedded options in their interest rate risk framework. This means that institutions
+    should:
+     (a) identify all material products and items subject to embedded options that could affect
+          either the interest rate charged or the behavioural repricing date (as opposed to
+          contractual maturity date) of the relevant balances;
+     (b) have appropriate pricing and risk mitigation strategies (e.g. use of derivatives) to manage
+          the impact of optionality within the risk appetite, which may include early redemption
+          penalties chargeable to the customer as an offset to the potential break costs (where
+          permitted);
+     (c) ensure that modelling of key behavioural assumptions is justifiable in relation to the
+          underlying historical data, and based on prudent hypotheses;
+     (d) be able to demonstrate that they have accurate modelling (back-tested against
+          experience);
+     (e) maintain appropriate documentation of assumptions in their policies and procedures, and
+          have a process for keeping them under review;
+     (f) understand the sensitivity of the institution’s risk measurement outputs to these
+          assumptions, including undertaking stress testing of the assumptions and taking the results
+          of such tests into account in internal capital allocation decisions; and
+     (g) perform regular internal validation of these assumptions to verify their stability over time
+          and to adjust them if necessary.
+b) Behavioural assumptions for customer accounts without specific repricing dates
+108. In making behavioural assumptions about accounts without specific repricing dates for the
+    purposes of interest rate risk management, institutions should:
+     (a) Be able to identify ‘core’ balances, i.e. deposits that are stable and unlikely to reprice even
+          under significant changes in interest rate environment, and/or other deposits whose
+          limited elasticity to interest rate changes could be modelled by banks.
+     (b) Modelling assumptions for these deposits should reflect depositor characteristics (e.g.
+          retail/wholesale) and account characteristics (e.g. transactional/non-transactional). A high-
+          level description of the above categories can be found below:
+             i.    Retail transactional deposits include non-interest-bearing and other retail accounts
+                   whose remuneration component is not relevant in the client’s decision to hold
+                   money in the account.
+                                                                                                      28
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+             ii.   Retail non-transactional deposits include retail accounts (including regulated ones)
+                   whose remuneration component is relevant in the client’s decision to hold money
+                   in the account.
+            iii.   Wholesale deposits include accounts from corporate and other wholesale clients,
+                   excluding interbank accounts or other fully price-sensitive ones.
+     (c) Assess the potential migration between deposits without specific repricing dates and other
+          deposits that could modify, under different interest rate scenarios, key behavioural
+          modelling assumptions.
+     (d) Consider potential constraints on the repricing of retail deposits in low or negative interest
+          rate environments.
+     (e) Ensure that assumptions about the decay of core and other modelled balances are prudent
+          and appropriate in balancing the benefits to earnings against the additional economic value
+          risk entailed in locking in a future interest rate return on the assets financed by these
+          balances, and the potential forgone revenue under a rising interest rate environment.
+     (f) Not exclusively rely on statistical or quantitative methods to determine the behavioural
+          repricing dates and the cash flow profile of NMDs. Further, the determination of
+          appropriate modelling assumptions for NMDs may require the collaboration of different
+          experts within an institution (e.g. risk management and risk control department, sales and
+          treasury).
+     (g) Have appropriate documentation of these assumptions in their policies and procedures,
+          and a process for keeping them under review.
+     (h) Understand the impact of the assumptions on the institution’s own chosen risk
+          measurement outputs and internal capital allocation decisions, including by periodically
+          calculating sensitivity analyses on key parameters (e.g. percentage and maturity of core
+          balances on accounts and pass-through rate) and the measures using contractual terms
+          rather than behavioural assumptions to isolate the impact of assumptions on both
+          economic value and earnings.
+     (i) Undertake stress testing to understand the sensitivity of the chosen risk measures to
+          changes in key assumptions, taking the results of such tests into account in internal capital
+          allocation decisions.
+c) Corporate planning assumptions for own equity capital
+109. Where institutions decide to adopt a policy intended to stabilise earnings arising from their
+    own equity, they should:
+     (a) have an appropriate methodology for determining what elements of equity capital should
+          be considered eligible for such treatment;
+                                                                                                    29
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+     (b) determine what would be a prudent investment maturity profile for the eligible equity
+          capital that balances the benefits of income stabilisation arising from taking longer-dated
+          fixed-return positions against the additional economic value sensitivity of those positions
+          under an interest rate stress, and the risk of earnings underperformance should rates rise;
+     (c) include appropriate documentation of these assumptions in their policies and procedures,
+          and include a process for keeping them under review;
+     (d) understand the impact of the chosen maturity profile on the institution’s own chosen risk
+          measurement outputs, including by regular calculation of the measures without inclusion
+          of the equity capital to isolate the effects on both EVE and earnings perspectives; and
+     (e) undertake stress testing to understand the sensitivity of risk measures to changes in key
+          assumptions for equity capital, taking the results of such tests into account in their IRRBB
+          internal capital allocation decisions.
+110. In deciding the investment term assumptions for equity capital, institutions should avoid
+    taking income stabilisation positions that significantly reduce their capability to adjust to
+    significant changes in the underlying economic and business environment.
+111. The investment term assumptions used to manage the risks to earnings and economic value
+    sensitivity arising from equity capital should be considered as part of the normal corporate
+    planning cycle, and such assumptions should not be altered just to reflect a change in the
+    institution’s expectations of the path of future interest rates. Any use of derivative or asset
+    portfolios to achieve the desired investment profile should be clearly documented and
+    recorded.
+112. Where an institution has not set explicit assumptions for the investment term of equity
+    capital or sets assumptions that are explicitly short-term, the institution should make sure that
+    its systems and management information can identify the implications of its chosen approach
+    for the volatility of both earnings and economic value.
+4.5 Supervisory outlier test
+113. Institutions should regularly, at least quarterly, calculate the impact on their EVE of a
+    sudden parallel +/-200 basis points shift of the yield curve. Institutions should report regularly,
+    at least annually, to the competent authority the change in EVE that results from the calculation.
+    Where the decline in EVE is greater than 20% of the institution’s own funds, the institution
+    should inform the competent authority immediately.
+114. Institutions should regularly, at least quarterly, calculate the impact on their EVE of interest
+    rate shocks, applying scenarios 1 to 6 as set out in Annex III. Institutions should report regularly,
+    at least annually through the ICAAP report, to the competent authority the change in EVE that
+    results from the calculation. Where the decline in EVE is greater than 15% of the institution’s
+                                                                                                      30
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+    Tier 1 capital under any of the six scenarios, the institution should inform the competent
+    authority.
+115. When calculating the change in EVE for the purpose of paragraphs 113 and 114, institutions
+    should in particular apply the following principles:
+           (a) All positions from interest rate sensitive instruments should be taken into account.
+           (b) Small trading book business should be included unless its interest rate risk is captured
+               in another risk measure.
+           (c) All CET1 instruments and other perpetual own funds without any call dates should be
+               excluded from the calculation of the standard EVE outlier test.
+           (d) Institutions should reflect automatic and behavioural options in the calculation.
+               Institutions should adjust key behavioural modelling assumptions to the features of
+               different interest rate scenarios.
+           (e) Pension obligations and pension plan assets should be included unless their interest
+               rate risk is captured in another risk measure.
+           (f) The cash flows from interest rate sensitive instruments should include any repayment
+               of principal, any repricing of principal and any interest payments.
+           (g) Institutions with an NPE ratio8 of 2% or more should include NPEs as general interest
+               rate sensitive instruments whose modelling should reflect expected cash flows and
+               their timing. NPEs should be included net of provisions.
+           (h) Institutions should consider instrument-specific interest rate floors.
+           (i) The treatment of commercial margins and other spread components in interest
+               payments in terms of their exclusion from or inclusion in the cash flows should be in
+               accordance with the institutions’ internal management and measurement approach for
+               interest rate risk in the non-trading book. Institutions should notify the competent
+               authority whether they exclude commercial margins and other spread components
+               from the calculation or not. If commercial margins and other spread components are
+               excluded, institutions should (i) use a transparent methodology for identifying the risk-
+               free rate at inception of each instrument; (ii) use a methodology that is applied
+               consistently across business units; and (iii) ensure that the exclusion of commercial
+               margins and other spread components from the cash flows is consistent with how the
+               institution manages and hedges IRRBB.
+           (j) The change in EVE should be computed with the assumption of a run-off balance sheet.
+8 Ratio of non-performing exposures (non-performing debt securities and loans and advances/total gross debt securities
+and loans and advances) calculated at the level of the institution.
+                                                                                                                   31
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+          (k) A maturity-dependent post-shock interest rate floor should be applied for each
+              currency starting with -100 basis points for immediate maturities. This floor should
+              increase by 5 basis points per year, eventually reaching 0% for maturities of 20 years
+              and more. If observed rates are lower than the current lower reference rate
+              of -100 basis points, institutions should apply the lower observed rate9.
+          (l) Institutions should calculate the change in EVE at least for each currency where the
+              assets or liabilities denominated in that currency amount to 5% or more of the total
+              non-trading book financial assets (excluding tangible assets) or liabilities, or less than
+              5% if the sum of assets or liabilities included in the calculation is lower than 90% of total
+              non-trading book financial assets (excluding tangible assets) or liabilities (material
+              positions).
+          (m) When calculating the aggregate EVE change for each interest rate shock scenario,
+              institutions should add together any negative and positive changes to EVE occurring in
+              each currency. Positive changes should be weighted by a factor of 50%.
+          (n) An appropriate general ‘risk-free’ yield curve per currency should be applied (e.g. swap
+              rate curves). That curve should not include instrument-specific or entity-specific credit
+              spreads or liquidity spreads.
+          (o) The assumed behavioural repricing date for retail and non-financial wholesale deposits
+              without any specific repricing dates (non-maturity deposits) should be constrained to
+              a maximum average of 5 years. The 5-year cap applies individually for each currency.
+              Non-maturity deposits from financial institutions should not be subject to behavioural
+              modelling.
+116. When computing the effects of the standard EVE outlier test, institutions should use the
+    calculation methods set out under the economic value of equity headings in Annex I and
+    Annex II.
+9 The EBA might envisage revising this floor to ensure that the lower reference rate will be sufficiently prudent given
+future developments in the interest rates.
+                                                                                                                     32
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+Annex I — IRRBB measurement methods
+ Cash flow                                                                                                       Risks
+                        Metric           Description                                                                            Limitations of metric
+ modelling                                                                                                       captured
+                                                                                                                                 <U+F0B7> The metric approximates the gap risk
+                                         Gap analysis allocates all relevant interest rate sensitive instruments
+                        Earnings-                                                                                                  only linearly.
+                                         into predefined time buckets according to their repricing or
+                        based:                                                                                                   <U+F0B7> It is based on the assumption that all
+                                         maturity dates, which are either contractually fixed or based on        Gap risk
+                        <U+F0B7> Gap                                                                                                      positions within a particular time
+                                         behavioural assumptions. It calculates the net positions (‘gaps’) in    (only parallel
+                          analysis:                                                                                                bucket mature or reprice
+                                         each time bucket. It approximates the change in net interest rate       risk)
+                          Repricing                                                                                                simultaneously.
+                                         income ensuing from a yield curve shift by multiplying each net
+                          gap                                                                                                    <U+F0B7> It fails to measure basis and option
+                                         position with the corresponding interest rate change.
+                                                                                                                                   risk.
+                                         The modified duration approximates the relative change in the net
+ Unconditional cash                      present value of a financial instrument due to a marginal parallel
+ flows (it is assumed                    shift of the yield curve by one percentage point. The modified
+ that the timing of                      duration of equity measures the exposure of an institution to gap
+ cash flows is          Economic         risk in its non-trading book. PV01 of equity is derived from the                        <U+F0B7> The metric only applies to marginal
+ independent of the     value:           modified duration of equity and measures the absolute change of                           shifts of the yield curve. In the
+ specific interest      <U+F0B7> Duration       the equity value resulting from a 1 basis point (0.01%) parallel shift                    presences of convexities, it may
+ rate scenario)           analysis:      of the yield curve.                                                     Gap risk          underestimate the effect of larger
+                          Modified                                                                               (only parallel    interest rate movements
+                          duration/P     The starting point is the allocation of all cash flows of interest rate risk)           <U+F0B7> It only applies to parallel shifts of the
+                          V01 of         sensitive instruments into time buckets. For each instrument type,                        yield curve
+                          equity         an appropriate yield curve is selected. The modified duration of                        <U+F0B7> It fails to measure option risk and
+                                         each instrument is calculated from the change of its net present                          captures basis risk at best partially.
+                                         value due to a 1 percentage point parallel shift of the yield curve.
+                                         The modified duration of equity is determined as the modified
+                                         duration of assets times assets divided by equity minus the modified
+                                         duration of liabilities times liabilities divided by equity.
+                                                                                                                                                                       33
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+ Cash flow                                                                                                        Risks
+                        Metric           Description                                                                            Limitations of metric
+ modelling                                                                                                        captured
+                                         PV01 of equity is obtained by multiplying the modified duration of
+                                         equity by the value of equity (i.e. assets minus liabilities) and
+                                         dividing by 10 000 to arrive at the value change per basis point.
+                                         The partial modified duration of an instrument for a specific time
+                                         bucket is calculated as the modified duration above, except that not                    <U+F0B7> The metric only applies to marginal
+                                         the entire yield curve is shifted in parallel, but only the yield curve                   interest rate changes. In the
+                        <U+F0B7> Partial                                                                                 Gap risk
+                                         segment corresponding to the time bucket. These partial measures                          presence of convexity, the metric
+                          modified                                                                                (parallel and
+                                         show the sensitivity of the market value of the banking book to a                         may underestimate the effect of
+                          duration/p                                                                              non-parallel
+                                         marginal shift of the yield curve in particular maturity segments. To                     larger interest rate movements.
+                          artial PV01                                                                             risk)
+                                         each time bucket’s partial measure a different magnitude of a shift                     <U+F0B7> It fails to measure the basis and
+                                         can be applied, such that the effect of a change of the yield curve’s                     option risk.
+                                         shape can be computed for the entire portfolio.
+ Cash flows partially                    The change of NII is an earnings-based metric and measures the
+ or fully conditional                    change of the net interest income over a particular time horizon
+ on interest rate                        (usually 1-5 years) resulting from a sudden or gradual interest rate
+ scenario (it is                         movement.                                                                Gap risk
+ assumed that the                        The starting point is the mapping of all cash flows of interest rate     (parallel and
+ timing of cash flows                    sensitive instruments to (granular) time buckets (or using the exact     non-
+ of options, of         Earnings-        repricing dates of individual positions in more sophisticated            parallel),
+ instruments with       based:           systems).                                                                basis risk
+ embedded, explicit     Focus on                                                                                  and,           <U+F0B7> Sensitivity of the outcome to the
+ options and – in       net interest     The base scenario for the calculations reflects the institution’s        provided all     modelling and behavioural
+ more sophisticated     income (NII)     current corporate plan to project the volume, pricing and repricing      cash flows       assumptions
+ approaches – of        component:       dates of future business transactions. The interest rates used to        are modelled   <U+F0B7> Complexity
+ instruments of         <U+F0B7> Change of      calculate future cash flows in the base scenario are derived from        scenario
+ which the maturity       NII            forward rates, appropriate spreads or market expected rates for          dependent,
+ depends on clients’                     different instruments.                                                   also option
+ behaviour, is                           In assessing the possible extent of NII changes, banks use               risk
+ modelled                                assumptions and models to predict the path of interest rates, the
+ conditional on the                      run-off of existing assets, liabilities and off-balance-sheet items, and
+ interest rate                           their potential replacement.
+ scenario)
+                                                                                                                                                                     34
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+ Cash flow                                                                                                       Risks
+                        Metric           Description                                                                           Limitations of metric
+ modelling                                                                                                       captured
+                                         Earnings-based metrics can be differentiated according to the
+                                         sophistication of projecting future cash flows: simple run-off models
+                                         assume that existing assets and liabilities mature without
+                                         replacement; constant balance sheet models assume that maturing
+                                         assets and liabilities are replaced by identical instruments; while the
+                                         most complex dynamic cash flow models reflect business responses
+                                         to differing interest rate environments in the size and composition
+                                         of the banking book.
+                                         All earnings-based metrics can be used in a scenario or stochastic
+                                         analysis. Earnings at risk (EaR) is an example of the latter, which
+                                         measures the maximum NII change at a given confidence level.
+                                                                                                                 Gap risk
+                                         The change in EVE is the change in the net present value of all cash    (parallel and  <U+F0B7> Sensitivity of the outcome to the
+                                         flows originating from banking book assets, liabilities and off-        non-             modelling and behavioural
+                        Economic
+                                         balance-sheet items resulting from a change in interest rates,          parallel),       assumptions
+                        value:
+                                         assuming that all banking book positions run off.                       basis risk     <U+F0B7> Stochastic metrics, which apply
+                        Focus on
+                                                                                                                 and, if all      distributional assumption, may fail to
+                        economic
+                                         The interest rate risk can be assessed by the <U+2206>EVE for specific         cash flows       capture tail risks and non-linearities
+                        value of
+                                         interest rate scenarios or by the distribution of <U+2206>EVE using Monte      are modelled   <U+F0B7> Full revaluation Monte Carlo
+                        equity (EVE)
+                                         Carlo or historical simulations. Economic value at risk (EVaR) is an    scenario         approaches are computationally
+                        <U+F0B7> Change in
+                                         example of the latter, which measures the maximum equity value          dependent,       demanding and may be difficult to
+                          EVE
+                                         change for a given confidence level.                                    also option      interpret (‘black-box’)
+                                                                                                                 risk           <U+F0B7> Complexity
+                                                                                                                                                                     35
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+Annex II – Sophistication matrix for
+IRRBB measurement
+Institutions should apply at least the level of sophistication in their risk measures shown in the table
+below corresponding to their categorisation under the SREP Guidelines. Where the complexity or
+scope of an institution’s business model is significant, the institution should, notwithstanding its
+size, apply and implement risk measures that correspond to its specific business model and
+adequately capture all sensitivities. All material sensitivities to the interest rate changes should be
+adequately captured, including sensitivity to behavioural assumptions.
+Institutions that offer financial products containing embedded optionalities should use
+measurement systems that can adequately capture the dependence of options to interest rate
+changes. Institutions with products that provide behavioural optionalities to clients should use
+adequate conditional cash flow modelling approaches to quantify IRRBB with regard to the changes
+in client behaviour that could occur under different interest rate stress scenarios.
+The four categories referred to in the sophistication table below reflect the categorisation of
+institutions laid down in the EBA SREP Guidelines. The different categories reflect different size,
+structure and the nature, scope and complexity of activities of institutions; with Category 1
+corresponding to the most sophisticated institutions.
+                                                                                                     36
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+                                                    Indicative supervisory expectations regarding IRRBB metric and modelling depending
+ IRRBB metric and modelling
+                                                    on the institution’s sophistication category
+ Cash flow modelling        Metric                  Category 4                 Category 3                  Category 2 institution       Category 1 institution
+                                                    institution                institution
+ Unconditional cash         Earnings-based:         Time buckets advised in the Basel Committee on         [Gap based on evolving size and composition of the
+ flows (it is assumed       Gap analysis:           Banking Supervision’s Standards ‘Principles for        banking book due to business responses to differing
+ that the timing of cash    <U+F0B7> Repricing gap         the Management and Supervision of Interest             interest rate environments. Including projected
+ flows is independent of                            Rate Risk in the banking book’ from April 2016         commercial margins consistent with the interest rate
+ the specific interest                              BCBS Standards).                                       scenario (see section 4.4, ‘Measurement’).]*
+ rate scenario)
+                                                                               Time buckets advised in                                  [Partial duration
+                                                                                                           [Partial duration
+                                                                               BCBS Standards,                                          computed per
+                                                                                                           computed per instrument
+                            Economic value:         Time buckets advised       application of partial                                   transaction and time
+                                                                                                           type and time bucket.
+                            Duration analysis:      in BCBS Standards.         duration weights.                                        bucket. Application of
+                                                                                                           Application of standard
+                                                    Application of             Application of standard                                  standard and other
+                            <U+F0B7> Modified              standard shocks.           shocks and other interest
+                                                                                                           and other interest rate
+                                                                                                                                        interest rate shock and
+                              duration/PV01 of                                                             shock and stress scenarios
+                                                    Yield curve model          rate shock and stress                                    stress scenarios (see
+                              equity                                                                       (see section 4.4,
+                                                    with tenors                scenarios (see section 4.4,                              section 4.4,
+                            <U+F0B7> Partial modified      corresponding to the       ‘Measurement’). Yield
+                                                                                                           ‘Measurement’). Yield
+                                                                                                                                        ‘Measurement’). Yield
+                              duration/partial PV01                                                        curve model with tenors
+                                                    time buckets.              curve model with tenors                                  curve model with
+                                                                                                           corresponding to the time
+                                                                               corresponding to the time                                tenors corresponding
+                                                                                                           buckets.]*
+                                                                               buckets.                                                 to the time buckets.]*
+                                                                                                                                                                37
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+                                                   Indicative supervisory expectations regarding IRRBB metric and modelling depending
+ IRRBB metric and modelling
+                                                   on the institution’s sophistication category
+ Cash flows partially or    Earnings-based:        Standard shocks          Standard and other        Standard and other         Comprehensive
+ fully conditional on       <U+F0B7>Net interest income   applied to earnings      interest rate shock and   interest rate shock and    interest rate and stress
+ interest rate scenario      (NII)                 under a constant         stress scenarios for the  stress scenarios for the   scenarios, combining
+ (timing of cash flows of                          balance sheet. Based     yield curve (see          yield curve and between    shifts of yield curves
+ options, of instruments                           on time buckets          section 4.4,              key market rates           with changes in basis
+ with embedded, explicit                           advised in the BCBS      ‘Measurement’) applied to separately (see            and credit spreads, as
+ options and – in more                             Standards.               earnings, reflecting      section 4.4,               well as changes in
+ sophisticated                                                              constant balance sheet or ‘Measurement’) applied     customer behaviour,
+ approaches – of                                                            simple assumptions about  to earnings projected by   are applied to
+ instruments of which                                                       future business           business plan or constant  reforecast business
+ the maturity depends                                                       development.              balance sheet. Including   volumes and earnings
+ on clients’ behaviour, is                                                                            projected commercial       to measure the
+ modelled conditional                                                                                 margins consistent with    difference compared
+ on the interest rate                                                                                 the interest rate scenario with the underlying
+ scenario)                                                                                            (see section 4.4,          business plan. Including
+                                                                                                      ‘Measurement’).            projected commercial
+                                                                                                                                 margins consistent with
+                                                                                                                                 the interest rate
+                                                                                                                                 scenario (see
+                                                                                                                                 section 4.4,
+                                                                                                                                 ‘Measurement’).
+                                                                                                                                                          38
+
+GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+                                                                      Indicative supervisory expectations regarding IRRBB metric and modelling depending
+  IRRBB metric and modelling
+                                                                      on the institution’s sophistication category
+                                    Economic value:                   Application of standard and other interest rate shock        Measure computed on      Comprehensive interest
+                                    <U+F0B7>Economic value of                and stress scenarios for the yield curve (see                transaction or cash flow rate and stress scenarios,
+                                      equity (EVE)                    section 4.4, ‘Measurement’), using time buckets as           basis. Application of    combining shifts of yield
+                                                                      advised in the BCBS Standards; yield curve tenors            standard and other       curves with changes in
+                                                                      corresponding to the time buckets.                           interest rate shock and  basis and credit spreads,
+                                                                                                                                   stress scenarios for the as well as changes in
+                                                                                                                                   yield curve and between  customer behaviour.
+                                                                                                                                   key market rates         Adequate tenors in all
+                                                                                                                                   separately (see          yield curves. Full
+                                                                                                                                   section 4.4,             optionality valuation.
+                                                                                                                                   ‘Measurement’).          Scenario analysis
+                                                                                                                                   Adequate tenors in yield complemented by Monte
+                                                                                                                                   curves. Full optionality Carlo or historical
+                                                                                                                                   valuation.               simulations on portfolios
+                                                                                                                                                            with material optionality.
+                                                                                                                                                            Daily updating of risk
+                                                                                                                                                            factors.
+* For category 1 and category 2 institutions, unconditional cash flow modelling approaches do not reflect supervisory expectations
+                                                                                                                                                                                      39
+
+ GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+Annex III – The standardised interest
+rate shock scenarios
+1. Interest rate shock scenarios and shock sizes
+The six interest rate shock scenarios for measuring EVE under the standard EVE outlier test are:
+(i)          parallel shock up;
+(ii)         parallel shock down;
+(iii)        steepener shock (short rates down and long rates up);
+(iv)         flattener shock (short rates up and long rates down);
+(v)          short rates shock up; and
+(vi)         short rates shock down.
+Institutions should apply the six above-mentioned interest rate shock scenarios to capture parallel
+and non-parallel gap risks for EVE. These scenarios are applied to IRRBB exposures in each currency
+separately for which the institution has material positions10.
+The shock size for the six interest rate shock scenarios is based on historical interest rates. More
+precisely, for capturing the local interest rate environment and cycle, a historical time series ranging
+from 2000 to 201511 for various maturities is used to calculate the parallel, short-end (‘short’) and
+long-end (‘long’) shocks for a given currency. However, deviations from the above-mentioned 16-
+year period are permitted if they better reflect a particular jurisdiction’s idiosyncratic
+circumstances.
+Table 1 displays the values calculated for the parallel, short and long interest rate shocks for
+selected currencies. The shocks capture the heterogeneous economic environments across the
+jurisdictions. These are then used to calculate the shocks for different maturities of the yield curve
+to create the interest rate shock scenarios as per the methodology explained below.
+ Table 1. Specified size of interest rate shocks R         ¯ shocktype,c
+                   ARS       AUD        BRL        CAD      CHF       CNY     EUR GBP HKD   IDR     INR
+    Parallel       400        300       400        200      100        250    200 250 200   400     400
+      Short        500        450       500        300      150        300    250 300 250   500     500
+      Long         300        200       300        150      100        150    100 150 100   350     300
+                   JPY       KRW       MXN         RUB      SAR        SEK    SGD TRY USD   ZAR
+    Parallel       100        300       400        400      200        200    150 400 200   400
+      Short        100        400       500        500      300        300    200 500 300   500
+      Long         100        200       300        300      150        150    100 300 150   300
+10 Material positions are defined in section 4.5, ‘Supervisory outlier test’.
+11 The EBA may envisage a recalibration in due course.
+                                                                                                      40
+
+ GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+2. Calibration of other currencies
+For calibrating interest rate shock sizes for further currencies, the following proceeding shall be
+applied:
+Step 1: Calculation of the daily average interest rate
+Collect a 16-year time series of daily ‘risk-free’ interest rates for each currency <U+0001D450> for the maturities
+3M, 6M, 1Y, 2Y, 5Y, 7Y, 10Y, 15Y and 20Y. Then, calculate the overall average interest rate for each
+currency <U+0001D450> across all observations in the time series and for all maturities. The result is a single
+measure per currency.
+Step 2: Applying the global shock parameters
+Apply the global shock parameters on the average interest rate, as per Table 2 below, to each
+currency <U+0001D450>.
+    Table 2. Baseline global interest rate shock parameters
+    Parallel               <U+0001D6FC>¯<U+0001D45D><U+0001D44E><U+0001D45F><U+0001D44E><U+0001D459><U+0001D459><U+0001D452><U+0001D459>                         60%
+    Short                  <U+0001D6FC>¯<U+0001D460>h<U+0001D45C><U+0001D45F><U+0001D461>                            85%
+    Long                   <U+0001D6FC>¯<U+0001D459><U+0001D45C><U+0001D45B><U+0001D454>                             40%
+Applying the global shock parameters from Table 2 to the average interest rates calculated in step 1
+results in revised interest rate shocks by currency for the different segments of the yield curve, i.e.
+for the parallel, short and long shocks.
+Step 3: Applying the caps and floors
+The proposed interest rate shock calibration can lead to unrealistically low interest rate shocks for
+some currencies and to unrealistically high interest rate shocks for others. In order to ensure a
+minimum level of prudence and a level playing field, a floor of 100 bps as well as variable caps
+(denoted as <U+2206><U+0001D445>¯<U+0001D457> (<U+0001D461><U+0001D458> )) are set as 500 bps for the short-term shock, 400 bps for the parallel shock
+and 300 bps for the long-term shock, respectively.
+The change in the ‘risk-free’ interest rate for shock scenario j and currency <U+0001D450>, at time bucket tenor
+midpoint <U+0001D461><U+0001D458> can be defined as:
+                                   |<U+2206><U+0001D445>~<U+0001D457>,<U+0001D450> (<U+0001D461><U+0001D458> )| = max {100, min{|<U+2206><U+0001D445><U+0001D457>,<U+0001D450> (<U+0001D461><U+0001D458> )|, <U+2206><U+0001D445>¯<U+0001D457> }}, 12
+where <U+2206><U+0001D445>¯<U+0001D457> = {400, 500, 300}, for j = {parallel, short and long}, respectively. Applying the caps and
+floors to the shocks calculated in step 2, and rounding to the nearest 50 bps, results in the final set
+of interest rate shocks by currency as shown in Table 1.
+Step 4: Adjustments for further currencies that are not shown in Table 1
+As jurisdictions might have experienced major economic changes within the period 2000 to 2015,
+the proceeding in steps 1 to 4 might not be adequate for some of them. This is particularly the case
+if the interest rates during the first years of the period differ considerably from the interest rates in
+the more recent years.
+For currencies that are not mentioned in Table 1, the time series to be used to calculate the average
+interest rate as per step 1 is determined using the following principle: If the average interest rate
+calculated as per step 1 for the period 2000 to 2006 is greater than 700 bps, then data from the
+12 In the case of rotation shock scenarios, <U+2206><U+0001D445>~<U+0001D457>,<U+0001D450> (<U+0001D461>1 ) cannot exceed 500 bps, and <U+2206><U+0001D445>~<U+0001D457>,<U+0001D450> (<U+0001D461><U+0001D43E> ) cannot exceed 300 bps,
+whereby <U+0001D461>1 denotes the time bucket with the lowest maturity and <U+0001D461><U+0001D43E> the time bucket with the highest maturity.
+                                                                                                                    41
+
+ GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+most recent 10 years (i.e. 2007 to 2016) or until when data is available shall be used; otherwise the
+full time series of data from 2000 to 2015 shall be used.
+Using this principle allows us to identify high interest rate environments and periods of significant
+structural change before the financial crisis. Further, this principle aims at finding those currencies
+that exceed the cap (700 bps · 0.6 = 420 bps > 400 bps) in the first years of the period considered
+and fosters a stronger consideration of more recent observed interest rates.
+Table 3 shows the results of applying steps 1 to 4 on EU currencies that are not covered in Table 1.
+Interest rate shock sizes for other currencies can be similarly retrieved by applying the methodology
+outlined in this section.
+  Table 3. Specified size of interest rate shocks R        ¯ shocktype,c for
+  additional EU currencies
+                     BGN        CZK       DKK      HRK         HUF        PLN      RON
+      Parallel        250       200       200      250         300        250       350
+       Short          350       250       250      400         450        350       500
+       Long           150       100       150      200         200        150       250
+3. Parameterisation of the standardised interest rate shock scenarios
+Given for each currency c the specified size of the parallel, short and long instantaneous shocks to
+the ‘risk-free’ interest rate, the following parameterisations of the six interest rate shock scenarios
+should be applied:
+(i)           Parallel shock for currency c: A constant parallel shock up or down across all time buckets:
+                                               <U+2206><U+0001D445><U+0001D45D><U+0001D44E><U+0001D45F><U+0001D44E><U+0001D459><U+0001D459><U+0001D452><U+0001D459>,<U+0001D450> (<U+0001D461><U+0001D458> ) = ± <U+0001D445>¯<U+0001D45D><U+0001D44E><U+0001D45F><U+0001D44E><U+0001D459><U+0001D459><U+0001D452><U+0001D459>,<U+0001D450>
+(ii)          Short rate shock for currency c: Shock up or down that is greatest at the shortest tenor
+                                                                                                    -<U+0001D461>k
+              midpoint. That shock, through the shaping scalar <U+0001D446><U+0001D460>h<U+0001D45C><U+0001D45F><U+0001D461> (<U+0001D461><U+0001D458> ) = <U+0001D452> <U+0001D465> , where <U+0001D465> = 4 ,
+              diminishes toward zero at the tenor of the longest point on the term structure13. Where tk
+              is the midpoint (in time) of the kth bucket and tK is the midpoint (in time) of the last bucket
+              <U+0001D43E>):
+                                                                                                -<U+0001D461>k
+                          <U+2206><U+0001D445><U+0001D460>h<U+0001D45C><U+0001D45F><U+0001D461>,<U+0001D450> (<U+0001D461><U+0001D458> ) = ± <U+0001D445>¯<U+0001D460>h<U+0001D45C><U+0001D45F><U+0001D461>,<U+0001D450> · <U+0001D446><U+0001D460>h<U+0001D45C><U+0001D45F><U+0001D461> (<U+0001D461><U+0001D458> ) = ± <U+0001D445>¯<U+0001D460>h<U+0001D45C><U+0001D45F><U+0001D461>,<U+0001D450> · <U+0001D452>         <U+0001D465>
+(iii)         Long rate shock for currency c: This shock is only applied to rotational shocks. The shock is
+              greatest at the longest tenor midpoint and is related to the short scaling factor as
+              <U+0001D446><U+0001D459><U+0001D45C><U+0001D45B><U+0001D454> (<U+0001D461><U+0001D458> ) = 1 - <U+0001D446><U+0001D460>h<U+0001D45C><U+0001D45F><U+0001D461> (<U+0001D461><U+0001D458> ):
+                                                                                                 -<U+0001D461>k
+                         <U+2206><U+0001D445><U+0001D459><U+0001D45C><U+0001D45B><U+0001D454>,<U+0001D450> (<U+0001D461><U+0001D458> ) = ± <U+0001D445>¯<U+0001D459><U+0001D45C><U+0001D45B><U+0001D454>,<U+0001D450> · <U+0001D446><U+0001D459><U+0001D45C><U+0001D45B><U+0001D454> (<U+0001D461><U+0001D458> ) = ± <U+0001D445>¯<U+0001D459><U+0001D45C><U+0001D45B><U+0001D454>,<U+0001D450> · (1 - <U+0001D452>          <U+0001D465> )
+(iv)          Rotation shocks for currency c: Involving rotations to the term structure (i.e. for steepeners
+              and flatteners) of the interest rates, whereby both the long and short rates are shocked
+              and the shift in interest rates at each tenor midpoint is obtained by applying the following
+              formulas to those shocks:
+                    <U+2206><U+0001D445><U+0001D460><U+0001D461><U+0001D452><U+0001D452><U+0001D45D><U+0001D452><U+0001D45B><U+0001D452><U+0001D45F>,<U+0001D450> (<U+0001D461><U+0001D458> ) = - 0.65 · | <U+2206><U+0001D445><U+0001D460>h<U+0001D45C><U+0001D45F><U+0001D461>,<U+0001D450> (<U+0001D461><U+0001D458> ) | +0.9 · | <U+2206><U+0001D445><U+0001D459><U+0001D45C><U+0001D45B><U+0001D454>,<U+0001D450> (<U+0001D461><U+0001D458> ) |;
+                                                       -<U+0001D461>k
+13 The value of <U+0001D465> in the denominator of the function <U+0001D452>  <U+0001D465>  controls the rate of decay of the shock.
+                                                                                                           42
+
+ GUIDELINES ON THE MANAGEMENT OF INTEREST RATE RISK
+ARISING FROM NON-TRADING BOOK ACTIVITIES
+                   <U+2206><U+0001D445><U+0001D453><U+0001D459><U+0001D44E><U+0001D461><U+0001D461><U+0001D452><U+0001D45B><U+0001D452><U+0001D45F>,<U+0001D450> (<U+0001D461><U+0001D458> ) = +0.8 · | <U+2206><U+0001D445><U+0001D460>h<U+0001D45C><U+0001D45F><U+0001D461>,<U+0001D450> (<U+0001D461><U+0001D458> ) | -0.6 · | <U+2206><U+0001D445><U+0001D459><U+0001D45C><U+0001D45B><U+0001D454>,<U+0001D450> (<U+0001D461><U+0001D458> ) |.
+Examples:
+Short rate shock: Assume the bank uses <U+0001D43E> = 19 time bands and tK = 25 years (the midpoint (in time)
+of the longest tenor bucket <U+0001D43E>), where <U+0001D461><U+0001D458> is the midpoint (in time) for bucket k. For <U+0001D458> = 10 with tk
+                                                                                          -3.5
+= 3.5 years, the scalar adjustment for the short shock would be: <U+0001D446><U+0001D460>h<U+0001D45C><U+0001D45F><U+0001D461> (<U+0001D461><U+0001D458> ) = <U+0001D452> 4 = 0.417. Banks
+would multiply this by the value of the short rate shock to obtain the amount to be added or
+subtracted from the yield curve at that tenor point. If the short rate shock was +250 bps, the
+increase in the yield curve at tk = 3.5 years would be 104.2 bps.
+Steepener: Assume the same point on the yield curve as above, tk = 3.5 years. If the absolute value
+of the short rate shock was 250 bps and the absolute value of the long rate shock was 100 bps (as
+for the euro), the change in the yield curve at tk = 3.5 years would be the sum of the effect of the
+short rate shock plus the effect of the long rate shock in basis points: - 0.65 · 250 bps · 0.417 +
+0.9 · 100 bps · (1 - 0.417) = -15.3 bps.
+Flattener: The corresponding change in the yield curve for the shocks in the example above at tk =
+3.5 years would be: + 0.8 · 250 bps · 0.417 - 0.6 · 100 bps · (1 - 0.417) = 48.4 bps.
+                                                                                                  43
+
