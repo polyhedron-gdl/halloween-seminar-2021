@@ -1,0 +1,370 @@
+\documentclass[11pt]{beamer}
+\usetheme{CambridgeUS}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pgfpages}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{soul}
+\usepackage{empheq}
+
+% The replacement character � (often displayed as a black rhombus with a white
+% question mark) is a symbol found in the Unicode standard at code point U
+% +FFFD in the Specials table. It is used to indicate problems when a system 
+% is unable to render a stream of data to a correct symbol.[4] It is usually 
+% seen when the data is invalid and does not match any character. For this 
+% reason we map explicitly this character to a blanck space.
+\DeclareUnicodeCharacter{FFFD}{ }
+
+\newcommand*{\itemimg}[1]{%
+  \raisebox{-.3\baselineskip}{%
+    \includegraphics[
+      height=\baselineskip,
+      width=\baselineskip,
+      keepaspectratio,
+    ]{#1}%
+  }%
+}
+
+\newtcbox{\mymath}[1][]{%
+    nobeforeafter, math upper, tcbox raise base,
+    enhanced, colframe=blue!30!black,
+    colback=blue!10, boxrule=1pt,
+    #1}
+
+\newcommand{\highlight}[1]{%
+  \colorbox{yellow!100}{$\displaystyle#1$}}
+
+\author{Giovanni Della Lunga\\{\footnotesize giovanni.dellalunga@unibo.it}}
+%\title{3 - Introduction to Deep Learning}
+%\title{4 - Basic Text Analysis}
+\title{5 - Introduction to Natural Language Processing}
+%\title{7 - Classification for Text Analysis}
+%\title{8 - Clustering for Text Similarity}
+%\title{9 - Information Extraction}
+\subtitle{} % (optional)
+\setbeamercovered{transparent} 
+\institute{Halloween Conference in Quantitative Finance} 
+\date{Bologna - October 26-28, 2021} 
+
+\begin{document}
+
+\begin{frame}
+\includegraphics[width=\linewidth]{img/halloween-seminar-logo.PNG}
+\end{frame}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\AtBeginSection[]
+{
+  %\begin{frame}<beamer>
+  %\footnotesize	
+  %\frametitle{Outline}
+  %\begin{multicols}{2}
+  %\tableofcontents[currentsection]
+  %\end{multicols}	  
+  %\normalsize
+  %\end{frame}
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}  	\usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+\AtBeginSubsection{\frame{\subsectionpage}}
+
+% INSERT HERE
+\subsection{Introduction	 \\ \scalebox{0.8}{What is NPL (Natural Language Processing)?}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{Introduction	}
+	\begin{itemize}
+		\item Natural language is what people use to communicate with each other. Unlike formal languages (e.g. programming languages), which are defined by strict rules, natural language is flexible, contextual, and evolving. 
+		\item As a result, natural language is not as straightforward for a computer program to process as a script written in a language like Java, Python, or SQL. 
+		\item When we talk about Natural Language Processing (or \textbf{NLP} for short), we are talking about the ways in which we can use computers to process and interact with human language.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Introduction: What is NLP ?}
+	\begin{itemize}
+		\item Having an insight into what people are talking about can be very valuable to financial traders. 
+		\item NLP is being used to track news, reports, comments about possible mergers between companies, everything can then be  incorporated into a trading algorithm;
+		\item Banks can determine what customers are saying about a service or product by identifying and extracting information in sources like social media. 
+		\item This sentiment analysis can provide a lot of information about customers choices and their decision drivers.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\subsection{The NLTK Package \\ \scalebox{0.8}{}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{NLTK Package}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item The [Natural Language Toolkit](https://www.nltk.org/), or more commonly NLTK, is a suite of libraries and programs for symbolic and statistical natural language processing (NLP) for English written in the Python programming language.
+		\item It was developed by Steven Bird and Edward Loper in the Department of Computer and Information Science at the University of Pennsylvania.
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/05_natural_language_processing_pic_0.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+\begin{frame}{NLTK Package}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item NLTK includes graphical demonstrations and sample data. 
+		\item It is accompanied by a book that explains the underlying concepts behind the language processing tasks supported by the toolkit, plus a text book available also on line [here](https://www.nltk.org/book/)
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/05_natural_language_processing_pic_1.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+\begin{frame}{NLTK Package}
+	\begin{itemize}
+		\item The latest version is NLTK 3.3. It can be used by students, researchers, and industrialists. It is an Open Source and free library. It is available for Windows, Mac OS, and Linux. 
+		\item You can install nltk using \textit{pip installer} if it is not installed in your Python installation. To test the installation:
+		\item Open your Python IDE or the CLI interface (whichever you use normally)
+		\item Type \textbf{\textit{import nltk}} and press enter if no message of missing nltk is shown then nltk is installed on your computer.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{NLTK Package}
+	\begin{itemize}
+		\item A \textbf{CorpusReader} is a programmatic interface to read, seek, stream, and filter documents, and furthermore to expose data wrangling techniques like encoding and preprocessing for code that requires access to data within a corpus. 
+		\item A \textbf{CorpusReader} is instantiated by passing a root path to the directory that contains the corpus files, a signature for discovering document names, as well as a file encoding (by default, UTF-8).
+		\item NLTK comes with a variety of corpus readers (66 at the time of this writing) that are specifically designed to access the text corpora and lexical resources that can be downloaded with NLTK.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Corpus Reader}
+	\textbf{PlaintextCorpusReader}. \textit{A reader for corpora that consist of plain-text documents, where paragraphs are assumed to be split using blank lines}.
+	\begin{center}
+	\includegraphics[scale=0.4]{../../07-pictures/05_natural_language_processing_pic_2.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Corpus Reader}
+	\begin{itemize}
+		\item \textbf{TaggedCorpusReader}. \textit{A reader for simple part-of-speech tagged corpora, where sentences are on their own line and tokens are delimited with their tag}. 
+		\item \textbf{BracketParseCorpusReader}. \textit{A reader for corpora that consist of parenthesis-delineated parse trees}.
+		\item \textbf{ChunkedCorpusReader}. \textit{A reader for chunked (and optionally tagged) corpora formatted with parentheses}.
+		\item \textbf{TwitterCorpusReader}. \textit{A reader for corpora that consist of tweets that have been serialized into line-delimited JSON}.
+		\item \textbf{WordListCorpusReader}. \textit{List of words, one per line. Blank lines are ignored}. 
+		\item \textbf{XMLCorpusReader}. \textit{A reader for corpora whose documents are XML files}. 
+		\item \textbf{CategorizedCorpusReader}. \textit{A corpus readers whose documents are organized by category}.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\subsection{Text Processing \\ \scalebox{0.8}{}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{Text Processing}
+	\begin{itemize}
+		\item Removing Punctuation
+		\item Converting to Lower Case
+		\item Removing Numbers (?)
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Preprocessing}
+	\begin{itemize}
+		\item Tokenization Is the process of segmenting text into sentences and words. 
+		\item In essence, it is the task of cutting a text into pieces called tokens, and at the same time throwing away certain characters, such as punctuation. 
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.55]{../../07-pictures/05_natural_language_processing_pic_3.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Tokenization}
+	\begin{itemize}
+		\item In this process some very common words that appear to provide little or no value to the NLP objective are filtered and excluded from the text to be processed, hence removing widespread and frequent terms that are not informative about the corresponding text.
+		\item Ex.: common language articles, pronouns and prepositions such as \textbf{and}, \textbf{ the} or \textbf{ to} in English.
+		\item In many situations, stop words can be safely ignored by carrying out a lookup in a pre-defined list of keywords, freeing up database space and improving processing time.
+		\item But \textbf{this is not always the case}.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Stop Words Removal}
+	\textbf{Be aware that}:
+	\begin{itemize}
+		\item There is no universal list of stop words!
+		\item stop words removal can wipe out relevant information and modify the context in a given sentence. 
+		\item For example, if we are performing a \textbf{sentiment analysis} we might throw our algorithm off track if we remove a stop word like \textbf{not}. 
+		\item Under these conditions, you might select a minimal stop word list and add additional terms \textbf{depending on your specific objective}.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Stemming and Lemmatization}
+	\begin{itemize}
+		\item Stemming refers to the process of slicing the end or the beginning of words with the intention of removing affixes (lexical additions to the root of the word).
+		\item Affixes that are attached at the beginning of the word are called \textbf{prefixes} (e.g. \textbf{ astro } in the word \textbf{ astrobiology}) and the ones attached at the end of the word are called \textbf{suffixes} (e.g. \textbf{ ful} in the word \textbf{ helpful}).
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/05_natural_language_processing_pic_4.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Stemming and Lemmatization}
+
+Typically a large corpus will contain many words that have a common root – for example: offer, offered and offering. Lemmatisation and stemming both refer to a process of reducing a word to its root. The difference is that stem might not be an actual word whereas, a lemma is an actual word. It’s a handy tool if you want to avoid treating different forms of the same word as different words. Let's consider the following example:
+\begin{itemize}
+	\item \highlight{\textbf{Stemming}}: considered, considering, consider → “consid”
+	\item \highlight{\textbf{Lemmatising}}: considered, considering, consider → “consider”
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Stemming and Lemmatization}
+	\begin{itemize}
+		\item Has the objective of reducing a word to its base form and grouping together different forms of the same word. 
+		\item For example, verbs in past tense are changed into present (e.g. \textbf{went} is changed to \textbf{ go }) and synonyms are unified (e.g. \textbf{ best } is changed to \textbf{ good }), hence standardizing words with similar meaning to their root. 
+		\item Although it seems closely related to the stemming process, lemmatization uses a different approach to reach the root forms of words.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Stemming and Lemmatization}
+	\begin{itemize}
+		\item Lemmatization resolves words to their dictionary form (known as lemma) for which it requires detailed dictionaries in which the algorithm can look into and link words to their corresponding lemmas.
+		\item For example, the words \textbf{running }, \textbf{ runs }  and  \textbf{ ran }  are all forms of the word \textbf{ run }, so \textbf{ run} is the lemma of all the previous words.
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/05_natural_language_processing_pic_5.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Stemming and Lemmatization}
+	\begin{itemize}
+		\item lemmatization is a much more resource-intensive task than performing a stemming process. 
+		\item At the same time, since it requires more knowledge about the language structure than a stemming approach, it \textbf{demands more computational power} than setting up or adapting a stemming algorithm.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Example}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item Using \textbf{05-natural-language-processing} Notebook 
+		\item Par. 5.1-5.4
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/05_natural_language_processing_pic_6.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+\subsection{Part-of-Speech (POS) Tagging \\ \scalebox{0.8}{}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{Part-of-Speech (POS) Tagging}
+	\begin{itemize}
+		\item The process of classifying words into their parts of speech and labeling them accordingly is known as \textbf{part-of-speech tagging} or  \textbf{ POS-tagging}, or simply  \textbf{ tagging}.
+		\item The part of speech explains how a word is used in a sentence
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/05_natural_language_processing_pic_7.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{POS Tagging}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item There are eight main parts of speech: 
+		\item nouns, 
+		\item pronouns, 
+		\item adjectives, 
+		\item verbs, 
+		\item adverbs, 
+		\item prepositions, 
+		\item conjunctions and 
+		\item interjections.
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/05_natural_language_processing_pic_8.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+\begin{frame}{POS Tagging}
+	\begin{itemize}
+		\item \textbf{Noun (N)} : Daniel, London, table, dog, teacher, pen, city
+		\item \textbf{ Verb (V)} : go, speak, run, eat, play, live, walk, have, like, are, is
+		\item \textbf{ Adjective (ADJ)} : big, happy, green, young, fun, crazy, three
+		\item  \textbf{ Adverb (ADV)} : slowly, quietly, very, always, never, too, well, tomorrow
+		\item \textbf{ Preposition (P)} : at, on, in, from, with, near, between, about, under
+		\item \textbf{ Conjunction (CON)} : and, or, but, because, so, yet, unless, since, if
+		\item \textbf{ Pronoun (PRO)} : I, you, we, they, he, she, it, me, us, them, him, her, this
+		\item \textbf{ Interjection (INT)} : Ouch! Wow! Great! Help! Oh! Hey! Hi!
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{POS Tagging}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item The collection of tags used for a particular task is known as a Tagset.
+		\item A part-of-speech tagger, or POS-tagger, processes a sequence of words, and attaches a part of speech tag to each word.
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/05_natural_language_processing_pic_9.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+\begin{frame}{POS Tagging}
+	\begin{center}
+	\includegraphics[scale=0.6]{../../07-pictures/05_natural_language_processing_pic_10.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Some POS Tags used in English}
+	\begin{itemize}
+		\item \textbf{Partial parsing}: syntactic analysis
+		\item \textbf{ Information Extraction}: tagging and partial parsing help identify useful terms and relationships between them.
+		\item \textbf{ Question Answering}: analyzing a query to understand what type of entity the user is looking for and how it is related to other noun phrases mentioned in the question.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Example}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item Using 05-natural-language-processing Notebook 
+		\item Par. 5.5
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/05_natural_language_processing_pic_11.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+%=====================================================================
+
+
+\end{document}

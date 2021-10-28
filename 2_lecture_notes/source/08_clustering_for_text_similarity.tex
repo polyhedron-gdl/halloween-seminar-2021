@@ -1,0 +1,293 @@
+\documentclass[11pt]{beamer}
+\usetheme{CambridgeUS}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pgfpages}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{soul}
+\usepackage{empheq}
+
+% The replacement character � (often displayed as a black rhombus with a white
+% question mark) is a symbol found in the Unicode standard at code point U
+% +FFFD in the Specials table. It is used to indicate problems when a system 
+% is unable to render a stream of data to a correct symbol.[4] It is usually 
+% seen when the data is invalid and does not match any character. For this 
+% reason we map explicitly this character to a blanck space.
+\DeclareUnicodeCharacter{FFFD}{ }
+
+\newcommand*{\itemimg}[1]{%
+  \raisebox{-.3\baselineskip}{%
+    \includegraphics[
+      height=\baselineskip,
+      width=\baselineskip,
+      keepaspectratio,
+    ]{#1}%
+  }%
+}
+
+\newtcbox{\mymath}[1][]{%
+    nobeforeafter, math upper, tcbox raise base,
+    enhanced, colframe=blue!30!black,
+    colback=blue!10, boxrule=1pt,
+    #1}
+
+\newcommand{\highlight}[1]{%
+  \colorbox{yellow!100}{$\displaystyle#1$}}
+
+\author{Giovanni Della Lunga\\{\footnotesize giovanni.dellalunga@unibo.it}}
+%\title{3 - Introduction to Deep Learning}
+%\title{4 - Basic Text Analysis}
+%\title{5 - Introduction to Natural Language Processing}
+%\title{7 - Classification for Text Analysis}
+\title{8 - Clustering for Text Similarity}
+%\title{9 - Information Extraction}
+\subtitle{} % (optional)
+\setbeamercovered{transparent} 
+\institute{Halloween Conference in Quantitative Finance} 
+\date{Bologna - October 26-28, 2021} 
+
+\begin{document}
+
+\begin{frame}
+\includegraphics[width=\linewidth]{img/halloween-seminar-logo.PNG}
+\end{frame}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\AtBeginSection[]
+{
+  %\begin{frame}<beamer>
+  %\footnotesize	
+  %\frametitle{Outline}
+  %\begin{multicols}{2}
+  %\tableofcontents[currentsection]
+  %\end{multicols}	  
+  %\normalsize
+  %\end{frame}
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}  	\usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+\AtBeginSubsection{\frame{\subsectionpage}}
+
+% INSERT HERE
+\subsection{Similarity \\ \scalebox{0.8}{Sorting documents}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{Similarity}
+	\begin{itemize}
+		\item At its core, any sorting task relies on our ability to compare two documents and determine their \textbf{SIMILARITY}. 
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/08_clustering_for_text_similarity_pic_0.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Introduction}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item Documents that are similar to each other are grouped together and the resulting groups broadly describe the overall themes, topics, and patterns inside the corpus.
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/08_clustering_for_text_similarity_pic_1.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+\begin{frame}{Introduction}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item While most document sorting is currently done manually, it is possible to achieve these tasks in a fraction of the time with the effective integration of unsupervised learning, as we will see in this lesson
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/08_clustering_for_text_similarity_pic_2.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+\begin{frame}{Introduction}
+	\begin{itemize}
+		\item In many situations, corpora do not arrive \textit{pretagged} with labels ready for classification. 
+		\item In these cases, the only choice, or at least a necessary precursor for many natural language processing tasks, is an unsupervised approach. 
+		\item Clustering algorithms aim to discover \textbf{latent structure} or themes in unlabeled data using features to organize instances into meaningfully dissimilar groups.
+		\item With text data, each \textbf{ instance} is a single document or sentence, and the \textbf{features} are its tokens, vocabulary, structure, metadata, etc.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Unsupervised Learning on Text}
+	\begin{itemize}
+		\item \textbf{Comparison between Clustering and Classification}
+		\item The behavior of unsupervised learning methods is fundamentally different from that of supervised algorithm we have seen in the previous section; 
+		\item \textbf{Instead of learning a predefined pattern, the model attempts to find relevant patterns a priori}.
+		\item A clustering algorithm is usually employed to create groups or topic clusters, using a \underline{distance metric} such that documents that are closer together in feature space are more similar. 
+		\item New incoming documents can then be vectorized and assigned to the nearest cluster.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Unsupervised Learning on Text}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item A corpus is transformed into feature vectors and a clustering algorithm is employed to create groups or topic clusters, using a distance metric such that documents that are closer together in feature space are more similar. 
+		\item New incoming documents can then be vectorized and assigned to the nearest cluster.
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/08_clustering_for_text_similarity_pic_3.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+\begin{frame}{Unsupervised Learning on Text}
+	\begin{itemize}
+		\item As we have seen in section 3.1, there are a number of different measures that can be used to determine document similarity; 
+		\item Remember that, fundamentally, each relies on our ability to imagine documents as points in space, where the relative closeness of any two documents is a measure of their similarity.
+		\item We have discussed the \textbf{cosine similarity} but there are others measure of distance we can use in clustering documents. 
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Unsupervised Learning on Text : Similarity}
+	\begin{center}
+	\includegraphics[scale=0.4]{../../07-pictures/08_clustering_for_text_similarity_pic_4.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Document Similarity}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item We can measure vector similarity with cosine distance, using the cosine of the angle between the two vectors to assess the degree to which they share the same orientation. 
+		\item In effect, the more parallel any two vectors are, the more similar the documents will be (regardless of their magnitude).
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/08_clustering_for_text_similarity_pic_5.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+\subsection{Clustering \\ \scalebox{0.8}{}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{Clustering}
+	\begin{itemize}
+		\item Now that we can quantify the similarity between any two documents, we can begin exploring unsupervised methods for finding similar groups of documents. 
+		\item \textbf{Partitive clustering} and \textbf{agglomerative clustering} are our two main approaches, and both separate documents into groups whose members share maximum similarity as defined by some distance metric.
+		\item \textbf{We will focus on partitive methods, which partition instances into groups that are represented by a central vector (the centroid)} or described by a density of documents per cluster. 
+		\item Centroids represent an aggregated value (e.g., mean or median) of all member documents and are a convenient way to describe documents in that cluster.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Clustering}
+	\begin{itemize}
+		\item As we have seen in the first part, clustering can be considered one of the most important unsupervised learning problem; so, as every other problem of this kind, it deals with finding a structure in a collection of unlabeled data. 
+		\item A loose definition of clustering could be \textit{the process of organizing objects into groups whose members are similar in some way}. 
+		\item A cluster is therefore a collection of objects which are coherent internally, but clearly dissimilar to the objects belonging to other clusters.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Text Documents Clustering using K-Means Algorithm }
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/08_clustering_for_text_similarity_pic_6.png}
+	\end{center}
+	\footnotesize{source: \textit{https://www.codeproject.com/Articles/439890/Text-Documents-Clustering-using-K-Means-Algorithm}}
+\end{frame}
+%..................................................................
+\begin{frame}{Text Documents Clustering using K-Means Algorithm}
+	\begin{itemize}
+		\item \textbf{Document Representation}
+		\item \highlight{\text{Each document is represented as a vector}} using the vector space model. 
+		\item The vector space model also called term vector model is an algebraic model for representing text document (or any object, in general) as vectors of identifiers. \highlight{\text{For example, TF-IDF weight}}.
+		\item \textbf{Finding Similarity Score}
+		\item We will use cosine similarity to identify the similarity score of a document. 
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Text Documents Clustering using K-Means Algorithm}
+	\begin{itemize}
+		\item \textbf{A Practical Example: Clustering Movie Reviews}
+		\item We are going to use data collected by Brandon Rose; 
+		\item here the link to the original post: http://brandonrose.org/top100
+		\item And the GitHub Repository in which you can find all the data files necessary for this example: https://github.com/brandomr/document\textunderscore cluster
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Text Documents Clustering using K-Means Algorithm}
+	\textbf{5 Steps}
+	\begin{itemize}
+		\item Prepare data
+		\item Tokenizing and stemming each synopsis
+		\item Transforming the corpus into vector space using tf-idf
+		\item Calculating cosine distance between each document as a measure of similarity
+		\item Clustering the documents using the k-means algorithm
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Clustering}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item Working Example
+		\item Using \textbf{08-clustering-for-text-similarity.ipynb} Notebook 
+		\item Clustering Film Reviews
+		\item Clustering Wikipedia
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/08_clustering_for_text_similarity_pic_7.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+\begin{frame}{Clustering}
+	\begin{itemize}
+		\item In the previous section, we explored partitive methods, which divide points into clusters. 
+		\item By contrast, hierarchical clustering involves creating clusters that have a predetermined ordering from top to bottom. 
+		\item Hierarchical models can be either \textbf{agglomerative}, where clusters begin as single instances that iteratively aggregate by similarity until all belong to a single group, or \textbf{divisive}, where the data are gradually divided, beginning with all instances and finishing as single instances.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Hierarchical clustering}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/08_clustering_for_text_similarity_pic_8.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Hierarchical clustering}
+	\begin{itemize}
+		\item Agglomerative clustering iteratively combines the closest instances into clusters until all the instances belong to a single group. 
+		\item In the context of text data, the result is a hierarchy of variable-sized groups that describe document similarities at different levels or granularities.
+		\item Just as there are multiple ways of quantifying the difference between any two documents, there are also multiple criteria for establishing the linkages between them. 
+		\item Agglomerative clustering requires both a \textbf{distance function} and a \textbf{linkage criterion}. 
+		\item Scikit-Learn implementation defaults to the Ward criterion, which minimizes the within-cluster variance as each are successively merged. 
+		\item At each aggregation step, the algorithm finds the pair of clusters that contributes the least increase in total within-cluster variance after merging.
+	\end{itemize}
+\end{frame}
+%..................................................................
+%=====================================================================
+
+
+\end{document}

@@ -1,0 +1,416 @@
+\documentclass[11pt]{beamer}
+\usetheme{CambridgeUS}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pgfpages}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{soul}
+\usepackage{empheq}
+
+\newcommand*{\itemimg}[1]{%
+  \raisebox{-.3\baselineskip}{%
+    \includegraphics[
+      height=\baselineskip,
+      width=\baselineskip,
+      keepaspectratio,
+    ]{#1}%
+  }%
+}
+
+\newtcbox{\mymath}[1][]{%
+    nobeforeafter, math upper, tcbox raise base,
+    enhanced, colframe=blue!30!black,
+    colback=blue!10, boxrule=1pt,
+    #1}
+
+\newcommand{\highlight}[1]{%
+  \colorbox{yellow!100}{$\displaystyle#1$}}
+
+
+\author{Giovanni Della Lunga\\{\footnotesize giovanni.dellalunga@unibo.it}}
+
+\title{Introduction to Unstructured Data Analysis}
+\subtitle{With Applications in Banking and Finance} % (optional)
+\setbeamercovered{transparent} 
+\institute{Halloween Conference in Quantitative Finance} 
+\date{Bologna - October 26-28, 2021} 
+
+\begin{document}
+
+\begin{frame}
+\includegraphics[width=\linewidth]{img/halloween-seminar-logo.PNG}
+\end{frame}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\AtBeginSection[]
+{
+\begin{frame}<beamer>
+  \frametitle{Outline}
+  \tableofcontents[currentsection]
+\end{frame}
+}
+\AtBeginSubsection{\frame{\subsectionpage}}
+
+%______________________________________________________________________________
+%
+%\subsection{Why? \\ \scalebox{0.8}{The purpose and the rationale for the subject covered in the seminar}}
+\subsection{Why Unstructured Data?}
+%______________________________________________________________________________
+%
+\begin{frame}{Why?}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+		\begin{itemize}
+		\item When we think of financial data, our thinking almost always ends up displaying infinite historical series of numbers (prices, interest rates, volatility) 
+		\item Financial data usually come in as structured data. 
+		\end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+	%\fbox{
+		\includegraphics[width=\linewidth]{../../07-pictures/00_general_information_addon_pic_0.png}
+	%}
+\end{column}%
+\end{columns}
+\end{frame}
+%..................................................................
+\begin{frame}{The importance of Unstructured Data}
+	 On the other hand, unstructured data, such as call transcripts, emails text, transactional data are largely an area not yet fully exploited due to accessibility and processing challenges.
+	\begin{center}
+	\includegraphics[scale=.6]{../../07-pictures/00_general_information_addon_pic_1.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{The importance of Unstructured Data}
+	\begin{center}
+	\includegraphics[scale=.35]{../../07-pictures/00_general_information_addon_pic_2.png}
+	\end{center}
+\end{frame}
+%..................................................................
+%______________________________________________________________________________
+%
+%\subsection{What? \\ \scalebox{0.8}{The key content, principles and topics to be learned in these lessons}}
+\subsection{The Key Content of These Lessons}
+%______________________________________________________________________________
+%
+%..................................................................
+\begin{frame}{Information Extraction}
+\begin{itemize}
+\item In order to act on unstructured data, ML models have to perform one of the crucial processes called Information Extraction(IE). 
+
+\item Information Extraction is the process of retrieving key information intertwined within the unstructured data. In other words, extracting structured data from the unstructured data. 
+\vspace{0.5cm}
+\begin{center}
+\includegraphics[scale=.5]{../../07-pictures/transaction_0.jpg} 
+\end{center}
+
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Information Extraction}
+\begin{itemize}
+\item Unfortunately, when it comes to mining these sources for usable data, it’s not quite so quick and easy. Sure, you can search documents for specific text, but what does that really tell you? Beyond word or phrase frequency, not much else. 
+
+\item For these reasons you have to resort to sophisticated techniques of Text Analysis which employ a variety of methodologies to process the text, one of the most important of these being Natural Language Processing (NLP).
+\end{itemize}
+
+\begin{center}
+\includegraphics[scale=.5]{../../07-pictures/transaction_0.jpg} 
+\end{center}
+
+\end{frame}
+%..................................................................
+\begin{frame}{Natural Language Processing}
+\begin{itemize}
+\item Although textual data is abundantly available, the entanglement of natural language makes it particularly difficult to extract useful information from them. 
+
+\item Natural Language Processing (NLP), a field of Artificial Intelligence (AI), analyzes, understands, and derives meaning from unstructured data. 
+
+\item NLP focuses on the interaction between data science and human language, and is scaling to lots of industries. 
+
+\item Today NLP is booming thanks to the huge improvements in the access to data and the increase in computational power, which are allowing practitioners to achieve meaningful results in areas like healthcare, media, finance and human resources, among others. NLP is used for Named Entity Recognition (NER) and Sentiment Analysis as well as Parts-of-Speech tagging, and more.
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Machine Learning}
+\begin{itemize}
+\item Machine learning is an artificial intelligence (AI) technology which provides systems with the ability to automatically learn from experience without the need for explicit programming, and can help solve complex problems. 
+
+\item It is seen as a part of artificial intelligence. 
+
+\item Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. 
+
+\item Machine learning algorithms are used in a wide variety of applications, such as in medicine, email filtering, speech recognition, and computer vision, where it is difficult or unfeasible to develop conventional algorithms to perform the needed tasks.
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Our Journey...}
+\begin{center}
+\includegraphics[scale=.35]{../../07-pictures/our_journey.png} 
+\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Our Program...}
+\begin{center}
+\includegraphics[scale=.8]{../../07-pictures/program.jpg} 
+\end{center}
+\end{frame}
+%---------------------------------------------------------------------------------------------------
+%\subsection{How? \\ \scalebox{0.8}{the learning tools we are going to use}}
+\subsection{Learning Tools}
+%---------------------------------------------------------------------------------------------------
+%..................................................................
+\begin{frame}{Anaconda}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+		\begin{itemize}
+\item To set up your python environment, you’ll first need to have a python on your machine. 
+
+\item There are various python distributions available and we have chosen one that works very well for data science. 
+
+\item Anaconda comes with its own Python distribution which will be installed along with it. 
+		\end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+	%\fbox{
+		\includegraphics[width=\linewidth]{img/anaconda.PNG}
+	%}
+\end{column}%
+\end{columns}
+\end{frame}
+%...................................................................................................
+\begin{frame}{Anaconda}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+		\begin{itemize}
+\item Data Science often requires you to work with a lot of scientific packages like scipy and numpy, data manipulation packages like pandas and IDEs and interactive Jupyter Notebook.
+
+\item Now, you don’t need to worry about any python package most of them come pre-installed and if you want to install a new package, you can do that simply by using conda or pip. 
+		\end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+	%\fbox{
+		\includegraphics[width=\linewidth]{img/anaconda.PNG}
+	%}
+\end{column}%
+\end{columns}
+\end{frame}
+%...................................................................................................
+\begin{frame}{Installing Python and Anaconda}
+\footnotesize{
+\begin{itemize}
+\item  To download an Anaconda distribution, you can use the official download page: \textbf{https://www.anaconda.com/download/}
+\item Here, you can select your platform and then choose the installer. For this, you can choose which version you want and whether 32-bit or 64-bit.
+\end{itemize}}
+\normalsize
+\begin{center}
+\includegraphics[scale=.15]{img/anaconda_2.png} 
+\end{center}
+\end{frame}
+%...................................................................................................
+\begin{frame}{Testing Your Installation}
+To test your installation, on Windows, click on Start and then Anaconda Navigator in the program list (or search for Anaconda in the search bar and select Anaconda Navigator). On a Mac, open up the finder, and in the Applications folder, double click on Anaconda-Navigator.
+\begin{center}
+\includegraphics[scale=.1]{img/anaconda_3.png} 
+\end{center}
+\end{frame}
+%______________________________________________________________________________
+%
+%\subsection{Package Managers}
+%______________________________________________________________________________
+%
+\begin{frame}{Package Managers}
+\begin{itemize}
+\item  Anaconda will give you two package managers- pip and conda. 
+
+\item When some packages aren’t available with conda, you can use pip to install them. 
+
+\item Note that using pip to install packages also available to conda may cause an installation error.
+\end{itemize}
+\end{frame}
+%______________________________________________________________________________
+%
+%\subsection{Jupyter Notebook}
+%______________________________________________________________________________
+%
+\begin{frame}{Teaching tools: Jupyter Notebook}
+\begin{itemize}
+\item The Python world developed the IPython notebook system. 
+\item Notebooks  allow you to write text, but you insert code blocks as "cells" into the notebook. 
+\item A notebook is interactive, so you can execute the code in the cell directly!
+\item Recently the Notebook idea took a much enhanced vision and scope, to explicitly allow languages other than Python to run inside the cells. 
+\item Thus the Jupyter Notebook was born, a project initially aimed at Julia, Python and R (Ju-Pyt-e-R). But in reality many other languages are supported in Jupyter.
+\end{itemize}
+\end{frame}
+%...................................................................................................
+\begin{frame}{Teaching tools: Jupyter Notebook}
+\begin{center}
+\includegraphics[scale=.6]{img/jupyter_1.PNG} 
+\end{center}
+\end{frame}
+%...................................................................................................
+\begin{frame}{Teaching tools: Jupyter Notebook}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+		\begin{itemize}
+			\item Jupyter was designed to enable sharing of notebooks with other people. 
+			\item The idea is that you can write some code, mix some text with the code, and publish this as a notebook.  
+\item In the notebook they can see the code as well as the actual results of running the code.
+		\end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+	%\fbox{
+		\includegraphics[width=\linewidth]{img/jupyter_2.PNG}
+	%}
+\end{column}%
+\end{columns}
+\end{frame}
+%...................................................................................................
+\begin{frame}{Teaching tools: Jupyter Notebook}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+		\begin{itemize}
+\item This is a nice way of sharing little experimental snippets, but also to publish more detailed reports with explanations and full code sets.  
+\item Of course, a variety of web services allows you to post just code snippets (e.g. gist). 
+\item What makes Jupyter different is that the service will actually render the code output.
+		\end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+	%\fbox{
+		\includegraphics[width=\linewidth]{img/jupyter_2.PNG}
+	%}
+\end{column}%
+\end{columns}
+\end{frame}
+%...................................................................................................
+\begin{frame}{Teaching tools: Jupyter Notebook}
+\begin{itemize}
+\item  As we saw earlier, the Jupyter Notebook ships with Anaconda. To run it, you can get in your virtual environment and type the following command: \textbf{jupyter notebook};
+\item Or directly from the Windows Menu...
+\begin{center}
+\includegraphics[scale=.3]{img/jupyter_0.png} 
+\end{center}
+\end{itemize}
+\end{frame}
+%...................................................................................................
+\begin{frame}{Teaching tools: Jupyter Notebook}
+\begin{itemize}
+\item You can find this at \textbf{http://localhost:8888/tree}
+\item Now to run Python here, you can create a new file. 
+\begin{center}
+\includegraphics[scale=.175]{img/jupyter_3.png} 
+\end{center}
+\end{itemize}
+\end{frame}
+%...................................................................................................
+\begin{frame}{Teaching tools: Jupyter Notebook}
+
+To make sure it’s working, click in the cell and type the following:
+
+\begin{center}
+\includegraphics[scale=.175]{img/jupyter_6.png} 
+\end{center}
+\end{frame}
+%______________________________________________________________________________
+%
+%\subsection{Google Colab}
+%______________________________________________________________________________
+%
+\begin{frame}{Teaching tools: Google Colab}
+	\noindent\begin{minipage}{0.5\textwidth}
+		\includegraphics[width=\linewidth]{img/colab.png}
+	\end{minipage}%
+	\hfill%
+	\begin{minipage}{0.5\textwidth}
+		\begin{itemize}
+			\item Colaboratory, or "Colab" for short, is a product from Google Research. \item Colab allows anybody to write and execute arbitrary python code through the browser, and is especially well suited to machine learning, data analysis and education. 
+		\end{itemize}
+	\end{minipage}
+\vfill
+\footnotesize{\textbf{https://colab.research.google.com/notebooks/intro.ipynb?hl=en}}
+\end{frame}
+%...................................................................................................
+\begin{frame}{Teaching tools: Google Colab}
+	\noindent\begin{minipage}{0.5\textwidth}
+		\includegraphics[width=\linewidth]{img/colab.png}
+	\end{minipage}%
+	\hfill%
+	\begin{minipage}{0.5\textwidth}
+		\begin{itemize}
+\item More technically, Colab is a hosted Jupyter notebook service that requires no setup to use, while providing free access to computing resources including GPUs.
+\item Colab notebooks are stored in \textit{Google Drive}, or can be loaded from \textit{GitHub}. Colab notebooks can be shared just as you would with Google Docs or Sheets.
+		\end{itemize}
+	\end{minipage}
+\vfill	
+\footnotesize{\textbf{https://colab.research.google.com/notebooks/intro.ipynb?hl=en}}
+\end{frame}
+%______________________________________________________________________________
+%
+%\subsection{Github Repository}
+%______________________________________________________________________________
+%
+%...................................................................................................
+\begin{frame}{GitHub Repository for this Course}
+\begin{itemize}
+\item GitHub is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management (SCM) functionality of Git, plus its own features. 
+\item It provides access control and several collaboration features such as bug tracking, feature requests, task management, continuous integration for every project. 
+\item You can find all the teaching materials (notebook, slides, code, etc...) at this address
+\highlight{\textbf{https://github.com/polyhedron-gdl}} in the repository \highlight{\textbf{halloween-conference-2021}}.  
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Some advertising for student...}
+\begin{center}
+\includegraphics[scale=.4]{../../07-pictures/university_course.JPG} 
+\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{A final word for students: don't try to bend the spoon...}
+\begin{itemize}
+\item ... that's impossible!
+\item Don't worry if you don't understand all the topics we are going to talk about in these days!
+\item The aim of the seminar is to give an overview of the main techniques used in a field that is having a growing application interest
+\item In order to obtain the credits you will have to pass correctly answering at least 3 out of 6 questions of a very simple questionnaire with predefined answers on the main topics addressed
+\item so don't worry, just relax and enjoy the ride ...
+\end{itemize}
+\begin{center}
+\includegraphics[scale=.2]{../../07-pictures/There_is_no_Spoon.jpg} 
+\end{center}
+\end{frame}
+%______________________________________________________________________________
+%
+\end{document}
+%
+% picture on the right
+%
+\begin{frame}{***}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+		\begin{itemize}
+\item item 1 
+
+\item item 2 
+
+\item item 3 
+		\end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+	%\fbox{
+		\includegraphics[width=\linewidth]{***}
+	%}
+\end{column}%
+\end{columns}
+\end{frame}

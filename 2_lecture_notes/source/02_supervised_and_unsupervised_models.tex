@@ -1,0 +1,404 @@
+\documentclass[11pt]{beamer}
+\usetheme{CambridgeUS}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pgfpages}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{soul}
+\usepackage{empheq}
+
+\newcommand*{\itemimg}[1]{%
+  \raisebox{-.3\baselineskip}{%
+    \includegraphics[
+      height=\baselineskip,
+      width=\baselineskip,
+      keepaspectratio,
+    ]{#1}%
+  }%
+}
+
+\newtcbox{\mymath}[1][]{%
+    nobeforeafter, math upper, tcbox raise base,
+    enhanced, colframe=blue!30!black,
+    colback=blue!10, boxrule=1pt,
+    #1}
+
+\newcommand{\highlight}[1]{%
+  \colorbox{yellow!100}{$\displaystyle#1$}}
+
+\author{Giovanni Della Lunga\\{\footnotesize giovanni.dellalunga@unibo.it}}
+\title{2 - Supervised and Unsupervised Models}
+\subtitle{} % (optional)
+\setbeamercovered{transparent} 
+\institute{Halloween Conference in Quantitative Finance} 
+\date{Bologna - October 26-28, 2021} 
+
+\begin{document}
+
+\begin{frame}
+\includegraphics[width=\linewidth]{img/halloween-seminar-logo.PNG}
+\end{frame}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\AtBeginSection[]
+{
+\begin{frame}<beamer>
+  \frametitle{Outline}
+  \tableofcontents[currentsection]
+\end{frame}
+}
+\AtBeginSubsection{\frame{\subsectionpage}}
+
+%===================================================================================================
+\section{Supervised Learning}
+%---------------------------------------------------------------------------------------------------
+\subsection{What is Supervised Learning?}
+%..................................................................
+\begin{frame}{Supervised Learning}
+\begin{itemize}
+\item When training a machine, supervised learning refers to a category of methods in which we teach or train a machine learning algorithm using data, while \highlight{\text{guiding}} the algorithm model with \highlight{\textbf{labels}} associated with the data. 
+\item Supervised learning algorithms take a dataset and use its features to learn some relationship with a corresponding set of labels. 
+
+\item This process is known as \textbf{training} and, once complete, we would hope that our algorithm would do a good job of predicting the labels of brand new data in which the algorithm has no explicit knowledge of the true label.
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Supervised Learning}
+	\begin{center}
+	\includegraphics[scale=.4]{../../07-pictures/02_supervised_vs_unsupervised_pic_0.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Supervised Learning}
+\begin{itemize}
+\item From a formal poin of view, supervised learning process involves input variables, which we call $X$, and an output variable, which we call $Y$. 
+
+\item We use an algorithm \highlight{\text{to learn the mapping function}} from the input to the output. 
+
+\item In simple mathematics, the output $Y$ is a dependent variable of input $X$ as illustrated by:
+
+$$Y = f(X)$$
+\end{itemize}
+
+\begin{tcolorbox}
+Here, our end goal is to try to \textbf{approximate the mapping function} $f$, so that we can \textbf{predict} the output variables $Y$ when we have new input data $X$.
+\end{tcolorbox}
+\end{frame}
+%---------------------------------------------------------------------------------------------------
+\subsection{Example: Predicting House Prices}
+%..................................................................
+\begin{frame}{Iowa House Price Case Study}
+\begin{center}
+\includegraphics[scale=.3]{../../07-pictures/housesbanner.png} 
+\end{center}
+	\begin{itemize}
+		\item The objective is to predict the prices of house in Iowa from features
+		\item 800 observations in training set, 600 in validation set, and 508 in test set
+		\item Here the original competition description: \textbf{https://www.kaggle.com/c/house-prices-advanced-regression-techniques}
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Iowa House Price Case Study}
+\begin{center}
+\includegraphics[scale=.3]{../../07-pictures/housesbanner.png} 
+\end{center}
+	\begin{itemize}
+	 \item How is this achieved?
+	 \item First, we need data about the houses: square footage, number of rooms, \textbf{features}, whether a house has a garden or not, and so on. 
+	 \item We then need to know the prices of these houses, i.e. the corresponding \textbf{labels}. 
+	 \item By leveraging data coming from thousands of houses, their features and prices, we can now train a supervised machine learning model to predict a new house’s price based on the examples observed by the model. 
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Back to Linear Regression}
+	\begin{itemize}
+		\item Linear regression is a very popular tool because once you have made the assumption that the model is linear you do not need huge amount of data. In ML we refer to the constant term as the $bias$ and the coefficients as $weights$
+		\item Assume $n$ observations and $m$ features. Model is
+		$$ Y = a+b_1X_1+b_2X_2+\dots+b_mX_m+\epsilon$$
+		\item Standard approach is to choose $a$ and the $b_i$ to minimize the mean square error (mse):
+		\begin{equation}
+			mse = \frac{1}{n}\sum\limits_{j=1}^n \left[ 
+			Y_j - \left(a + b_1X_{1,j} + b_2 X_{2,j} + \dots + b_mX_{m,j} \right)
+			\right]^2
+		\end{equation}		 
+		\item This can be done analytically by inverting a matrix, in practice a numerical (gradient descent) is used.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Categorical Features}
+	\begin{itemize}
+		\item Categorical features are features where there are a number of non-numerical alternatives 
+		\item We can define a dummy variable for each alternative. The variable equals 1 if the alternative is true and zero otherwise. 
+		\item This is known as \textbf{one-hot encoding}
+		\item But sometimes we do not have to do this because there is a natural ordering of variables, e.g.:
+		\begin{itemize}
+		\item 	small=1, medium=2, large=3
+		\item    assist. prof=1, assoc. prof=2, full prof =3
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Dummy Variably Trap}
+	\begin{itemize}
+		\item Suppose we have a constant term and a number of dummy variables (equal to 0 or 1)
+		\item There is then no unique solution because, for any C,  we can add C to the constant term and subtract C from each of the dummy variables without changing the prediction
+		\item A side effect of regularization is that it solves this problem
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Iowa House Price Results (No regularization)}
+	2 categorical variables included. Natural ordering for Basement quality. 25 dummy variables created for neighborhood
+	\begin{center}
+	\includegraphics[scale=.6]{../../07-pictures/pic_30.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Example: Iowa House Prices}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item Using \textbf{02-supervised-and-unsupervised-models} Notebook 
+		\item Example 1 - Predicting Iowa Prices
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/09_information_extraction_pic_6.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+%..................................................................
+%===================================================================================================
+\section{Unsupervised Learning}
+%---------------------------------------------------------------------------------------------------
+\subsection{What is Unsupervised Learning?}
+%..................................................................
+\begin{frame}{Unsupervised Learning}
+\begin{itemize}
+\item Unsupervised learning algorithms, on the other hand, work with data that isn’t explicitly labelled. 
+
+\item Unsupervised algorithms attempt to find some sort of underlying structure in the data. 
+
+\item Are some observations clustered into groups? Are there interesting relationships between different features? Which features carry most of the information?
+\end{itemize}
+\begin{center}
+\includegraphics[scale=.35]{../../07-pictures/02_supervised_vs_unsupervised_pic_1.png} 
+\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Unsupervised Learning}
+	\begin{itemize}
+		\item In unsupervised learning we are not trying to predict anything
+		\item The objective is to cluster data to increase our understanding of the environment
+		\item \textbf{Example - Clustering Customers}
+	\begin{itemize}
+		\item Suppose you are a bank and have hundreds of thousands of customers and 100 features describing each one
+		\item Unsupervised learning algorithms can be used to divide your customers into clusters so that you can anticipate their needs and communicate with them more effectively 
+	\end{itemize}
+	\end{itemize}
+\begin{center}
+\includegraphics[scale=.4]{../../07-pictures/02_supervised_vs_unsupervised_pic_3.png} 
+\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Unsupervised Learning}
+\begin{itemize}
+\item Also in contrast to supervised learning, assessing performance of an unsupervised learning algorithm is somewhat subjective and largely depend on the specific details of the task. 
+
+\item Unsupervised learning is commonly used in tasks such as text mining and dimensionality reduction. 
+
+\item K-means is an example of an unsupervised learning algorithm.
+\end{itemize}
+\end{frame}
+%__________________________________________________________________________
+%
+\subsection[subsection]{Example: k-Means Clustering}
+%__________________________________________________________________________
+%
+\begin{frame}{The \textit{k}-Means Algorithm}
+	\begin{itemize}
+		\item In this section we explain a simple clustering procedure known as the 			\textit{k-means algorithm};
+\item \textit{k}-means clustering is one of the simplest and popular unsupervised machine learning algorithms.
+
+\item Typically, unsupervised algorithms make inferences from datasets using only input vectors without referring to known, or labelled, outcomes. 
+
+\item The objective of K-means is simple: group similar data points together and discover underlying patterns. 
+
+\item To achieve this objective, K-means looks for a fixed number (k) of clusters in a dataset.
+
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{The \textit{k}-Means Algorithm}
+	\begin{itemize}
+\item A cluster refers to a collection of data points aggregated together because of certain similarities. 
+
+\item You’ll define a target number k, which refers to the number of centroids you need in the dataset. 
+
+\item A centroid is the imaginary or real location representing the center of the cluster.
+
+\item Every data point is allocated to each of the clusters through \highlight{\text{reducing the in-cluster sum of squares}}.
+
+\item In other words, the K-means algorithm identifies k number of centroids, and then allocates every data point to the \textbf{nearest} cluster, while keeping the centroids as small as possible.
+
+\item The ‘means’ in the K-means refers to averaging of the data; that is, finding the centroid.
+		
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{The \textit{k}-Means Algorithm}{A Distance Measure}
+	\begin{itemize}
+		\item For clustering we need a distance measure
+		\item The simplest distance measure is the Euclidean distance measure. Distance = $\sqrt{(x_B-x_B)^2 + (y_B - y_A)^2}$
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=.6]{../../07-pictures/pic_12.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{The \textit{k}-Means Algorithm}{Distance Measure}
+	\begin{itemize}
+		\item In general when there are $m$ features the distance between P and Q is
+		\begin{equation}
+			d = \sqrt{\sum\limits_{j=1}^m \left( \nu_{pj} - \nu_{qj} \right)^2}
+		\end{equation}		   
+		where $\nu_{pj}$  and $\nu_{qj}$ are the values of the $j-th$ feature for $P$ and $Q$
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{The \textit{k}-Means Algorithm}{Cluster Centers}
+	The center of a cluster (sometimes called the \textbf{centroid}) is determined by averaging the values of each feature for all points in the cluster. 
+	
+	\textbf{Example}:
+	 
+	\begin{center}
+	\includegraphics[scale=.6]{../../07-pictures/pic_13.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{The \textit{k}-Means Algorithm to find k Clusters}
+	\begin{center}
+	\includegraphics[scale=.6]{../../07-pictures/pic_13_B.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{The \textit{k}-Means Algorithm to find k Clusters}
+	\begin{center}
+	\includegraphics[scale=.48]{../../07-pictures/k-means.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{The \textit{k}-Means Algorithm}{Cluster Centers}{Inertia}
+	\begin{itemize}
+	\item A measure of the performance of the algorithm is the within cluster sum of squares also known as \textit{inertia};
+		\item For any given k the objective is to minimize inertia:
+		\begin{equation}
+		Inertia = \sum\limits_{i=1}^n d_i^2
+		\end{equation}
+		
+		where $d_i$ is the distance of observation $i$ from its cluster center
+		\item In practice we use the k-means algorithm with several different starting points and choose the result that has the smallest inertia 
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{The \textit{k}-Means Algorithm}{Choosing k}
+	\begin{itemize}
+		\item The elbow approach (see next slide) 
+		\item The silhouette method:
+		\begin{itemize}
+		\item For each observation $i$ calculate $a(i)$, the average distance from other observations in its cluster, and $b(i)$, the average distance from observations in the closest other cluster. The silhouette score for observation $i$, $s(i)$, is defined as 
+		\begin{equation}
+		s(i) = \frac{b(i)-a(i)}{\max[a(i),b(i)]}
+\end{equation}		   
+		\item Choose the number of clusters that maximizes the average silhouette score across all observations   
+
+\end{itemize}		 
+		\item Use the gap statistic which compares the within cluster sum of squares with what would be expected with random data
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{The \textit{k}-Means Algorithm}{The elbow method}
+	The \textbf{elbow method} (In this example k=4 is suggested)
+	\begin{center}
+	\includegraphics[scale=.5]{../../07-pictures/pic_13_C.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{The \textit{k}-Means Algorithm}{The Curse of Dimensionality}
+	\begin{itemize}
+		\item The Euclidean distance measure increases as the number of features increase.
+		\item This is referred to as the curse of dimensionality
+		\item Consider two observations that have values for feature $j$ equal to $x_j$ and $y_j$.  An alternative distance measure that always lies between $0$ and $2$ is
+		\begin{equation}
+		d=1 - \frac{\sum\limits_{j=1}^m x_j y_j}{\sqrt{\sum\limits_{j=1}^m x_j^2 \, \sum\limits_{j=1}^m y_j^2}}
+		\end{equation}
+	\end{itemize}
+\end{frame}
+%__________________________________________________________________________
+%
+%\subsection[subsection]{Country Risk Example}
+%__________________________________________________________________________
+%
+%..................................................................
+\begin{frame}{Example: Country Risk Example}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item Using \textbf{02-supervised-and-unsupervised-models} Notebook 
+		\item Example 2 - Country Risk Example
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/09_information_extraction_pic_6.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+%..................................................................
+\section{End Notes}
+\subsection{Breaking the Dichotomy}
+\begin{frame}{Breaking the Dichotomy}
+\begin{itemize}
+\item In recent years a number of paradigms have appeared that don’t quite fit under the supervised and unsupervised labels. 
+
+\item Semi-Supervised Learning is just what is sounds like, approaches that combine some labelled and some unlabelled data. 
+
+\item Often labelling is an expensive, time consuming process so there are many situations where we would like to use information from a small amount of labelled data and a larger amount of unlabelled data. 
+
+\item Also related to this situation is Active Learning where a learning algorithm can query a user to label particular observations which will add the most information. 
+\end{itemize}
+\end{frame}
+
+%===================================================================================================
+\begin{frame}{Bibliography}
+\begin{thebibliography}{9}
+
+\setbeamertemplate{bibliography item}[book]
+
+\bibitem{1} John C. Hull, \textit{Machine Learning in Business: An Introduction to the World of Data Science}, Amazon, 2019.
+
+\bibitem{2} Paul Wilmott, \textit{Machine Learning: An Applied Mathematics Introduction}, Panda Ohana Publishing, 2019.
+
+\end{thebibliography}
+\end{frame}
+%===================================================================================================
+\end{document}
+
+%..................................................................
+\begin{frame}{}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{frame}

@@ -1,0 +1,735 @@
+\documentclass[11pt]{beamer}
+\usetheme{CambridgeUS}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pgfpages}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{soul}
+\usepackage{empheq}
+
+\newcommand*{\itemimg}[1]{%
+  \raisebox{-.3\baselineskip}{%
+    \includegraphics[
+      height=\baselineskip,
+      width=\baselineskip,
+      keepaspectratio,
+    ]{#1}%
+  }%
+}
+
+\newtcbox{\mymath}[1][]{%
+    nobeforeafter, math upper, tcbox raise base,
+    enhanced, colframe=blue!30!black,
+    colback=blue!10, boxrule=1pt,
+    #1}
+
+\newcommand{\highlight}[1]{%
+  \colorbox{yellow!100}{$\displaystyle#1$}}
+
+\author{Giovanni Della Lunga\\{\footnotesize giovanni.dellalunga@unibo.it}}
+\title{1 - Introduction to Machine Learning}
+\subtitle{} % (optional)
+\setbeamercovered{transparent} 
+\institute{Halloween Conference in Quantitative Finance} 
+\date{Bologna - October 26-28, 2021} 
+
+\begin{document}
+
+\begin{frame}
+\includegraphics[width=\linewidth]{img/halloween-seminar-logo.PNG}
+\end{frame}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\AtBeginSection[]
+{
+\begin{frame}<beamer>
+  \frametitle{Outline}
+  \tableofcontents[currentsection]
+\end{frame}
+}
+\AtBeginSubsection{\frame{\subsectionpage}}
+
+
+%===================================================================================================
+\section{General Ideas}
+
+\begin{frame}{Introduction}
+\begin{itemize}
+\item These introductory lessons assume a basic level of statistical and mathematical knowledge. 
+\item No previous knowledge of Machine Learning is assumed. 
+\item For this reason I have decided to use two basic texts for the preparation of these lessons that you can consult for further details on the topics we are going to deal with.
+
+\vspace{0.5cm}
+\textit{John C. Hull}, \textbf{Machine Learning in Business, An Introduction to the World of Data Science}, Amazon (2019)
+
+\vspace{0.5cm}
+\textit{Paul Wilmott}, \textbf{Machine Learning, An Applied Mathematics Introduction}, Panda Ohana Publishing (2019)
+
+
+\end{itemize}
+\end{frame}
+%..................................................................
+%__________________________________________________________________________
+%
+\subsection[subsection]{What is Machine Learning}
+%__________________________________________________________________________
+%
+\begin{frame}{What is Machine Learning}
+	\begin{itemize}
+		\item Machine learning is a branch of AI
+		\item The idea underlying machine learning is that we give a computer program access to lots of data and let it learn about relationships between variables and make predictions 
+		\item Some of the techniques of machine learning date back to the 1950s  but improvements in computer speeds and data storage costs have now made machine learning a practical tool
+		\item Machine Larning or data science can be described as the new world of statistics
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Software}
+	\begin{itemize}
+		\item There a several alternatives such as Python, R, MatLab, Spark, and Julia 
+		\item Need ability to handle very large data sets and availability of packages that implement the algorithms.
+		\item Python seems to be winning at the moment
+		\item Scikit-Learn has freely available packages for many ML tasks
+	\end{itemize}
+
+\begin{tcolorbox}
+\textbf{A word of caution}. It is tempting to learn a language such as Python and apply various packages to your data without really understanding what the packages are doing or even how the results should be interpreted. This would be a bit like a finance specialist using the Black-Scholes model to value options without understanding where it comes from or its limitations...
+\end{tcolorbox}
+\end{frame}
+%..................................................................
+\begin{frame}{Traditional statistics}
+	\begin{itemize}
+		\item Means, SDs
+		\item Probability distributions
+		\item Significance tests
+		\item Confidence intervals
+		\item Linear regression
+		\item etc
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{The new world of statistics}
+	\begin{itemize}
+		\item Huge data sets 
+		\item Fantastic improvements in computer processing speeds and data storage costs
+		\item Machine learning tools are now feasible
+		\item Can now develop non-linear prediction models, find patterns in data in ways that were not possible before, and develop multi-stage decision strategies
+		\item New terminology: features, labels, activation functions, target, bias, supervised/unsupervised learning
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Applications of ML}
+	\begin{itemize}
+		\item Credit decisions
+		\item Classifying and understanding customers better
+		\item Portfolio management
+		\item Private equity
+		\item Language translation 
+		\item Voice recognition
+		\item Biometrics
+		\item etc 
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Types of Machine Learning }
+	\begin{itemize}
+		\item \highlight{\textbf{Supervised Learning}} (predict numerical value or classification)
+		\item \highlight{\textbf{Unsupervised Learning}} (find patterns)
+		\item Semi-supervised learning (only part of data has values for, or classification of, target)
+		\item Reinforcement learning (multi-stage decision making)
+	\end{itemize}
+
+\vspace{1cm}
+In these introductory lessons we will discuss only the first two types.	
+\end{frame}
+%..................................................................
+\begin{frame}{Types of Machine Learning }
+	\begin{itemize}
+		\item \textbf{Supervised Learning} \highlight{\text{is concerned with using data to make prediction}} (for example a simple regression model). We can distinguish between supervised learning models that are used to predict a variable than can take a continuum of values and models that are used for classification (for example to learn if a potential borrower can be classified as acceptable or unacceptable credit risk);
+		\item \textbf{Unsupervided Learning} \highlight{\text{is most concerned with recognizing patters in data}}. The main objective usually is not to forecast a particular variable, rather it is to undersand the environment represented by the data better. As we will see clustering is one of the most used tool in unsupervised learning. 
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Features and Labels}
+	\begin{itemize}
+		\item The data for \textbf{Supervised Learning} contains what are referred to as \textbf{features} and \textbf{labels};
+		\item \textit{Labels} are \highlight{\text{the values of the target that is to be predicted}};
+		\item \textit{Features} are \highlight{\text{the variables from which the predictions are to be made}} (if you are from statistics then think of it as an explanatory variable);
+	\end{itemize}
+\begin{center}
+\includegraphics[scale=.3]{../../07-pictures/feature-and-labels.png} 
+\end{center}	
+	
+\end{frame}
+%..................................................................
+\begin{frame}{Features and Labels}
+	\begin{itemize}
+		\item For example, when predicting the \textbf{price of a house}, the \textit{features} could be the \textit{square meters of living space}, \textit{the number of bedrooms}, \textit{the number of bathrooms}, \textit{the size of the garage} and so on. 
+		\item The \textit{label} would be \textit{the house price};  
+	\end{itemize}
+\begin{center}
+\includegraphics[scale=.35]{../../07-pictures/feature-and-labels.png} 
+\end{center}	
+\end{frame}
+%..................................................................
+\begin{frame}{Features and Labels}
+	\begin{itemize}
+		\item The data for \textbf{Unsupervised Learning} consists of features but no labels because the model is being used to identify patterns not to forecast something. 
+		\item For example we could use an unsupervised model to classify the houses that exist in a certain neghborhood without trying to predict any price.
+	\end{itemize}
+\begin{center}
+\includegraphics[scale=.65]{../../07-pictures/cluster-house.jpg} 
+\end{center}	
+\end{frame}
+%..................................................................
+\begin{frame}{Supervised and Unsupevised}
+	\begin{itemize}
+		\item In the second part of this tutorial, we will return to the distinction between supervised and unsupervised models. 
+		\item For the moment we continue to discuss some general principles of machine learning: Data Handling, Cost Function, etc...
+	\end{itemize}
+\end{frame}
+%__________________________________________________________________________
+%
+\subsection[subsection]{Data Preprocessing}
+%__________________________________________________________________________
+%
+\begin{frame}{Feature Scaling}
+	\begin{itemize}
+		\item Before using many ML algorithms (including those for unsupervised learning), it is important to scale feature values so that they are comparable.
+		\item  Z-score scaling involves calculating the mean ($\mu$) and SD ($\sigma$) from the values of each feature from the training set. Scaled feature values for all data sets are then created by subtracting the mean and dividing by the SD. 
+\item The scaled feature values have a mean of zero and SD of one.
+		\begin{equation}
+		\text{scaled feature value} = \frac{V-\mu}{\sigma}
+		\end{equation}
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Feature Scaling}
+	\begin{itemize}
+		\item Min-max scaling involves calculating the maximum and minimum value of each feature from the training set. 
+		\item Scaled feature values for all data sets are then created by subtracting the minimum and dividing by the difference between the maximum and minimum. 
+		\item The scaled feature values lie between zero and one:
+		
+				\begin{equation}
+		\text{scaled feature value} = \frac{V-V_{min}}{V_{max}-V_{min}}
+		\end{equation}
+
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Cleaning data}
+	\begin{itemize}
+		\item Dealing with inconsistent recording
+		\item Removing unwanted observations
+		\item Removing duplicates
+		\item Investigating outliers
+		\item Dealing with missing items
+	\end{itemize}
+\end{frame}
+%__________________________________________________________________________
+%
+\subsection[subsection]{Cost Functions and Gradient Descent}
+%__________________________________________________________________________
+%
+\begin{frame}{Cost Function}
+\begin{itemize}
+\item In Machine Learning a \textbf{Cost Function} or loss function is used to represent how far away a mathematical model is from the real data;
+\item One adjust the mathematical model usually by varying parameters within the model so as to \ul{minimize the const function};
+\item Let's take for example a very simple model of the form
+$$y = \theta_0 + \theta_1 \,x$$
+where the $\theta$s are the parameters that we want to find to give us the best fit to the data;
+\item Call this function $h_\theta (x)$ to emphasize the dependence on both the variable $x$ and the two parameters $\theta_0$ and $\theta_1$; 
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Cost Function}
+\begin{itemize}
+\item We want to measure how far away the data, the $y^{(n)}$s are from the function $h_\theta (x)$;
+\item A common way to do this is via the quadratic cost function
+\begin{equation}\label{cost_function}
+		J(\mathbf{\theta}) =  \frac{1}{2N} \sum\limits_{n=1}^N \left[h_\theta \left( x^{(n)} \right) - y ^{(n)}\right]^2 
+\end{equation}
+\item We wants the parameters that minimize (\ref{cost_function}), almost always you are going to have to do this numerically;
+\item If we have a nice convex function then there is a numerical method that will converge to the solution, it is called \textbf{gradient descent}. 
+\end{itemize}
+\end{frame}
+%__________________________________________________________________________
+%
+%\subsection[subsection]{Gradient Descent}
+%__________________________________________________________________________
+%
+\begin{frame}{Gradient Descent}{Linear Regression}
+   \begin{itemize}
+      \item   				  						  
+		Gradient Descent is a very generic optimization algorithm capable of finding optimal solutions to a wide range of problems. 
+	  \item Gradient Descent Algorithm measures the local gradient of the error function with regards to the parameter vector $\theta$, and it goes in the direction of descending gradient. 
+	  \item Once the gradient is zero, you have reached a minimum!
+      \item Concretely, you start by filling $\theta$ with random values (this is called random initialization), and then you improve it gradually, taking one step at a time, each step attempting to decrease the cost function (e.g., the MSE), until the algorithm converges to a minimum		  
+   \end{itemize}
+\end{frame}
+%...................................................................................................
+\begin{frame}{Gradient Descent}{Linear Regression}
+An important parameter in Gradient Descent is the size of the steps, determined by
+the learning rate hyperparameter. 
+   \begin{center}
+   \includegraphics[scale=.6]{../../07-pictures/pic_50.png} 	
+   \end{center}
+\end{frame}
+%...................................................................................................
+\begin{frame}{Gradient Descent}{Linear Regression}
+If the learning rate is too small, then the algorithm
+will have to go through many iterations to converge, which will take a long time...   \begin{center}
+   \includegraphics[scale=.6]{../../07-pictures/pic_51.png} 	
+   \end{center}
+\end{frame}
+%...................................................................................................
+\begin{frame}{Gradient Descent}{Linear Regression}
+... on the other hand, if the learning rate is too high, you might jump across the valley. This might make the algorithm diverge failing to find a good solution. 
+   \begin{center}
+   \includegraphics[scale=.6]{../../07-pictures/pic_52.png} 	
+   \end{center}
+\end{frame}
+%...................................................................................................
+\begin{frame}{Gradient Descent}
+Having defined an appropriate learning rate, the scheme works as follow
+\begin{itemize}
+\item Start with an initial guess for each parameter $\theta_k$;
+\item Move $\theta_k$ in the direction of the slope
+
+\begin{empheq}[box=\tcbhighmath]{align*}
+\text{New}\: \theta_k = \text{Old}\: \theta_k - \beta \frac{\partial J}{\partial \theta_k}
+\end{empheq}
+
+where $\beta$ is our learning rate;
+\end{itemize}
+\begin{tcolorbox}
+In the above description of gradient descent we have used all of the data points simultaneously. This is called \textbf{batch gradient descent}
+\end{tcolorbox}
+\end{frame}
+%...................................................................................................
+\begin{frame}{Gradient Descent}
+\begin{itemize}
+\item Rather then use all of the data in the parameter updating we can use a technique called \textbf{stochastic gradient descent};
+\item This technique is the same as the batch gradient descent except that you only update using \textbf{one} of the data points each time and this data point is chosen \textbf{randomly};
+\item Especially in high-dimensional optimization problems this reduces the computational burden, achieving faster iterations in trade for a lower convergence rate;
+\item When the learning rates decrease with an appropriate rate, and subject to relatively mild assumptions, stochastic gradient descent converges almost surely to a global minimum when the objective function is convex or pseudoconvex, and otherwise converges almost surely to a local minimum;
+\end{itemize}
+\end{frame}
+%__________________________________________________________________________
+%
+\subsection[subsection]{Validation and Testing}
+%__________________________________________________________________________
+%
+\begin{frame}{Validation and Testing}
+	\begin{itemize}
+		\item When data is used for forecasting there is a danger that the machine learning model \textbf{will work very well for training data, but will not generalize well to other data};
+		\item An obvious point is that it is important that the data used in a machine learning model be representative of the situations to which the model is to be applied;
+		\item It is also important to test a model \textbf{out-of-sample}, by this we mean that \ul{the model should be tested on data that is different from the sample data used to determine the parameters of the model};
+		\item Data scientist refer to the sample data as the \textbf{training set} and the data used to determine the accuracy of the model as the \textbf{test set};
+		\item Often a \textbf{validation set} is used as well as we explain later;
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Validation and Testing}
+\begin{itemize}
+\item We will illustrate the use of a training set and the test data set with a very simple Example (Hull, Chapter 1);
+\item We suppose that awe are interested in forecasting the salaries of people from their age;
+\item This simple regression model is an example of supervised learning...
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Validation and Testing: Training Set}
+\textbf{Table 1}. Salary as a function of Age for a certain profession in a certain area)
+	\begin{center}
+	\includegraphics[scale=.6]{./../../07-pictures/pic_0.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Validation and Testing: Training Set}
+\textbf{Figure 1}. Scatter plot of Salary as a function of Age (see Table 1)
+	\begin{center}
+	\includegraphics[scale=.6]{./../../07-pictures/pic_1.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Validation and Testing: Training Set}
+\textbf{Figure 2}. It's tempting to choose a model that fits the data really well for example with a polynomial of degree five (Y = Salary, X = Age):
+	\begin{equation}
+	Y = a + b_1X+b_2X^2+b_3X^3+b_4X^4+b_5X^5 \notag
+	\end{equation}	 
+	\begin{center}
+	\includegraphics[scale=.6]{./../../07-pictures/pic_2.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Validation and Testing: Discussion of Training Result}
+\begin{itemize}
+\item The model provides a good fit to the data;
+\item The standard deviation of the difference between the salary given by the model and the actual salary for the ten individuals in the training data set (which is referred to as the \textbf{root mean square error (rmse)}) is \$12902;
+\item However common sense would suggest that we many over-fitted the data;
+\item We need to check the model out-of-sample;
+\item To use the language of \textit{data science} we need to determine \ul{whether the model generalizes well to a new data set that is different from the training set}.
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Validation and Testing: Validation Set}
+\textbf {Table 2}. An Out-of-Sample Validation Set
+	\begin{center}
+	\includegraphics[scale=.6]{./../../07-pictures/pic_3.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Validation and Testing: Validation Set}
+\textbf{Figure 3}. Scatter Plot for Validation Set
+	\begin{center}
+	\includegraphics[scale=.6]{./../../07-pictures/pic_4.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame} {Validation and Testing: Discussion of Validation Result}
+The Fifth Order Polynomial Model Does Not Generalize Well
+	\begin{itemize}
+		\item The root mean squared error (rmse) for the training      data set is \$12,902
+		\item  The rmse for the test data set is \$38,794
+		\item   We conclude that the model overfits the data
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=.5]{./../../07-pictures/pic_2_A.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Validation and Testing}
+
+\textbf{Figure 4}. A Simpler Quadratic Model
+	\begin{equation}
+	Y = a + b_1X + b_2X^2 \notag
+	\end{equation}		
+	 
+	\begin{center}
+	\includegraphics[scale=.6]{./../../07-pictures/pic_5.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Validation and Testing}
+\textbf{Figure 5 }. Linear Model
+	\begin{equation}
+		Y = a + b_1X \notag
+	\end{equation}
+	\begin{center}
+	\includegraphics[scale=.6]{./../../07-pictures/pic_6.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Validation and Testing}
+\textbf{Table 3}. Summary of Results: The linear model under-fits while the 5th degree polynomial over-fits:
+	\begin{center}
+	\includegraphics[scale=.6]{./../../07-pictures/pic_7.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Validation and Testing}
+\textbf{Table 3}. Summary of Results: The linear model under-fits while the 5th degree polynomial over-fits:
+	\begin{center}
+	\includegraphics[scale=.6]{./../../07-pictures/pic_7_A.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Validation and Testing}
+\textbf{Figure 6}. Overfitting/Underfitting Example: predicting salaries for people in a certain profession in a certain area (only 10 observations)
+	\begin{center}
+	\includegraphics[scale=.5]{./../../07-pictures/pic_8.png}  \hfill
+	\includegraphics[scale=.5]{./../../07-pictures/pic_9.png}  \hfill
+	\includegraphics[scale=.5]{./../../07-pictures/pic_10.png}
+	\end{center}
+	Overfitting -------------- Underfitting	 ----------------- Best model?
+\end{frame}
+%..................................................................
+\begin{frame}{Typical Pattern of Errors for Training Set and Validation Set}
+	\begin{center}
+	\includegraphics[scale=.6]{./../../07-pictures/pic_11.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Validation and Testing}
+
+ML Good Practice
+
+	\begin{itemize}
+		\item Divide data into three sets
+		\item Training set
+		\item Validation set
+		\item Test set
+		\item Develop different models using the \textbf{training set} and compare them using the \textbf{validation set};
+		\item Rule of thumb: increase model complexity until model no longer generalizes well to the validation set;
+		\item The \textbf{test set} is used to provide a final out-of-sample indication of how well the chosen model works;
+	\end{itemize}
+\end{frame}
+%__________________________________________________________________________
+%
+\subsection[subsection]{Bias and Variance}
+%__________________________________________________________________________
+%
+\begin{frame}{Bias and Variance}
+\begin{itemize}
+\item Suppose there is a relationship between an independent variable $x$ and a dependent variable $y$:
+
+\begin{equation}
+    y=f(x) + \epsilon
+\end{equation}
+
+where $\epsilon$ is an error term with mean zero and variance $\sigma^2$. 
+
+\item The error term captures either genuine randomness in the data or noise due to measurement error.
+
+\item Suppose we find, with a Machine Learning technique,  a deterministic model for this relationship:
+
+\begin{equation}
+    y = \hat f(x)
+\end{equation}
+ 
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Bias and Variance}
+\begin{itemize}
+\item Now it comes a new data point $x^\prime$ not in the training set and we want to predict the corresponding $y^\prime$;
+
+\item The error we will observe in our model at point $x^\prime$ is going to be
+
+\begin{equation}
+    \hat f(x^\prime) - f(x^\prime) - \epsilon
+\end{equation}
+
+\item There are two different sources of error in this equation. 
+
+\item The first one is included in the factor $\epsilon$; 
+
+\item The second one, more interesting, is due to what is in our training set. 
+
+\item A robust model should give us the same prediction whatever data we used for training out model.
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Bias and Variance}
+\begin{itemize}
+\item Let's look at the average error:
+
+\begin{equation}
+E \left[ \hat f (x^\prime ) \right] - f(x^\prime)
+\end{equation}
+
+where the expectation is taken over random samples of training data (having the same distributio as the training data). 
+
+\item This is the definition of the \textbf{bias}
+
+\begin{equation}
+    \textrm{Bias} \left[\hat f (x^\prime) \right] = E \left[ \hat f (x^\prime ) \right] - f(x^\prime)
+\end{equation}
+
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Bias and Variance}
+\begin{itemize}
+\item We can also look at the mean square error
+
+\begin{empheq}[box=\tcbhighmath]{align*}
+E \left[\left( \hat f (x^\prime ) - f(x^\prime) - \epsilon \right)^2\right] =
+\left[ \textrm{Bias} \left( \hat f(x^\prime) \right) \right]^2 + \textrm{Var}\left[ \hat f(x^\prime) \right] + \sigma^2
+\end{empheq}
+
+where we remember that $\hat f (x^\prime)$ and $\epsilon$ are independent.
+
+\item This show us that there are two important quantities, the \textbf{bias} and the \textbf{variance} that will affect our results and that we can control to some extent. 
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Bias and Variance}
+
+\begin{itemize}
+
+\item \textbf{What is Bias?} It's the difference between the average prediction of our model and the correct value which we are trying to predict. \ul{Model with high bias pays very little attention to the training data and oversimplifies the model}. It always leads to high error on training and test data.
+
+\item \textbf{What is Variance?} It's the variability of model prediction for a given data point or a value which tells us spread of our data. \ul{Model with high variance pays a lot of attention to training data and does not generalize on the data which it hasn't seen before}. As a result, such models perform very well on training data but has high error rates on test data.
+
+\end{itemize}
+
+\end{frame}
+%..................................................................
+\begin{frame}{Bias and Variance}
+\begin{center}
+\includegraphics[scale=.45]{../../07-pictures/bias_and_variance_1.png}  
+\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Bias and Variance}
+\begin{tcolorbox}
+Unfortunately, we often find that there is a trade-off between bias and variance. As one is reduced, the other is increased. This is the matter of over- and under-fitting.
+\end{tcolorbox}
+\begin{center}
+\includegraphics[scale=.4]{../../07-pictures/bias_and_variance_2.png} 
+\end{center}
+\end{frame}
+%__________________________________________________________________________
+%
+\subsection[subsection]{Regularization}
+%__________________________________________________________________________
+%
+\begin{frame}{Regularization}
+	\begin{itemize}
+		\item Linear regression can over-fit, particularly when there are a large number of correlated features.
+		\item Results for validation set may not then be as good as for training set
+		\item Regularization is a way of avoiding overfitting and reducing the number of features. Alternatives:
+		\item Ridge 
+		\item Lasso
+		\item Elastic net
+		\item We must first scale feature values
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Ridge regression (analytic solution)}
+	\begin{itemize}
+\item Ridge regression is a regularization technique where we change the function that is to be minimize;	
+		\item Reduce magnitude of regression coefficients by choosing a parameter $\lambda$ and minimizing
+		\begin{equation}
+		\frac{1}{2N} \sum\limits_{n=1}^N \left[h_\theta \left( x^{(n)} \right) - y ^{(n)}\right]^2	+ \highlight{\lambda \sum\limits_{n=1}^N b_i^2}
+		\end{equation}
+		\item This change has the effect of encouraging the model to keep the weights $b_j$ as small as possibile;
+		\item The Ridge regression should only be used for determining model parameters using the training set. Once the model parameters have been determined the penalty term should be removed for prediction;
+		\item What happens as $\lambda$ increases?
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Lasso Regression (must use gradient descent)}
+	\begin{itemize}
+	\item Lasso is short for \textit{Least Absolute Shrinkage and Selection Operator};
+		\item Similar to ridge regression except we minimize
+		\begin{equation}
+		\frac{1}{2N} \sum\limits_{n=1}^N \left[h_\theta \left( x^{(n)} \right) - y ^{(n)}\right]^2 + \highlight{\lambda \sum\limits_{n=1}^N \vert b_n \vert}
+		\end{equation}
+		\item This function cannot be minimized analytically and so a variation on the gradient descent algorithm must be used;
+		\item Lasso regression also has the effect of simplifying the model. It does this by setting the weights of unimportant features to zero. When there are a large number of features, Lasso can identify a relatively small subset of the features that form a good predictive model.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Ridge and Lasso Regression Compared}
+\begin{center}
+\includegraphics[scale=.65]{../../07-pictures/ridge_and_lasso.png} 
+\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Elastic Net Regression (must use gradient descent)}
+	\begin{itemize}
+		\item Middle ground between Ridge and Lasso
+		\item Minimize
+		\begin{equation}
+		\frac{1}{2N} \sum\limits_{n=1}^N \left[h_\theta \left( x^{(n)} \right) - y ^{(n)}\right]^2 + \highlight{\lambda_1 \sum\limits_{n=1}^N b_n^2 + \lambda_2 \sum\limits_{n=1}^N \vert b_n \vert}
+		\end{equation}
+		\item In Lasso some weights are reduced to zero but others may be quite large. In Ridge, weights are small in magnitude but they are not reduced to zero. The idea underlying Elastic Net is that we may be able to get the best of both by making some weights zero while reducing the magnitude of the others.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Salary Vs Age Example: The Effect of Regularization}
+	\begin{center}
+	\includegraphics[scale=.4]{./../../07-pictures/pic_26.png}
+	\end{center}
+We apply regularization to the model:
+\begin{equation}
+Y = a + b_1X + b_2X^2 + b_3X^3 + b_4X^4 + b_5 X^5
+\end{equation}
+where $Y$ is salary and $X$ is age.
+\end{frame}
+%..................................................................
+\begin{frame}{Salary Vs Age Example: The Effect of Regularization}
+
+Data with Z-score scaling
+	\begin{center}
+	\includegraphics[scale=.6]{./../../07-pictures/pic_27.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Salary Vs Age Example: The Effect of Regularization}
+Ridge Results, $\lambda=0.02$ is similar to quadratic model
+	\begin{center}
+	\includegraphics[scale=.55]{./../../07-pictures/pic_28.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Salary Vs Age Example: The Effect of Regularization}
+
+Lasso Results, $\lambda=1$ is similar to the quadratic model
+
+	\begin{center}
+	\includegraphics[scale=.5]{../../07-pictures/pic_29.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Let's code ...}
+\begin{center}
+\includegraphics[scale=.8]{../../07-pictures/exercise.jpg} 
+\end{center}
+\end{frame}
+%===================================================================================================
+\end{document}
+
+%..................................................................
+\begin{frame}{Cost Function}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Cost Function}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Cost Function}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Cost Function}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Cost Function}
+   \begin{itemize}
+      \item   				  						  
+		We could also regularize all of our theta parameters in a single summation as: 
+		\begin{equation}
+		\min_\theta \frac{1}{2m} \sum\limits_{i=1}^m \left[h_\theta \left( x^{(i)} \right) - y ^{(i)}\right]^2 + \lambda \sum\limits_{j=1}^n \theta_j^2
+		\end{equation}
+	  \item 
+	    $\lambda$ is the regularization parameter. It determines how much the costs of our theta parameters are inflated. 	  
+      \item 
+        Using the above cost function with the extra summation, we can smooth the output of our hypothesis function to reduce overfitting. 
+        
+        \item If $\lambda$ is chosen to be too large, it may smooth out the function too much and cause underfitting. 
+        
+        \item Hence, what would happen if $\lambda = 0$ or is too small ?
+   \end{itemize}
+\end{frame}
+
+\begin{frame}{Gradient Descent}
+	\begin{itemize}
+		\item The objective is to minimize a function by changing parameters. Steps are as follows:
+		\item Choose starting value for parameters
+		\item Find the steepest slope: i.e. the direction in which parameter have to be changed to reduce the objective function by the greatest amount
+		\item Take a step down the valley in the direction of the steepest slope
+		\item Repeat steps 2 and 3
+		\item Continue until you reach the bottom of the valley
+	\end{itemize}
+\end{frame}
+%..................................................................

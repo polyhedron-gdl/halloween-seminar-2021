@@ -1,0 +1,396 @@
+\documentclass[11pt]{beamer}
+\usetheme{CambridgeUS}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pgfpages}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{soul}
+\usepackage{empheq}
+
+% The replacement character � (often displayed as a black rhombus with a white
+% question mark) is a symbol found in the Unicode standard at code point U
+% +FFFD in the Specials table. It is used to indicate problems when a system 
+% is unable to render a stream of data to a correct symbol.[4] It is usually 
+% seen when the data is invalid and does not match any character. For this 
+% reason we map explicitly this character to a blanck space.
+\DeclareUnicodeCharacter{FFFD}{ }
+
+\newcommand*{\itemimg}[1]{%
+  \raisebox{-.3\baselineskip}{%
+    \includegraphics[
+      height=\baselineskip,
+      width=\baselineskip,
+      keepaspectratio,
+    ]{#1}%
+  }%
+}
+
+\newtcbox{\mymath}[1][]{%
+    nobeforeafter, math upper, tcbox raise base,
+    enhanced, colframe=blue!30!black,
+    colback=blue!10, boxrule=1pt,
+    #1}
+
+\newcommand{\highlight}[1]{%
+  \colorbox{yellow!100}{$\displaystyle#1$}}
+
+\author{Giovanni Della Lunga\\{\footnotesize giovanni.dellalunga@unibo.it}}
+%\title{3 - Introduction to Deep Learning}
+\title{4 - Basic Text Analysis}
+%\title{5 - Introduction to Natural Language Processing}
+%\title{7 - Classification for Text Analysis}
+%\title{8 - Clustering for Text Similarity}
+\subtitle{} % (optional)
+\setbeamercovered{transparent} 
+\institute{Halloween Conference in Quantitative Finance} 
+\date{Bologna - October 26-28, 2021} 
+
+\begin{document}
+
+\begin{frame}
+\includegraphics[width=\linewidth]{img/halloween-seminar-logo.PNG}
+\end{frame}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\AtBeginSection[]
+{
+  %\begin{frame}<beamer>
+  %\footnotesize	
+  %\frametitle{Outline}
+  %\begin{multicols}{2}
+  %\tableofcontents[currentsection]
+  %\end{multicols}	  
+  %\normalsize
+  %\end{frame}
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}  	\usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+\AtBeginSubsection{\frame{\subsectionpage}}
+
+% INSERT HERE
+
+\begin{frame}{We will talk about...}
+\begin{itemize}
+\item What is text mining
+\item What is a Corpus
+\item Creating your own corpus
+\item Regular Expressions
+\end{itemize}
+\end{frame}
+
+
+\subsection{What is Text Mining	 \\ \scalebox{0.8}{And why is so important!}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{What is Text Mining}
+	\begin{itemize}
+		\item At some level, text analysis is the act of breaking up larger bodies of work into their constituent components - unique vocabulary words, common phrases, syntactical patterns - then applying statistical analysis to them;
+		\item We will soon see that there are many levels to which we can apply our analysis, all of which revolve around a central text dataset: the \textbf{corpus}.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{What is a Corpus}
+	\begin{itemize}
+		\item Corpora are collections of related documents that contain natural language. 
+		\item A corpus can be large or small, though generally they consist of dozens or even hundreds of gigabytes of data inside of thousands of documents.
+		\item A corpus can be broken down into categories of documents or individual documents.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{What is a Corpus}
+	\begin{itemize}
+		\item Corpora can be \textbf{annotated}  \textit{meaning that the text or documents are labeled with the correct responses for supervised learning algorithms }, or \textbf{unannotated}, making them candidates for topic modeling and document clustering.
+		\item  For example, one common type of annotation is the addition of tags, or labels, indicating the word class to which words in a text belong
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.6]{../../07-pictures/04_basic_text_mining_picture_00.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Domain Specific Corpora}
+	\begin{itemize}
+		\item  The best applications tend to use language models trained on domain-specific corpora (collections of related documents containing natural language). 
+		\item The reason for this is that language is highly contextual, and words can mean different things in different contexts. 
+		\item For example, depending on context, the word \textbf{bank} can refer a place where you put your money, the side of a river, the surface of a mine shaft, or the cushion of a pool table! 
+		\item With domain-specific corpora, we can reduce ambiguity and prediction space to make results more intelligible.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\subsection{Create your own corpus \\ \scalebox{0.8}{Getting text from the web}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{Web Scraping}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item The need and importance of extracting data from the web is becoming increasingly loud and clear. 
+		\item There are several ways to extract information from the web. 
+		\item Use of APIs being probably the best way to extract data from a website. If you can get what you need through an API, it is almost always preferred approach over web scrapping. 
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/04_basic_text_analysis_pic_0.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+\begin{frame}{Web Scraping}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item Sadly, not all websites provide an API. 
+		\item Some do it because they do not want the readers to extract huge information in structured way, while others do not provide APIs due to lack of technical knowledge. What do you do in these cases? 
+		\item Well, we need to scrape the website to fetch the information.
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/04_basic_text_analysis_pic_1.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+\begin{frame}{Web Scraping}
+	\begin{itemize}
+		\item Ok, but what is Web Scraping?
+		\item Web scraping is a computer software technique of extracting information from websites. 
+		\item This technique mostly focuses on the transformation of unstructured data (HTML format) on the web into structured data (database or spreadsheet).
+		\item You can perform web scrapping in various way.
+		\item We will resort to Python because of its ease and rich ecosystem. It has a library known as \textbf{BeautifulSoup} which assists this task. 
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Downloading Files from the Web with the requests Module}
+	\begin{itemize}
+		\item The requests module lets you easily download files from the Web without having to worry about complicated issues such as network errors, connection problems, and data compression. 
+		\item The requests module does not come with Python, so you will have to install it first. From the command line, run pip install requests. 
+		\item Next, do a simple test to make sure the requests module installed itself correctly. Enter the following into the interactive shell:
+		\item >>> import requests
+		\item If no error messages show up, then the requests module has been successfully installed.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Downloading a Web Page with the requests.get() Function}
+	\begin{itemize}
+		\item The requests.get() function takes a string of a URL to download. 
+		\item By calling type() on requests.get() return value, you can see that it returns a Response object, which contains the response that the web server gave for your request
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/04_basic_text_analysis_pic_2.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Libraries required for web scraping}
+	\begin{itemize}
+		\item Urllib2: It is a Python module which can be used for fetching URLs. 
+		\item It defines functions and classes to help with URL actions (basic and digest authentication, redirections, cookies, etc). 
+		\item For more detail refer to the documentation page.
+		\item BeautifulSoup: It is an incredible tool for pulling out information from a webpage. 
+		\item You can use it to extract tables, lists, paragraph and you can also put filters to extract information from web pages. 
+		\item You can look at the installation instruction in its documentation page.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Example : Processing Raw Text}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item Notebook: 04-basic-text-analysis
+		\item Focus: Processing HTML Files
+		\item Libraries: NLTK, URLIB, BeautifulSoup
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/09_information_extraction_pic_6.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+%..................................................................
+\subsection{Regular Expressions \\ \scalebox{0.8}{}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{Regular Expressions}
+	\begin{itemize}
+		\item In computing, a regular expression, also referred to as "regex" or "regexp", provides a concise and flexible means for matching strings of text, such as particular characters, words, or patterns of characters. 
+		\item A regular expression is written in a formal language that can be interpreted by a regular expression processor.
+		\item Really clever "wild card" expressions for matching and parsing strings.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Regular Expressions}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item Very powerful and quite cryptic
+		\item Fun once you understand them
+		\item Regular expressions are a language unto themselves
+		\item A language of "marker characters" - programming with characters
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/04_basic_text_analysis_pic_4.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+\begin{frame}{Regular Expressions quick guide}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/04_basic_text_analysis_pic_5.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Regular Expressions Module}
+	\begin{itemize}
+		\item Before you can use regular expressions in your program, you must import the library using \textbf{import re}
+		\item You can use \textbf{re.search()} to see if a string matches a regular expression similar to using the \textbf{find()} method for strings
+		\item You can use \textbf{re.findall()} extract portions of a string that match your regular expression similar to a combination of \textbf{find()} and slicing.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Wild-Card Characters}
+	\begin{itemize}
+		\item The dot character matches any character
+		\item If you add the asterisk character, the character is "any number of times"
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.4]{../../07-pictures/04_basic_text_analysis_pic_6.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Wild-Card Characters}
+	\begin{itemize}
+		\item The dot character matches any character
+		\item If you add the asterisk character, the character is "any number of times"
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.3]{../../07-pictures/04_basic_text_analysis_pic_7.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Fine-Tuning Your Match}
+	Depending on how "clean" your data is and the purpose of your application, you may want to narrow your match down a bit
+	\begin{center}
+	\includegraphics[scale=0.3]{../../07-pictures/04_basic_text_analysis_pic_8.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Fine-Tuning Your Match}
+	Depending on how "clean" your data is and the purpose of your application, you may want to narrow your match down a bit
+	\begin{center}
+	\includegraphics[scale=0.3]{../../07-pictures/04_basic_text_analysis_pic_9.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Matching and Extracting Data}
+	\begin{itemize}
+		\item The re.search() returns a True/False depending on whether the string matches  the regular expression
+		\item If we actually want the matching strings to be extracted, we use re.findall()
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.3]{../../07-pictures/04_basic_text_analysis_pic_10.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Matching and Extracting Data}
+	When we use re.findall() it returns a list of zero or more sub-strings that match the regular expression
+	\begin{center}
+	\includegraphics[scale=0.3]{../../07-pictures/04_basic_text_analysis_pic_11.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Warning: Greedy Matching}
+	The repeat characters (* and +) push outward in both directions (greedy) to match the largest possible string
+	\begin{center}
+	\includegraphics[scale=0.3]{../../07-pictures/04_basic_text_analysis_pic_12.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Non-Greedy Matching}
+	Not all regular expression repeat codes are greedy!  If you add a ? character - the + and * chill out a bit...
+	\begin{center}
+	\includegraphics[scale=0.3]{../../07-pictures/04_basic_text_analysis_pic_13.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Fine Tuning String Extraction}
+	You can refine the match for re.findall() and separately determine which portion of the match that is to be extracted using parenthesis
+	\begin{center}
+	\includegraphics[scale=0.3]{../../07-pictures/04_basic_text_analysis_pic_14.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Fine Tuning String Extraction}
+	Parenthesis are not part of the match - but they tell where to start and stop what string to extract
+	\begin{center}
+	\includegraphics[scale=0.3]{../../07-pictures/04_basic_text_analysis_pic_15.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{The Regex Version}
+	Sometimes we split a line one way and then grab one of the pieces of the line and split that piece again
+	\begin{center}
+	\includegraphics[scale=0.3]{../../07-pictures/04_basic_text_analysis_pic_16.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{The Regex Version}
+	Sometimes we split a line one way and then grab one of the pieces of the line and split that piece again
+	\begin{center}
+	\includegraphics[scale=0.3]{../../07-pictures/04_basic_text_analysis_pic_17.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{The Regex Version}
+	Sometimes we split a line one way and then grab one of the pieces of the line and split that piece again
+	\begin{center}
+	\includegraphics[scale=0.3]{../../07-pictures/04_basic_text_analysis_pic_18.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Escape Character}
+	If you want a special regular expression character to just behave normally (most of the time) you prefix it with ' \\'
+	\begin{center}
+	\includegraphics[scale=0.3]{../../07-pictures/04_basic_text_analysis_pic_19.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Example : Regular Expressions}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item Notebook: 04-basic-text-analysis
+		\item Focus: Using Regular Expressions
+		\item Libraries: python re module
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/03_intro_to_deep_learning_pic_20.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+%..................................................................
+%=====================================================================
+
+
+\end{document}

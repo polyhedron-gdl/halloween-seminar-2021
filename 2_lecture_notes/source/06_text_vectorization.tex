@@ -1,0 +1,665 @@
+\documentclass[11pt]{beamer}
+\usetheme{CambridgeUS}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pgfpages}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{soul}
+\usepackage{empheq}
+
+% The replacement character � (often displayed as a black rhombus with a white
+% question mark) is a symbol found in the Unicode standard at code point U
+% +FFFD in the Specials table. It is used to indicate problems when a system 
+% is unable to render a stream of data to a correct symbol.[4] It is usually 
+% seen when the data is invalid and does not match any character. For this 
+% reason we map explicitly this character to a blanck space.
+\DeclareUnicodeCharacter{FFFD}{ }
+
+\newcommand*{\itemimg}[1]{%
+  \raisebox{-.3\baselineskip}{%
+    \includegraphics[
+      height=\baselineskip,
+      width=\baselineskip,
+      keepaspectratio,
+    ]{#1}%
+  }%
+}
+
+\newtcbox{\mymath}[1][]{%
+    nobeforeafter, math upper, tcbox raise base,
+    enhanced, colframe=blue!30!black,
+    colback=blue!10, boxrule=1pt,
+    #1}
+
+\newcommand{\highlight}[1]{%
+  \colorbox{yellow!100}{$\displaystyle#1$}}
+
+\author{Giovanni Della Lunga\\{\footnotesize giovanni.dellalunga@unibo.it}}
+%\title{3 - Introduction to Deep Learning}
+%\title{4 - Basic Text Analysis}
+%\title{5 - Introduction to Natural Language Processing}
+\title{6 - Text Vectorization}
+%\title{7 - Classification for Text Analysis}
+%\title{8 - Clustering for Text Similarity}
+%\title{9 - Information Extraction}
+\subtitle{} % (optional)
+\setbeamercovered{transparent} 
+\institute{Halloween Conference in Quantitative Finance} 
+\date{Bologna - October 26-28, 2021} 
+
+\begin{document}
+
+\begin{frame}
+\includegraphics[width=\linewidth]{img/halloween-seminar-logo.PNG}
+\end{frame}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\AtBeginSection[]
+{
+  %\begin{frame}<beamer>
+  %\footnotesize	
+  %\frametitle{Outline}
+  %\begin{multicols}{2}
+  %\tableofcontents[currentsection]
+  %\end{multicols}	  
+  %\normalsize
+  %\end{frame}
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}  	\usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+\AtBeginSubsection{\frame{\subsectionpage}}
+
+% INSERT HERE
+
+\begin{frame}{We will talk about...}
+\begin{itemize}
+\item Feature Extraction
+\item Semantic Space
+\item Bag-of-Words Models
+\item Vectorization with SkLearn
+\item Document Similarity
+\item Word Embedding: word2vec and GloVe
+\item Using keras
+\end{itemize}
+\end{frame}
+
+\subsection{Introduction \\ \scalebox{0.8}{Turning Words into Numbers}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{Introduction}
+	\begin{itemize}
+		\item Machine learning algorithms operate on a numeric feature space, expecting input as a two-dimensional array where rows are instances and columns are features. 
+		\item \highlight{\text{What are the appropriate features for applying a ML model to a}} \highlight{\text{text?}} 
+		\item In order to perform machine learning on text, we need to transform our documents into vector representations such that we can apply numeric machine learning. 
+		\item This process is called \textbf{feature extraction} or more simply, \textbf{vectorization}, and is an essential first step toward language-aware analysis.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Introduction}
+	\begin{itemize}
+		\item For this reason, we must now make a critical shift in how we think about language - from a sequence of words to \highlight{\text{points that occupy a high-dimensional semantic space}}
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.4]{../../07-pictures/06_text_vectorization_pic_0.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Introduction}
+	\begin{itemize}
+		\item Points in space can be close together or far apart, tightly clustered or evenly distributed. 
+		\item Semantic space is therefore mapped in such a way where documents with similar meanings are closer together and those that are different are farther apart. 
+		\item By encoding \textbf{similarity} as distance, we can begin to derive the primary components of documents and draw decision boundaries in our semantic space.
+		\item The simplest encoding of semantic space is the bag-of-words model, whose primary insight is that \highlight{\text{meaning and similarity are encoded in}} \highlight{\textbf{vocabulary}}.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\subsection{Bag-of-Words (BOW) \\ \scalebox{0.8}{}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{Bag-of-Words}
+	\begin{itemize}
+		\item To vectorize a corpus with a bag-of-words (BOW) approach, \textbf{we represent every document from the corpus as a vector whose length is equal to the vocabulary of the corpus}.
+		\item The vocabulary is the set of words without repetition present in the whole corpus
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.6]{../../07-pictures/06_text_vectorization_pic_1.png}
+	\end{center}
+	\footnotesize{image source: \textit{Bengfort B. et al. Text Analysis with Python}}
+\end{frame}
+%..................................................................
+\begin{frame}{Bag-of-Words}
+What should each element in the document vector be?
+	\begin{itemize}
+		\item We will explore several choices, each of which extends or modifies the base bag-of-words model to describe semantic space. 
+		\item We will look at three types of vector encoding - frequency, one-hot, TF-IDF, - and discuss their implementations in Scikit-Learn and NLTK.
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.6]{../../07-pictures/06_text_vectorization_pic_2.png}
+	\end{center}
+	\footnotesize{image source: \textit{Bengfort B. et al. Text Analysis with Python}}
+\end{frame}
+%..................................................................
+\begin{frame}{Bag-of-Words}
+	\begin{itemize}
+		\item \textbf{Frequency Vectors}
+		\item The simplest vector encoding model is to simply fill in the vector with \textbf{the frequency of each word as it appears in the document};
+		\item In this encoding scheme each document is represented as the multiset of the tokens that compose it and the value for each word position in the vectr is its count;
+		\item This representation can either be a straight count encoding or a normalized encoding where each word is weighted by the total number of words in the document;
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Bag-of-Words}
+	Token Frequency as Vector Encoding
+	\begin{center}
+	\includegraphics[scale=0.6]{../../07-pictures/06_text_vectorization_pic_3.png}
+	\end{center}
+	\footnotesize{image source: \textit{Bengfort B. et al. Text Analysis with Python}}
+\end{frame}
+%..................................................................
+\begin{frame}{Text Feature Extraction}
+	\begin{itemize}
+		\item CountVectorizer: turns a collection of text documents into numerical feature vectors.
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/06_text_vectorization_pic_5.png}
+	\end{center}
+		\item \textbf{TF}: Just counting the number of words in each document has 1 issue: it will give \textbf{more weightage to longer documents than shorter documents}. To avoid this, we can use frequency (\textbf{TF - Term Frequencies}) i.e. \#count(word) / \#Total words, in each document.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Bag-of-Words  }
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/06_text_vectorization_pic_4.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{One-Hot Encoding}
+	One-Hot encoding is a method that produces a boolean vector. A particular vector index is marked as TRUE (1) if the token exist in the document and FALSE (0) if it does not.
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/06_text_vectorization_pic_6.png}
+	\end{center}
+	\footnotesize{image source: \textit{Bengfort B. et al. Text Analysis with Python}}
+\end{frame}
+%..................................................................
+\begin{frame}{Term Frequency-Inverse Document Frequency }
+	\begin{itemize}
+		\item The bag-of-words representations that we have explored so far only describe a document in a standalone fashion, \textbf{not taking into account the context of the corpus}. 
+		\item A better approach would be to consider the \textbf{relative frequency or rareness of tokens in the document against their frequency in other documents}. 
+		\item The central insight is that \textbf{meaning is most likely encoded in the more rare terms from a document}.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Compute Inverse Document Frequency}
+	\begin{itemize}
+		\item The inverse document frequency is a measure of how much information the word provides, that is, whether the term is common or rare across all documents. 
+		\item It is the logarithmically scaled inverse fraction of the documents that contain the word, obtained by dividing the total number of documents by the number of documents containing the term, and then taking the logarithm of that quotient: 
+		\begin{equation}idf(t,D) = \log \frac{N}{\vert \{  d \in D: t \in d\}\vert} 
+		\end{equation}  
+		where \textbf{the numerator ($N$) is the total number of documents} in the corpus and \textbf{the denominator is the number of documents where the term $t$ appears}.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Compute Inverse Document Frequency}
+	\begin{center}
+	\includegraphics[scale=0.45]{../../07-pictures/06_text_vectorization_pic_8.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Term Frequency-Inverse Document Frequency }
+	\begin{itemize}
+		\item TF-IDF, term frequency-inverse document frequency, encoding normalizes the frequency of tokens in a document with respect to the rest of the corpus. 
+		\item This encoding approach accentuates terms that are very relevant to a specific instance, as shown in Figure, where the token studio has a higher relevance to this document since it only appears there.
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/06_text_vectorization_pic_7.png}
+	\end{center}
+	\footnotesize{image source: \textit{Bengfort B. et al. Text Analysis with Python}}
+\end{frame}
+%..................................................................
+\begin{frame}{Compute Term Frequency-Inverse Document Frequency}
+	\begin{itemize}
+		\item Then tf-idf is calculated as: \begin{equation} tfidf(t,d,D) = tf(t,d) \cdot idf(t,D)\end{equation}
+		\item A high weight in tf-idf is reached by a \highlight{\text{high term frequency}} (in the given document) and a \highlight{\text{low document frequency}} of the term in the whole collection of documents; 
+\item The weights hence tend to filter out common terms. 
+		\item Since the ratio inside the idf's log function is always greater than or equal to 1, the value of idf (and tf-idf) is greater than or equal to 0. As a term appears in more documents, the ratio inside the logarithm approaches 1, bringing the idf and tf-idf closer to 0.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Compute Term Frequency-Inverse Document Frequency}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/06_text_vectorization_pic_9.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Text Feature Extraction}
+	CountVectorizer: turns a collection of text documents into numerical feature vectors.
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/06_text_vectorization_pic_10.png}
+	\end{center}
+	As tf-idf is very often used for text features, there is also another class called TfidfVectorizer that combines all the options of CountVectorizer and TfidfTransformer in a single model
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/06_text_vectorization_pic_11.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Document Similarity}
+	\begin{itemize}
+		\item When you have vectorized your text, we can try to define a distance metric such that documents that are closer together in feature space are more similar.
+		\item There are a number of different measures that can be used to determine document similarity; 
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.4]{../../07-pictures/06_text_vectorization_pic_12.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Document Similarity}
+	\begin{itemize}
+		\item Fundamentally, each relies on our ability to imagine documents as points in space, where the relative closeness of any two documents is a measure of their similarity.
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.4]{../../07-pictures/06_text_vectorization_pic_13.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Document Similarity}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item We can measure vector similarity with cosine distance, using the cosine of the angle between the two vectors to assess the degree to which they share the same orientation. 
+		\item In effect, the more parallel any two vectors are, the more similar the documents will be (regardless of their magnitude).
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/06_text_vectorization_pic_14.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+\begin{frame}{Document Similarity}
+	\begin{itemize}
+		\item Mathematically, Cosine similarity metric measures the cosine of the angle between two n-dimensional vectors projected in a multi-dimensional space. The Cosine similarity of two documents will range from 0 to 1. If the Cosine similarity score is 1, it means two vectors have the same orientation. The value closer to 0 indicates that the two documents have less similarity.
+		\item The mathematical equation of Cosine similarity between two non-zero vectors is: \begin{equation} \text{similarity} = \cos(\theta) = \frac{\mathbf{A} \cdot \mathbf{B}}{\left\Vert\mathbf{A}\right\Vert \,\left\Vert\mathbf{B}\right\Vert} = \frac{\sum\limits_{i=1}^n A_iB_i}{\sum\limits_{i=1}^n A_i^2 \sum\limits_{i=1}^n B_i^2} \end{equation}
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Example : Bag-of-Words}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item Notebook: 06-Text Vectorization
+		\item Focus: Vectorization with sklearn, Document Similarity
+		\item Libraries: NLTK, sklearn
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/09_information_extraction_pic_6.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+%..................................................................
+\subsection{Word Embedding \\ \scalebox{0.8}{}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{What is Word Embedding}
+	\begin{itemize}
+		\item The different encoding we have discussed so far is arbitrary as \textbf{it does not capture any relationship between words}. 
+		\item It can be challenging for a model to interpret, for example, a linear classifier learns a single weight for each feature. 
+		\item Because there is no relationship between the similarity of any two words and the similarity of their encodings, this feature-weight combination is not meaningful.
+		\item Furthermore, \textbf{the dimension of the vector space}, being equal to the number of terms in the vocabulary, \textbf{tends to increase considerably} as the size of the corpus increases.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{What is Word Embedding}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+        \item Relationship between words
+		\item For example, we humans understand the words like king and queen, man and woman, tiger and tigress have a certain type of relation between them but how can a computer figure this out?
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/06_text_vectorization_pic_15.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+\begin{frame}{What is Word Embedding}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item It should be nice to have representations of text in an n-dimensional space where \highlight{\text{words that have the same}} 
+\highlight{\text{meaning have a similar}} 
+\highlight{\text{representation}}. 
+		\item Meaning that two similar words are represented by almost similar vectors that are very closely placed in a vector space. 
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/06_text_vectorization_pic_16.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+\begin{frame}{What is Word Embedding}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item Thus when using word embeddings, all individual words are represented as real-valued vectors in a predefined vector space. 
+		\item Each word is mapped to one vector and the vector values are learned in a way that resembles a neural network.
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/06_text_vectorization_pic_17.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+\begin{frame}{The Importance of Context}
+	\begin{itemize}
+		\item The concept of embeddings arises from a branch of Natural Language Processing called - \textit{Distributional Semantics}. It is based on the simple intuition that:
+		\item \textbf{Words that occur in similar contexts tend to have similar meanings.}
+		\item In other words, a word meaning is given by the words that it appears frequently with.
+	\end{itemize}
+	
+\begin{tcolorbox}
+Conceptually it involves the mathematical embedding \textbf{from space with many dimensions} per word to a \textbf{continuous vector space with a much lower dimension}.
+\end{tcolorbox}
+
+\end{frame}
+%..................................................................
+\subsection{Word2Vec \\ \scalebox{0.8}{}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{What is Word2Vec?}
+	\begin{itemize}
+		\item Word2vec is a method to efficiently create word embeddings by using a two-layer neural network.  
+		\item It was developed by Tomas Mikolov, et al. at Google in 2013 as a response to make the neural-network-based training of the embedding more efficient and since then has become the de facto standard for developing pre-trained word embedding. 		  
+		\item The input of word2vec is a text corpus and its output is a set of vectors known as feature vectors that represent words in that corpus. 
+		
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Word2Vec}
+	\begin{itemize}
+	\item The Word2Vec objective function causes the words that have a similar context to have similar embeddings. 
+		\item Thus in this vector space, these words are really close. Mathematically, the cosine of the angle (Q) between such vectors should be close to 1, i.e. angle close to 0.
+		\item Word2vec is not a single algorithm but a combination of two techniques - CBOW(Continuous bag of words) and Skip-gram model.
+		\item Both these are shallow neural networks which map word(s) to the target variable which is also a word(s). 
+		\item Both these techniques learn weights which act as word vector representations. 
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Word2Vec : CBOW approach}
+	\begin{itemize}
+		\item CBOW predicts the probability of a word to occur \textbf{given the words surrounding it}. We can consider a single word or a group of words. But for simplicity, we will take a single context word and try to predict a single target word.
+		\item The English language contains almost 1.2 million words, making it impossible to include so many words in our example. So I will consider a small example in which we have only four words i.e. \textbf{live}, \textbf{home}, \textbf{they} and \textbf{at}. For simplicity, we will consider that the corpus contains only one sentence, that being, \textbf{They live at home}.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Word2Vec : CBOW approach}
+	First, we convert each word into a one-hot encoding form. Also, we will not consider all the words in the sentence but ll only take certain words that are in a window. 
+	\begin{center}
+	\includegraphics[scale=0.4]{../../07-pictures/06_text_vectorization_pic_18.png}
+	\end{center}
+	\footnotesize{image source: \textit{https://www.mygreatlearning.com/blog/word-embedding/}}
+\end{frame}
+%..................................................................
+\begin{frame}{Word2Vec : CBOW approach}
+	For example, for a window size equal to three, we only consider three words in a sentence. The middle word is to be predicted and the surrounding two words are fed into the neural network as context. The window is then slide and the process is repeated again.
+	\begin{center}
+	\includegraphics[scale=0.4]{../../07-pictures/06_text_vectorization_pic_19.png}
+	\end{center}
+	\footnotesize{image source: \textit{https://www.mygreatlearning.com/blog/word-embedding/}}
+\end{frame}
+%..................................................................
+\begin{frame}{Word2Vec : CBOW approach}
+	\begin{itemize}
+		\item Finally, after training the network repeatedly by sliding the window a shown above, we get weights which we use to get the embeddings as shown below.
+		\item Usually, we take a window size of around 8-10 words and have a vector size of 300.
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/06_text_vectorization_pic_20.png}
+	\end{center}
+	\footnotesize{image source: \textit{https://www.mygreatlearning.com/blog/word-embedding/}}
+\end{frame}
+%..................................................................
+\begin{frame}{Word2Vec : Skip-Gram Model}
+	\begin{itemize}
+		\item The Skip-gram model tries to predict the source context words (surrounding words) given a target word (the centre word)
+		\item The working is conceptually similar to the CBOW, there is just a difference in the architecture of its NN and in the way the weight matrix is generated:	 
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.4]{../../07-pictures/06_text_vectorization_pic_21.png}
+	\end{center}
+	\footnotesize{image source: \textit{https://www.mygreatlearning.com/blog/word-embedding/}}
+\end{frame}
+%..................................................................
+\begin{frame}{Example : Word2Vec}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item Notebook: 06-Text Vectorization
+		\item Focus: Implementing a word2vec model using a CBOW NN architecture
+		\item Libraries: NLTK, keras
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/09_information_extraction_pic_6.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+%..................................................................
+\subsection{GloVe	 \\ \scalebox{0.8}{Global Vectors for Word Representation}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{GloVe}
+	\begin{itemize}
+		\item As we have said, word vectors techniques put words to a vector space, where similar words cluster together and different words repel. 
+		\item The advantage of GloVe is that, unlike Word2vec, GloVe does not rely just on local statistics (local context information of words), but incorporates \highlight{\text{global statistics}} (word co-occurrence) to obtain word vectors. 
+		\item In general there is quite a bit of synergy between the GloVe and Word2vec.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Glove : What is a Co-Occurence Matrix}
+	\begin{itemize}
+		\item Generally speaking, a co-occurrence matrix will have specific entities in rows (ER) and columns (EC). 
+		\item The purpose of this matrix is to present the number of times each ER appears in the same context as each EC. 
+		\item As a consequence, in order to use a co-occurrence matrix, you have to define your entites and the context in which they co-occur.
+		\item In NLP, the most classic approach is to define each entity (ie, lines and columns) as a word present in a text, and the context as a sentence or in the $\pm n$ word window - depends on the application.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{GloVe : How to form the Co-occurrence matrix}
+Let our corpus contain the following three sentences:
+	\begin{itemize}
+		\item I enjoy flying
+		\item I like NLP
+		\item I like deep learning
+	\end{itemize}
+Let \textbf{window size =1}. This means that context words for each and every word are \textbf{1 word to the left and one to the right}.
+\end{frame}
+%..................................................................
+\begin{frame}{GloVe : How to form the Co-occurrence matrix}
+
+Let our corpus contain the following three sentences:
+	\begin{itemize}
+		\item I enjoy flying
+		\item I like NLP
+		\item I like deep learning
+	\end{itemize}
+\vspace{0.25cm}
+\textbf{Context words for: }
+\vspace{0.25cm}
+	\begin{itemize}
+		\item I $\rightarrow$ enjoy(1 time), like(2 times)
+		\item enjoy $\rightarrow$ I (1 time), flying(2 times)
+		\item flying $\rightarrow$ enjoy(1 time)
+		\item like $\rightarrow$ I(2 times), NLP(1 time), deep(1 time)
+		\item NLP $\rightarrow$ like(1 time)
+		\item deep $\rightarrow$ like(1 time), learning(1 time)
+		\item learning $\rightarrow$ deep(1 time)
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{GloVe : How to form the Co-occurrence matrix}
+	Therefore, the resultant co-occurrence matrix A with fixed window size 1 looks like:
+	\begin{center}
+	\includegraphics[scale=0.6]{../../07-pictures/06_text_vectorization_pic_22.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{GloVe : Some Formalism	}
+	So, from a formal point of view, given a corpus having $V$ words, the co-occurrence matrix $X$ will be a $V  \times V$ matrix, where the $i$-th row and $j$-th column of $X$,$X_{ij}$ denotes how many times word $i$ has co-occurred with word $j$
+	\begin{center}
+	\includegraphics[scale=0.6]{../../07-pictures/06_text_vectorization_pic_23.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{GloVe}
+	\begin{itemize}
+		\item The number of \textbf{contexts} is, of course, large, since it is essentially combinatorial in size. 
+		\item So then we factorize this matrix to yield a lower-dimensional matrix, where each row now yields a vector representation for each word. In general, this is done by minimizing a \textbf{reconstruction loss}. 
+		\item This loss tries to find the lower-dimensional representations which can explain most of the variance in the high-dimensional data.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{GloVe}
+	From the matrix elements we can define the quantity $P_{ik}$ as the probability of seeing word $i$ and $k$ together, this is computed by dividing the number of times $i$ and $k$ appeared together ($X_{ik}$) by the total number of times word $i$ appeared in the corpus ($X_i$):
+	
+\begin{equation}
+P_{ik} = \frac{X_{ik}}{X_i}
+\end{equation}	 
+\end{frame}
+%..................................................................
+\begin{frame}{GloVe}
+Consider now the ratio \begin{equation} \frac{P_{ik}}{P_{jk}} \end{equation} where $k$ is another word in the text
+	\begin{center}
+	\includegraphics[scale=0.7]{../../07-pictures/06_text_vectorization_pic_24.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Glove}
+You can see that given two words, i.e. ice and steam, \textbf{if the third word $k$} (also called the \textit{probe word}):
+	\begin{itemize}
+		\item is very similar to ice but irrelevant to steam (e.g. k=solid), $P_{ik} > P_{jk}$ and $P_{ik}/P_{jk}$ will be very high ($>1$),
+		\item is very similar to steam but irrelevant to ice (e.g. k=gas), $P_{ik} < P_{jk}$ and $P_{ik}/P_{jk}$ will be very small ($<1$),
+		\item is related or unrelated to either words, then $P_{ik} \sim P_{jk}$ and $P_{ik}/P_{jk}$ will be close to 1
+	\end{itemize}
+So, if we can find a way to incorporate $P_{ik}/P_{jk}$ in the computation of word vectors we will be achieving the goal of \textbf{using global statistics when learning word vectors}.
+\end{frame}
+%..................................................................
+\begin{frame}{GloVe : The Model }
+	\begin{itemize}
+		\item Assume that there is a function $F$ which takes in word vectors of $i,j$ and $k$ which outputs the ratio we are interested in: \begin{equation}F(w_i,w_j, u_k) = P_{ik}/P_{jk} \end{equation}
+		\item Word vectors are linear systems. For example, you should perform arithmetic in embedding space, e.g.: \begin{equation} \mathbf{w_{king} - w_{male} + w_{female} = w_{queen}}\end{equation}
+		\item Therefore, let us change the above equation to the following: \begin{equation} F(w_i - w_j, u_k) = P_{ik}/P_{jk} \end{equation}
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{GloVe : The Model}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/06_text_vectorization_pic_25.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{GloVe : The Model }
+	\begin{itemize}
+		\item \textbf{Vector to a scalar}
+		\item How do we make LHS a scalar? There is a pretty straight forward answer to this. That is to introduce a transpose and a dot product between the two entities the following way: \begin{equation} F((w_i - w_j)^T \cdot u_k) = P_{ik}/P_{jk} \end{equation}
+		\item If you assume a word vector as a $D\times 1$ matrix, $(w_i - w_j)^\star$ will be $1\times D$ shaped which gives a scalar when multiplied with $u_k$.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{GloVe : The Model}
+if we assume $F$ has a certain property (i.e. homomorphism between additive group and the multiplicative group) which gives,
+$$F(w_i^T u_k-w_j^T u_k) = \frac{F(w_i^T u_k)}{F(w_j^T u_k)} = \frac{P_{ik}}{P_{jk}}$$
+In other words this particular homomorphism ensures that the subtraction $F(A-B)$ can also be represented as a division $F(A)/F(B)$ and get the same result. 
+\end{frame}
+%..................................................................
+\begin{frame}{GloVe : The Model}
+Note that for word-word co-occurrence matrices, the distinction between a word and a context word is arbitrary and that we are free to exchange the two roles. To do so consistently we must not only exchange $w \leftrightarrow u$ but also $X \leftrightarrow X^T$. Our final model is invariant under this relabeling, this is another reason for the particular choice of the homomorphism.
+\\
+And therefore,
+$$\frac{F(w_i^T u_k)}{F(w_j^T u_k)} = \frac{P_{ik}}{P_{jk}} \Rightarrow F(w_i^T u_k) = P_{ik}$$
+\end{frame}
+%..................................................................
+\begin{frame}{GloVe : The Model}
+If we assume F=exp the above homomorphism property is satisfied. Then let us set,
+$$\exp(w_i^T u_k) = P_{ik}= \frac{X_{ik}}{X_i}$$
+and
+$$w_i^T u_k = log(X_{ik})-log(X_i)$$
+Next we note that this equation would exhibit the exchange symmetry if not for the $log(X_i)$ on the right hand side. However this term is independent on $k$ so it can be absorbed into a bias $b_i$ for $w_i$. Finally adding and addictional bias $b_k$ for $u_k$ restores the symmetry,
+$$w_i^T u_k + b_i + b_k = log(X_{ik})$$
+\end{frame}
+%..................................................................
+\begin{frame}{GloVe : Defining a Cost Function}
+\begin{itemize}
+\item In an ideal setting, where you have perfect word vectors, the above expression will be zero. In other words, that is our goal or objective. So we will be setting the LHS expression as our cost function.
+\begin{equation}
+J(w_i, w_j)= (w_i^\star u_j + b^w_i +b^u_j - log(X_{ij}))^2 
+\end{equation}
+
+\item Note that the square makes this a mean square cost function. 
+
+\item To avoid problem when $X_{ij} = 0$, GloVe use a weighted version of this cost function
+\begin{equation}
+J(w_i, w_j)= f(X_{ij})(w_i^\star u_j + b^w_i +b^u_j - log(X_{ij}))^2
+\end{equation}
+where
+$$f(X_{ij}) = (x/x_{max})^\alpha \quad \text{if} \, x < x_{max} \quad \text{else} \, 0$$
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Pre-Trained Embedding Models}
+	\begin{itemize}
+		\item In practice, we use both GloVe and Word2Vec to convert our text into embeddings and both exhibit comparable performances. 
+		\item Although in real applications we train our model over Wikipedia text with a window size around 5- 10. 
+		\item The number of words in the corpus is around 13 million, hence it takes a huge amount of time and resources to generate these embeddings. 
+		\item To avoid this we can use the pre-trained word vectors that are already trained and we can easily use them. 
+		\item Here are the links to download pre-trained Word2Vec or GloVe.
+	\end{itemize}
+\end{frame}
+%..................................................................
+%=====================================================================
+
+
+\end{document}
+
+%..................................................................
+\begin{frame}{GloVe : What is a Co-Occurence Matrix}
+	\begin{itemize}
+		\item Similar words tend to occur together and will have a similar context for example : Apple is a fruit. Mango is a fruit.
+		\item Apple and mango tend to have a similar context i.e fruit.
+		\item Co-occurrence : For a given corpus, the co-occurrence of a pair of words say w1 and w2 is the number of times they have appeared together in a Context Window.
+		\item Context Window : Context window is specified by a number and the direction.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{GloVe : How to form the Co-occurrence matrix}
+	\begin{itemize}
+		\item The matrix A stores co-occurrences of words.
+		\item In this method, we count the number of times each word appears inside a window of a particular size around the word of interest.
+		\item Calculate this count for all the words in the corpus.
+		\item Let us understand all of this with the help of an example.
+	\end{itemize}
+\end{frame}

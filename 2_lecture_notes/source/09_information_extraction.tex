@@ -1,0 +1,441 @@
+\documentclass[11pt]{beamer}
+\usetheme{CambridgeUS}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pgfpages}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{soul}
+\usepackage{empheq}
+
+% The replacement character � (often displayed as a black rhombus with a white
+% question mark) is a symbol found in the Unicode standard at code point U
+% +FFFD in the Specials table. It is used to indicate problems when a system 
+% is unable to render a stream of data to a correct symbol.[4] It is usually 
+% seen when the data is invalid and does not match any character. For this 
+% reason we map explicitly this character to a blanck space.
+\DeclareUnicodeCharacter{FFFD}{ }
+
+\newcommand*{\itemimg}[1]{%
+  \raisebox{-.3\baselineskip}{%
+    \includegraphics[
+      height=\baselineskip,
+      width=\baselineskip,
+      keepaspectratio,
+    ]{#1}%
+  }%
+}
+
+\newtcbox{\mymath}[1][]{%
+    nobeforeafter, math upper, tcbox raise base,
+    enhanced, colframe=blue!30!black,
+    colback=blue!10, boxrule=1pt,
+    #1}
+
+\newcommand{\highlight}[1]{%
+  \colorbox{yellow!100}{$\displaystyle#1$}}
+
+\author{Giovanni Della Lunga\\{\footnotesize giovanni.dellalunga@unibo.it}}
+%\title{3 - Introduction to Deep Learning}
+%\title{4 - Basic Text Analysis}
+%\title{5 - Introduction to Natural Language Processing}
+%\title{6 - Text Vectorization}
+%\title{7 - Classification for Text Analysis}
+%\title{8 - Clustering for Text Similarity}
+\title{9 - Information Extraction}
+\subtitle{} % (optional)
+\setbeamercovered{transparent} 
+\institute{Halloween Conference in Quantitative Finance} 
+\date{Bologna - October 26-28, 2021} 
+
+\begin{document}
+
+\begin{frame}
+\includegraphics[width=\linewidth]{img/halloween-seminar-logo.PNG}
+\end{frame}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\AtBeginSection[]
+{
+  %\begin{frame}<beamer>
+  %\footnotesize	
+  %\frametitle{Outline}
+  %\begin{multicols}{2}
+  %\tableofcontents[currentsection]
+  %\end{multicols}	  
+  %\normalsize
+  %\end{frame}
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}  	\usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+\AtBeginSubsection{\frame{\subsectionpage}}
+
+% INSERT HERE
+\subsection{Unstructured Data Analysis \\ \scalebox{0.8}{}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{Unstructured Data Analysis}
+	\begin{itemize}
+		\item Data generated from conversations, declarations or even tweets are examples of unstructured data. 
+		\item Unstructured data doesn't fit neatly into the traditional row and column structure of relational databases, and represent the vast majority of data available in the actual world. 
+		\item It is messy and hard to manipulate. 
+		\item Nevertheless, thanks to the advances in disciplines like machine learning a big revolution is going on regarding this topic.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Introduction}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item In order to act on unstructured form of information (data), the ML models have to perform one of the crucial processes called Information Extraction(IE). 
+		\item Information Extraction is the process of retrieving key information intertwined within the unstructured data. 
+		\item In other words, extracting structured data from the unstructured data.
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/09_information_extraction_pic_0.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+\begin{frame}{Introduction}
+The goal of this section is to answer the following questions:
+	\begin{itemize}
+		\item How can we build a system that extracts structured data, such as tables, from unstructured text?
+		\item What are some robust methods for identifying the entities and relationships described in a text?
+		\item Which corpora are appropriate for this work, and how do we use them for training and evaluating our models?
+	\end{itemize}
+Along the way, we'll apply techniques from the previous sections to the problems of chunking and named-entity recognition.
+\end{frame}
+%..................................................................
+\begin{frame}{Introduction}
+	\begin{itemize}
+		\item One approach to this problem involves building a very general representation of meaning. 
+		\item In order to simplify the problem at hand, we will take a different approach, deciding in advance that we will only look for very specific kinds of information in text, such as the relation between organizations and locations;
+		\item Rather than trying to use text like to answer a question directly, we first \textbf{convert the unstructured data} of natural language sentences into a \textbf{structured data}. 
+		\item Then we apply the benefits of powerful query tools such as SQL. 
+		\item This method of getting meaning from text is called \textbf{Information Extraction}.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Introduction}
+	\begin{itemize}
+		\item In the following slide we shows the architecture for a simple information extraction system based on the NLTK project (see references). 
+		\item It begins by processing a document using several of the procedures already discussed: first, the raw text of the document is split into sentences using a sentence segmenter, and each sentence is further subdivided into words using a tokenizer. 
+		\item Next, each sentence is tagged with part-of-speech tags, which will prove very helpful in the next step, named entity detection. 
+		\item In this step, we search for mentions of potentially interesting entities in each sentence. 
+		\item Finally, we use relation detection to search for likely relations between different entities in the text.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Information Extraction Architecture}
+	\footnotesize{source: \textit{Bird S. et al. Natural Language Processing with Python, Chapter 7}}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/09_information_extraction_pic_1.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\subsection{Named Entity Recognition \\ \scalebox{0.8}{}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{Named Entity Recognition}
+	\begin{itemize}
+		\item A crucial component in IE systems is Named Entity Recognition (NER). 
+		\item Named-entity recognition is the problem of identifying and classifying entities into categories such as the names of people, locations, organizations, the expressions of quantities, times, measurements, monetary values, and so on. 
+		\item In general terms, entities refer to names of people, organizations (e.g. United Nations, American Airlines), places/cities (Rome, Boston), etc.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Named Entity Recognition}
+	\begin{itemize}
+		\item \textit{The fourth Wells account moving to another agency is the packaged paper-products division of Georgia-Pacific Corp., which arrived at Wells only last fall. Like Hertz and the History Channel, it is also leaving for an Omnicom-owned agency, the BBDO South unit of BBDO Worldwide. BBDO South in Atlanta, which handles corporate advertising for Georgia-Pacific, will assume additional duties for brands like Angel Soft toilet tissue and Sparkle paper towels, said Ken Haldin, a spokesman for Georgia-Pacific in Atlanta.}
+		\item The question is: \textbf{which companies are based in Atlanta?}
+	\end{itemize}
+	Taken from Bird S. et al. \textit{Natural Language Processing with Python} O'Reilly (2009)
+\end{frame}
+%..................................................................
+\begin{frame}{Extracting Information from Text}
+	\begin{center}
+	\includegraphics[scale= 0.35]{../../07-pictures/09_information_extraction_pic_2.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Extracting Information from Text}
+	\begin{center}
+	\includegraphics[scale= 0.35]{../../07-pictures/09_information_extraction_pic_3.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Extracting Information from Text}
+	\begin{center}
+	\includegraphics[scale= 0.35]{../../07-pictures/09_information_extraction_pic_4.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Extracting Information from Text: Using spaCy}
+
+\begin{itemize}
+\item Download and install a trained pipeline (in this case `en\_core\_web\_sm`), you can load it via spacy.load. 
+\item This will return a Language object containing all components and data needed to process text. We call it `spacy\_nlp`. Calling the nlp object on a string of text will return a processed Doc. 
+\item In particular, When you call `spacy\_nlp` on a text, spaCy first tokenizes the text to produce a Doc object. 
+\end{itemize}
+
+	\begin{center}
+	\includegraphics[scale=0.35]{../../07-pictures/../07-pictures/spacy_nlp_pipeline.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Extracting Information from Text: Using spaCy}
+
+\begin{itemize}
+\item The Doc is then processed in several different steps – this is also referred to as the processing pipeline. 
+\item The pipeline used by the trained pipelines typically include a tagger, a lemmatizer, a parser and an entity recognizer. Each pipeline component returns the processed Doc, which is then passed on to the next component.
+\end{itemize}
+
+	\begin{center}
+	\includegraphics[scale=0.35]{../../07-pictures/../07-pictures/spacy_nlp_pipeline.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Extracting Information from Text: Using spaCy}
+	\begin{center}
+	\includegraphics[scale=0.35]{../../07-pictures/09_information_extraction_pic_5.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{\small Extracting Information from Text: Using NLTK with Stanford NER}
+	\begin{center}
+	\includegraphics[scale=0.35]{./img/stanford_ner_0.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Example : Reading the Newspaper }
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item Notebook: 09-information-extraction
+		\item Libraries: NLTK, Stanford Group NER
+		\item https://nlp.stanford.edu/software/
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/09_information_extraction_pic_6.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+%..................................................................
+\begin{frame}{Comparing Results}
+
+\begin{itemize}
+\item Natural language processing applications are characterized by complex interdependent decisions that require large amounts of prior knowledge. 
+\item In this case, as you can see, the system designed by Stanford did not achieve the same result as spaCy, but it is pure accident; in fact, a lot depends on how well the models have been trained and with how much data. 
+\item For this reason, in case there is a need to perform a task like this, the best thing to do is to use multiple tools and compare the results, in order to find the best one in terms of performance and response.
+\end{itemize}
+\end{frame}
+
+\subsection{Chunking \\ \scalebox{0.8}{}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{What is chunking?}
+\begin{itemize}
+\item Chunking is a process of \highlight{\text{extracting phrases from unstructured text}}, which means analyzing a sentence to identify the constituents(Noun Groups, Verbs, verb groups, etc.) 
+\item \highlight{\text{It works on top of POS tagging}}. 
+\item It uses POS-tags as input and provides chunks as output.
+\item Chunking is one of the \highlight{\text{rule-based}} text extraction processes which is used for building \highlight{\text{Named-Entity}} recognition models. 
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{What is chunking?}
+	\begin{itemize}
+		\item In chucking, a chunker chunks the \highlight{\text{phrases that are meaningful}} in a text. 
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.45]{../../07-pictures/09_information_extraction_pic_7.png}
+	\end{center}
+	\footnotesize{source: \textit{Bird S. et al. "Natural Language Processing with Python" O'Reilly (2009) Ch. 7}}
+\end{frame}
+%..................................................................
+\begin{frame}{Why chunking is important?}
+\begin{itemize}
+\item Simply breaking text into words in many situations isn’t very helpful. \item It’s very crucial to know that sentence involves a person, a date, places, etc.. (different entities);
+\item Chunking can break sentences into phrases that are more useful than individual words and yield meaningful results.
+\item Chunking is very important when you want to extract information from text such as locations, person names (entity extraction).
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Chunking}
+Let’s understand it from scratch. A sentence typically follows a hierarchical structure consisting of the following components.
+$$\textbf{sentence} \rightarrow \textbf{clauses} \rightarrow \textbf{phrases} \rightarrow \textbf{words}$$ 
+Group of words make up phrases and there are five major categories.
+\begin{itemize}
+\item Noun Phrase (NP)
+\item Verb phrase (VP)
+\item Adjective phrase (ADJP)
+\item Adverb phrase (ADVP)
+\item Prepositional phrase (PP)
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Chunking}
+\textbf{Noun Phrases}
+\begin{itemize}
+\item Noun phrases are groups of words that function like nouns. Typically, they act as subjects, objects or prepositional objects in a sentence.
+\item Noun phrases are simply nouns with modifiers. Just as nouns can act as subjects, objects and prepositional objects, so can noun phrases.
+\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/chunking-1.jpg}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Chunking}
+\textbf{Noun Phrases}
+\begin{itemize}
+\item Noun phrases are groups of words that function like nouns. Typically, they act as subjects, objects or prepositional objects in a sentence.
+\item Noun phrases are simply nouns with modifiers. Just as nouns can act as subjects, objects and prepositional objects, so can noun phrases.
+\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/chunking-2.jpg}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Regex Based Chunking}
+	\begin{itemize}
+		\item The chunker is built upon a set of production rules, otherwise known as Grammar Rules. 
+		\item For instance, in the case of NER, grammar can be a pattern to match a Noun Phrase, since Named-entities are mostly nouns.
+	\end{itemize}
+	
+	\begin{center}
+	\includegraphics[scale=0.45]{../../07-pictures/09_information_extraction_pic_10.png}
+	\end{center}
+\footnotesize{source: \textit{https://payodatechnologyinc.medium.com/extract-meaningful-information-from-big-data-using-nlp-and-machine-learning}}
+\end{frame}
+%..................................................................
+\begin{frame}{Regex Based Chunking}
+	As you can see \highlight{\text{chunker rules are based on PoS tags}}, Pos tagging becomes the necessary task before chunking.
+	\begin{center}
+	\includegraphics[scale=0.45]{../../07-pictures/09_information_extraction_pic_11.png}
+	\end{center}
+\footnotesize{source: \textit{https://payodatechnologyinc.medium.com/extract-meaningful-information-from-big-data-using-nlp-and-machine-learning}}
+\end{frame}
+%..................................................................
+\begin{frame}{Regex Based Chunking}
+Now lets under understand this concept with python experiment. We are going to introduce a grammar in which NP (Noun phrase) is combined by
+\begin{itemize}
+\item  DT? $\rightarrow$ one or zero determiner
+\item  JJ* $\rightarrow$ zero or more adjectives
+\item  NN $\rightarrow$ Noun
+\end{itemize}
+and we parse this grammar by NLTK defined regular expression parser. As we will see, whole sentence \textbf{S} is divided into chunks and represented in tree-like structures. Based on defined grammar, an internally tree-like structure is created. So you can define your grammar, based on that sentence will be chunked.
+\end{frame}
+%..................................................................
+\begin{frame}{Regex Based Chunking}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/09_information_extraction_pic_8.png}
+	\end{center}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/09_information_extraction_pic_9.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Example : Regex Based Chunking}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item Notebook: 09-information-extraction
+		\item Libraries: NLTK, Stanford Group NER
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/09_information_extraction_pic_14.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+%..................................................................
+\begin{frame}{Training tagger based chunker}
+\textbf{The IOB tagging scheme}
+	\begin{itemize}
+		\item In this scheme, each token is tagged with one of three special chunk tags, I (inside), O (outside), or B (begin). 
+		\item A token is tagged as B if it marks the beginning of a chunk. Subsequent tokens within the chunk are tagged I. All other tokens are tagged O. 
+		\item The B and I tags are suffixed with the chunk type, e.g. B-NP, I-NP. 
+		\item Of course, it is not necessary to specify a chunk type for tokens that appear outside a chunk, so these are just labeled O.
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.4]{../../07-pictures/09_information_extraction_pic_12.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Training tagger based chunker}
+\begin{itemize}
+\item We'll use the `conll2000` corpus from NLTK package for training chunker. \item The CoNLL 2000 corpus contains 270k words of Wall Street Journal text, divided into "train" and "test" portions, annotated with part-of-speech tags and chunk tags in the IOB format. We can access the data using nltk.corpus.conll2000. 
+\item It specifies where the chunk begins and ends, along with its types.
+\item A POS tagger can be trained on these IOB tags
+\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.4]{../../07-pictures/09_information_extraction_pic_13.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Relation Extraction}
+\begin{itemize}
+\item Once named entities have been identified in a text, we then want to extract the relations that exist between them. 
+\item We will typically be looking for relations between specified types of named entity. 
+\item One way of approaching this task is to initially look for all triples of the form $(X, \alpha, Y)$, where $X$ and $Y$ are named entities of the required types, and $\alpha$ is the string of words that link $X$ and $Y$. 
+\item We can then use regular expressions to pull out just those instances of $\alpha$ that express the relation that we are looking for. 
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Example : Transactional Data }
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item Notebook: 09-information-extraction
+		\item Libraries: NLTK, Stanford Group NER
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/09_information_extraction_pic_14.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+%=====================================================================
+
+
+\end{document}
+%..................................................................
+\begin{frame}{Chunking}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Chunking}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Chunking}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{frame}

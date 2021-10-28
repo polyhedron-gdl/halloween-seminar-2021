@@ -1,0 +1,119 @@
+\documentclass[11pt]{beamer}
+\usetheme{CambridgeUS}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pgfpages}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{soul}
+\usepackage{empheq}
+
+% The replacement character � (often displayed as a black rhombus with a white
+% question mark) is a symbol found in the Unicode standard at code point U
+% +FFFD in the Specials table. It is used to indicate problems when a system 
+% is unable to render a stream of data to a correct symbol.[4] It is usually 
+% seen when the data is invalid and does not match any character. For this 
+% reason we map explicitly this character to a blanck space.
+\DeclareUnicodeCharacter{FFFD}{ }
+
+\newcommand*{\itemimg}[1]{%
+  \raisebox{-.3\baselineskip}{%
+    \includegraphics[
+      height=\baselineskip,
+      width=\baselineskip,
+      keepaspectratio,
+    ]{#1}%
+  }%
+}
+
+\newtcbox{\mymath}[1][]{%
+    nobeforeafter, math upper, tcbox raise base,
+    enhanced, colframe=blue!30!black,
+    colback=blue!10, boxrule=1pt,
+    #1}
+
+\newcommand{\highlight}[1]{%
+  \colorbox{yellow!50}{$\displaystyle#1$}}
+
+\author{Giovanni Della Lunga}
+\title{Introduction to Natural Language Processing}
+\subtitle{} % (optional)
+\setbeamercovered{transparent} 
+%\setbeamertemplate{navigation symbols}{} 
+%\logo{} 
+%\institute{} 
+%\date{} 
+%\subject{} 
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\AtBeginSection[]
+{
+  %\begin{frame}<beamer>
+  %\footnotesize	
+  %\frametitle{Outline}
+  %\begin{multicols}{2}
+  %\tableofcontents[currentsection]
+  %\end{multicols}	  
+  %\normalsize
+  %\end{frame}
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}  	\usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+\AtBeginSubsection{\frame{\subsectionpage}}
+
+% INSERT HERE
+%===================================================================================================
+\section{Unstructured Data \\ \scalebox{0.8}{}}
+%---------------------------------------------------------------------------------------------------
+\subsection{Why? \\ \scalebox{0.8}{The purpose and the rationale for the subject covered in the seminar}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{Why?}
+	\begin{itemize}
+		\item When we think of financial data, our thinking almost always ends up displaying infinite historical series of numbers (prices, interest rates, volatility) 
+		\item Financial data usually come in as structured data. 
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=1]{../../07-pictures/00_general_information_addon_pic_0.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{The importance of Unstructured Data}
+	 On the other hand, unstructured data, such as call transcripts, emails text, transactional data are largely an area not yet fully exploited due to accessibility and processing challenges.
+	\begin{center}
+	\includegraphics[scale=1]{../../07-pictures/00_general_information_addon_pic_1.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{The importance of Unstructured Data}
+	\begin{center}
+	\includegraphics[scale=1]{../../07-pictures/00_general_information_addon_pic_2.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\subsection{What? \\ \scalebox{0.8}{The key content, principles and topics to be learned in these lessons}}
+%---------------------------------------------------------------------------------------------------
+\subsection{How? \\ \scalebox{0.8}{the learning tools we are going to use}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{How?}
+	\begin{center}
+	\includegraphics[scale=1]{../../07-pictures/00_general_information_addon_pic_3.png}
+	\end{center}
+\end{frame}
+%..................................................................
+%=====================================================================
+
+
+\end{document}

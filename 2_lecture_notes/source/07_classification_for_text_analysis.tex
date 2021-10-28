@@ -1,0 +1,450 @@
+\documentclass[11pt]{beamer}
+\usetheme{CambridgeUS}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pgfpages}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{soul}
+\usepackage{empheq}
+
+% The replacement character � (often displayed as a black rhombus with a white
+% question mark) is a symbol found in the Unicode standard at code point U
+% +FFFD in the Specials table. It is used to indicate problems when a system 
+% is unable to render a stream of data to a correct symbol.[4] It is usually 
+% seen when the data is invalid and does not match any character. For this 
+% reason we map explicitly this character to a blanck space.
+\DeclareUnicodeCharacter{FFFD}{ }
+
+\newcommand*{\itemimg}[1]{%
+  \raisebox{-.3\baselineskip}{%
+    \includegraphics[
+      height=\baselineskip,
+      width=\baselineskip,
+      keepaspectratio,
+    ]{#1}%
+  }%
+}
+
+\newtcbox{\mymath}[1][]{%
+    nobeforeafter, math upper, tcbox raise base,
+    enhanced, colframe=blue!30!black,
+    colback=blue!10, boxrule=1pt,
+    #1}
+
+\newcommand{\highlight}[1]{%
+  \colorbox{yellow!100}{$\displaystyle#1$}}
+
+\author{Giovanni Della Lunga\\{\footnotesize giovanni.dellalunga@unibo.it}}
+%\title{3 - Introduction to Deep Learning}
+%\title{4 - Basic Text Analysis}
+%\title{5 - Introduction to Natural Language Processing}
+%\title{6 - Text Vectorization}
+\title{7 - Classification for Text Analysis}
+%\title{8 - Clustering for Text Similarity}
+%\title{9 - Information Extraction}
+\subtitle{} % (optional)
+\setbeamercovered{transparent} 
+\institute{Halloween Conference in Quantitative Finance} 
+\date{Bologna - October 26-28, 2021} 
+
+\begin{document}
+
+\begin{frame}
+\includegraphics[width=\linewidth]{img/halloween-seminar-logo.PNG}
+\end{frame}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\AtBeginSection[]
+{
+  %\begin{frame}<beamer>
+  %\footnotesize	
+  %\frametitle{Outline}
+  %\begin{multicols}{2}
+  %\tableofcontents[currentsection]
+  %\end{multicols}	  
+  %\normalsize
+  %\end{frame}
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}  	\usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+\AtBeginSubsection{\frame{\subsectionpage}}
+
+% INSERT HERE
+\subsection{Introduction \\ \scalebox{0.8}{What is Text Classification}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{Introduction}
+	\begin{itemize}
+		\item Text Classification is the process of labeling or organizing text data into groups - it forms a fundamental part of Natural Language Processing.
+		\item In the digital age that we live in, we are surrounded by text on our social media accounts, commercials, websites, Ebooks, etc. The majority of this text data is \textbf{unstructured}, so classifying this data can be extremely useful.
+		\item The premise of classification is simple: given a categorical target variable, learn patterns that exist between instances composed of independent variables and their relationship to the target. 
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Introduction}
+\textbf{Text Classification: a formal definition}\\
+\vspace{0.5cm}
+\textbf{INPUT}:
+\begin{itemize}
+\item a document $d$;
+\item a fixed set of classes $C=\{C_1, C_2, \dots, C_n \}$
+\end{itemize}
+\vspace{0.5cm}
+\textbf{OUTPUT}
+\begin{itemize}
+\item a predicted class $c \in C$
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Introduction}
+	Text Classification has a wide array of applications. Some popular uses are:
+	\begin{itemize}
+		\item Spam detection in emails
+		\item Sentiment analysis of online reviews
+		\item Topic labeling documents like research papers
+		\item Language detection like in Google Translate
+		\item Age/gender identification of anonymous users
+		\item Tagging online content
+		\item Speech recognition used in virtual assistants (like Siri and Alexa)
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Introduction}
+\textbf{Hand-coded rules}
+\vspace{0.5cm}
+\begin{itemize}
+\item Rules based on combinations of words or other features, for example:
+ spam if black-list-address OR (“dollars” AND “you have been selected”)
+\item Accuracy can be high if rules carefully refined by expert
+\item But building and maintaining these rules is expensive
+
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Introduction}
+	\begin{itemize}
+		\item Because \textbf{the target is given ahead of time}, classification is a \highlight{\text{supervised}} machine learning model because a model can be trained to minimize error between predicted and actual categories in the training data. 
+		\item Once a classification model is fit, it assigns categorical labels to new instances based on the patterns detected during training.
+		\item The application problem can be formulated to identify either a yes/no (binary classification) or discrete buckets (multiclass classification).
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Introduction}
+\textbf{Text Classification: Supervised Machine Learning}\\
+\vspace{0.5cm}
+\textbf{INPUT}:
+\begin{itemize}
+\item a document $d$;
+\item a fixed set of classes $C=\{C_1, C_2, \dots, C_n \}$
+\item a training set of $m$ hand-labeled documents $(d_1,c_1), \dots,(d_m,c_m)$
+\end{itemize}
+\vspace{0.5cm}
+\textbf{OUTPUT}
+\begin{itemize}
+\item a learned classifier $\gamma:d \rightarrow c$
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Introduction}
+All classifier model families have the same basic workflow, and with Scikit-Learn Estimator objects, they can be employed in a procedural fashion and compared using cross-validation to select the best performing predictor.
+The classification workflow occurs in two phases: a build phase and an operational phase.
+	\begin{itemize}
+		\item In the build phase, a corpus of documents is transformed into feature vectors. The document features, along with their annotated labels (the category or class we want the model to learn), are then passed into a classification algorithm that defines its internal state along with the learned patterns. 
+		\item Once trained or fitted, a new document can be vectorized into the same space as the training data and passed to the predictive algorithm, which returns the assigned class label for the document.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Introduction}
+	\begin{center}
+	\includegraphics[scale=0.8]{../../07-pictures/07_classification_for_text_analysis_pic_0.png}
+	\end{center}
+	\footnotesize{source: \textit{Bengfort B. et al. Text Analysis with Python}}
+\end{frame}
+%---------------------------------------------------------------------------------------------------
+\subsection{Naive Bayes \\ \scalebox{0.8}{}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{Naive Bayes}
+\begin{itemize}
+\item Simple ("naive") classification method based on Bayes rule
+\item Relies on very simple representation of document: \highlight{\text{ 
+Bag of words}}
+\item For a document $d$ and a class $c$
+\begin{equation}
+P(c \vert d) = \frac{P(d \vert c) P(c)}{P(d)}
+\end{equation}
+\begin{equation}
+C_{map} = \underset{c \in C}{\operatorname{argmax}}\frac{P(d \vert c) P(c)}{P(d)} 
+\end{equation}
+The denominator does not change, it remain static. Therefore, the denominator can be removed and a proportionality can be introduced
+\begin{equation}
+C_{map} \sim \underset{c \in C}{\operatorname{argmax}}\left[P(d \vert c) P(c)\right]
+\end{equation}
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Naive Bayes}
+\begin{itemize}
+\item We can represent a document as a vector of features $(x_1, x_2, \dots, x_n)$
+\begin{equation}
+C_{map} \sim \underset{c \in C}{\operatorname{argmax}}\left[P(x_1, x_2, \dots, x_n \vert c) P(c)\right]
+\end{equation}
+\item To estimate $P$ we can just count the relative frequencies in a corpus
+\item Of course, it could only be estimated if a very, very large number of training examples was available.
+
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Naive Bayes}
+Now the \textbf{naive} assumptions ...
+\begin{itemize}
+\item Bag of Words assumption: Assume position doesn’t matter
+\item Conditional Independence: Assume the feature probabilities $P(x_i|c_j)$ are independent given the class $c$
+\end{itemize}
+\begin{equation}
+P(x_1, x_2, \dots, x_n \vert c) = \prod\limits_{i=1}^n P(x_i \vert c)
+\end{equation}
+\begin{equation}
+C_{map} \sim \underset{c \in C}{\operatorname{argmax}} \, P(c) \, \prod\limits_{i=1}^n P(x_i \vert c)
+\end{equation}
+\end{frame}
+%..................................................................
+\begin{frame}{Naive Bayes}
+\begin{itemize}
+\item Training process maximum likelihood estimates
+\item Simply use the frequencies in the data
+\item Create mega-document for topic $j$ by concatenating all docs in this topic
+\begin{align*}
+& \hat P (c_j) = \frac{N_{c_j}}{N_{total}} \\
+& \hat P (w_i \vert c_j) = \frac{\text{count}(w_i \vert c_j)}{\sum\limits_{w \in V} \text{count}(w \vert c_j)}
+\end{align*}
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------------------------------
+\subsection{Practical Examples \\ \scalebox{0.8}{}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{Example 1 - Gender Identification}
+In this first example we will try to build a simple algorithm to understand if a noun passed in input is of masculine or feminine gender. In this, and in the following examples, we will implicitly assume that the language used is English.
+\\
+\vspace{0.5cm}
+\textbf{FOCUS}
+\\
+	\begin{itemize}
+		\item How build a feature in text analysis
+		\item Training Vs validation
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Example 2 - The \textit{20 Newsgroup} data set}
+	\begin{itemize}
+		\item In this example we are going to work with the "20 Newsgroup Dataset". 
+		\item The 20 Newsgroups data set is a collection of approximately 20,000 newsgroup documents, partitioned (nearly) evenly across 20 different newsgroups. The 20 newsgroups collection has become a popular data set for experiments in text applications of machine learning techniques, such as text classification and text clustering. 
+		\item This data set is infact in-built in scikit, so we don’t need to download it explicitly.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Example 2 - The \textit{20 Newsgroup} data set}
+	\textbf{FOCUS}
+	\vspace{0.5cm}
+	\begin{itemize}
+		\item using sklearn package
+		\item numerical features and vectorization process
+		\item building a ml pipeline with sklearn
+		\item model optimization
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Example 2 - Building a Pipeline }
+	\begin{itemize}
+		\item A machine learning pipeline is a way to codify and automate the workflow it takes to produce a machine learning model. 
+		\item Machine learning pipelines consist of multiple sequential steps that do everything from data extraction and preprocessing to model training and deployment.
+		\item For data science teams, the production pipeline should be the central product. 
+		\item It encapsulates all the learned best practices of producing a machine learning model for the organization use-case and allows the team to execute at scale. 
+		\item Whether you are maintaining multiple models in production or supporting a single model that needs to be updated frequently, an end-to-end machine learning pipeline is a must.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Example 2 - Building a Pipeline}
+	\begin{itemize}
+		\item The purpose of a Pipeline is to chain together multiple estimators representing a fixed sequence of steps into a single unit. 
+		\item All estimators in the pipeline, except the last one, must be transformers - that is, implement the transform method, while the last estimator can be of any type, including predictive estimators. 
+		\item Pipelines provide convenience; fit and transform can be called for single inputs across multiple objects at once. 
+		\item Pipelines also provide a single interface for grid search of multiple estimators at once. 
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Example 2 - Build a Pipeline with SciKit}
+	\begin{itemize}
+		\item Most importantly, pipelines provide operationalization of text models by coupling a vectorization methodology with a predictive model. 
+		\item Pipelines are constructed by describing a list of (key, value) pairs where the key is a string that names the step and the value is the estimator object. 
+		\item Pipelines can be created either by using the make\textunderscore pipeline helper function, which automatically determines the names of the steps, or by specifying them directly. 
+		\item Generally, it is better to specify the steps directly to provide good user documentation, whereas make\textunderscore pipeline is used more often for automatic pipeline construction.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Example 2 - Build a Pipeline with SciKit}
+	\begin{itemize}
+		\item The Pipeline can then be used as a single instance of a complete model. 
+		\item Calling model.fit is the same as calling fit on each estimator in sequence, transforming the input and passing it on to the next step. 
+		\item Other methods like fit\textunderscore  transform behave similarly. 
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/07_classification_for_text_analysis_pic_1.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Example 2 - Build a Pipeline with SciKit}
+	\begin{itemize}
+		\item The pipeline will also have all the methods the last estimator in the pipeline has. If the last estimator is a transformer, so too is the pipeline. 
+		\item If the last estimator is a classifier, as in the example above, then the pipeline will also have predict and score methods so that the entire model can be used as a classifier.
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/07_classification_for_text_analysis_pic_2.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\subsection{Sentiment Analysis with Keras \\ \scalebox{0.8}{From \textit{Deep Learning with Python by F. Chollet}}}
+%---------------------------------------------------------------------------------------------------
+\begin{frame}{Sentiment Analysis with Keras}
+	\begin{itemize}
+		\item The IMDb Movie Reviews dataset is a binary sentiment analysis dataset consisting of 50,000 reviews from the Internet Movie Database (IMDb) labeled as positive or negative. 
+		\item The dataset contains an even number of positive and negative reviews. 
+		\item Only highly polarizing reviews are considered. 
+		\item A negative review has a score = 4 out of 10, and a positive review has a score = 7 out of 10. 
+		\item No more than 30 reviews are included per movie. 
+		\item The dataset contains additional unlabeled data.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{The IMDb Movie Reviews Dataset}
+	\begin{itemize}
+		\item Just like the MNIST dataset, the IMDB dataset comes packaged with Keras. 
+		\item It has already been preprocessed: the reviews (sequences of words) have been turned into sequences of integers, where each integer stands for a specific word in a dictionary.
+		\item The following code will load the dataset (when you run it the first time, about 80 MB of data will be downloaded to your machine).
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/07_classification_for_text_analysis_pic_3.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{The IMDb Movie Reviews Dataset}
+	\begin{itemize}
+		\item \textbf{One-hot encode}
+		\item All lists are transformed into vectors of 0s and 1s. 
+		\item This would mean, for instance, turning the sequence [3, 5] into a 10,000-dimensional vector that would be all 0s except for indices 3 and 5, which would be 1s. 
+		\item Then you could use as the first layer in your network a Dense layer, capable of handling floating-point vector data.
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/07_classification_for_text_analysis_pic_4.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Preparing the data}
+	\begin{itemize}
+		\item The input data is vectors, and the labels are scalars (1s and 0s). 
+		\item A type of network that performs well on such a problem is a simple stack of fully connected (Dense) layers with relu activations.
+		\item The argument being passed to each Dense layer (16) is the number of hidden units of the layer.
+		\item The intermediate layers will use relu as their activation function, and the final layer will use a sigmoid activation so as to output a probability (a score between 0 and 1, indicating how likely the review is to be positive). 
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Building our Network}
+	\begin{center}
+	\includegraphics[scale=0.35]{../../07-pictures/07_classification_for_text_analysis_pic_5.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Building our Network}
+	\begin{center}
+	\includegraphics[scale=0.4]{../../07-pictures/07_classification_for_text_analysis_pic_6.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Building our Network}
+	\begin{itemize}
+		\item Finally, we need to choose a loss function and an optimizer. 
+		\item Because we are facing a binary classification problem and the output of your network is a probability (we end our network with a single-unit layer with a sigmoid activation), it is best to use the binary\_crossentropy loss. 
+		\item It is not the only viable choice: you could use, for instance, the well known mean squared error but crossentropy is usually the best choice when you're dealing with models that output probabilities. 
+		\item Crossentropy is a quantity from the field of Information Theory that measures the distance between probability distributions or, in this case, between the ground-truth distribution and your predictions.
+	\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Loss Function and Optimizer}
+	\begin{itemize}
+		\item \textbf{RMSprop} is unpublished optimization algorithm designed for neural networks, first proposed by Geoff Hinton in lecture 6 of the online course \textbf{Neural Networks for Machine Learning};
+		\item \textbf{Adaptive learning rate} methods are an optimization of gradient descent methods with the goal of minimizing the objective function of a network by using the gradient of the function and the parameters of the network.
+	\end{itemize}
+	\begin{center}
+	\includegraphics[scale=0.5]{../../07-pictures/07_classification_for_text_analysis_pic_7.png}
+	\end{center}
+\end{frame}
+%..................................................................
+\begin{frame}{Example}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+        \begin{itemize}
+		\item Now that we have described the construction of the neural network, let's see how it works in practice ...
+		\item Using \textbf{07-DLP-classifying-movie-reviews.ipynb} Notebook 
+        \end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    %\fbox{
+        \includegraphics[width=\linewidth]{../../07-pictures/07_classification_for_text_analysis_pic_8.png}
+    %}
+\end{column}%
+\end{columns}
+\end{frame}
+%=====================================================================
+
+
+\end{document}
+
+%..................................................................
+\begin{frame}{Naive Bayes}
+\begin{itemize}
+\item
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Naive Bayes}
+\begin{itemize}
+\item
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Naive Bayes}
+\begin{itemize}
+\item
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Naive Bayes}
+\begin{itemize}
+\item
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Naive Bayes}
+\begin{itemize}
+\item
+\end{itemize}
+\end{frame}
+%..................................................................
+\begin{frame}{Naive Bayes}
+\begin{itemize}
+\item
+\end{itemize}
+\end{frame}
+%..................................................................
